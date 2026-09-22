@@ -3,8 +3,8 @@
 import { useRef, useState } from 'react';
 
 const initialMessages = [
-  {from:'assistant',text:"Hi — I'm the Coast & Marsh Coverage Assistant. I can help organize the information we need to understand your smoke shop before a human coverage review. This is a preliminary assessment, not a quote or coverage determination."},
-  {from:'assistant',text:"First, where is your shop located? A ZIP code is perfect."}
+  {from:'assistant',text:"Hi — I'm the Coast & Marsh Coverage Assistant. I'll ask a few questions about your business and the products you sell so we can determine which insurance markets may be worth exploring. This is a preliminary assessment, not a quote or coverage determination."},
+  {from:'assistant',text:"What does your business sell? For example: tobacco or vape products, Delta-8/Delta-9, kratom, CBD/hemp, or something else."}
 ];
 
 export default function SmokeShopPOC() {
@@ -55,9 +55,9 @@ export default function SmokeShopPOC() {
   return <main className="smoke-page">
     <header className="smoke-header"><a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a><a className="smoke-phone" href="tel:+19049885028">904-988-5028</a></header>
     <section className="smoke-hero">
-      <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Skip the long application.<br/>Start with a conversation.</h1><p>What you sell can change which insurance markets will consider your shop. Tell our Coverage Assistant about your business and get a preliminary assessment in about 60 seconds.</p><div className="trust-row"><span>No lengthy forms</span><span>AI-guided intake</span><span>Human coverage review</span></div></div>
+      <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Insurance for shops selling <em>Delta-8, Delta-9, Kratom &amp; Hemp.</em></h1><p>Some products can make ordinary business insurance difficult to place. Coast &amp; Marsh helps regulated-market businesses organize the details specialty insurance markets need to evaluate more complex risks.</p><div className="specialty-callout"><strong>Selling Delta-8, Delta-9, Kratom, CBD or Hemp?</strong><span>Tell our Coverage Assistant what you sell. In about 60 seconds, we'll gather the information needed for a human coverage review.</span></div><div className="trust-row"><span>Specialty-market focus</span><span>No long application</span><span>Human review</span></div></div>
       <div className="chat-card">
-        {!started ? <div className="chat-start"><div className="assistant-badge">C&amp;M</div><h2>Can we help review your shop?</h2><p>Answer a few questions in plain English. The assistant will adapt its follow-up questions to your business and organize the information for a coverage review.</p><button onClick={start}>Start the 60-second assessment <b>→</b></button><small>Not a quote, binder, underwriting decision, or guarantee of coverage.</small></div> :
+        {!started ? <div className="chat-start"><div className="assistant-badge">C&amp;M</div><h2>Tell us what you sell.</h2><p>Delta-8, Delta-9, kratom, CBD, hemp, vape and tobacco products can create very different insurance considerations. Answer a few questions in plain English and we'll organize the details for a human coverage review.</p><button onClick={start}>Start my coverage review <b>→</b></button><small>Not a quote, binder, underwriting decision, or guarantee of coverage.</small></div> :
         <><div className="chat-top"><div className="assistant-badge">C&amp;M</div><div><strong>Coverage Assistant</strong><small>{stage==='meeting_ready'?'READY TO SCHEDULE':stage==='meeting'?'SCHEDULING REVIEW':'AI-GUIDED INTAKE'}</small></div></div>
         <div className="chat-messages">{messages.map((m,i)=><div key={i} className={'bubble '+m.from}>{m.text}</div>)}{loading&&<div className="bubble assistant thinking">Thinking…</div>}</div>
         {stage!=='meeting_ready'&&<div className="chat-input"><textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}} placeholder={stage==='meeting'?'Name, email, mobile and a good day/time...':'Type your answer in plain English...'} disabled={loading}/><button onClick={send} aria-label="Send" disabled={loading}>→</button></div>}
@@ -65,7 +65,7 @@ export default function SmokeShopPOC() {
         <div className="progress"><span style={{width: stage==='meeting_ready'?'100%':stage==='meeting'?'82%':'48%'}}/></div></>}
       </div>
     </section>
-    <section className="smoke-why"><p className="eyebrow">WHY WE ASK</p><h2>Smoke shops aren't all the same risk.</h2><p>A shop selling traditional tobacco and accessories can look very different to an insurer than one selling vape, CBD, hemp-derived THC, kratom, imported products or private-label products. Our assistant adapts the conversation to the operation, then organizes the details for a human coverage review.</p></section>
+    <section className="smoke-why"><p className="eyebrow">WHY COAST &amp; MARSH</p><h2>Complex products need a more focused insurance conversation.</h2><p>A tobacco retailer can look very different to an insurer than a business selling Delta-8, Delta-9, kratom, CBD, hemp-derived products, imported products or private-label brands. We focus the intake on those differences, organize the underwriting details, and have a human review every qualified submission.</p><div className="specialty-points"><span>Specialty-market access</span><span>Regulated-industry focus</span><span>Human review</span><span>Fast conversational intake</span></div></section>
     <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Preliminary assessment only. Coverage subject to carrier underwriting and eligibility.</div><div className="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>
 }
