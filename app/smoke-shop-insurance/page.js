@@ -14,7 +14,8 @@ export default function SmokeShopPOC() {
   const [stage,setStage]=useState('intake');
   const [summary,setSummary]=useState({});
   const [assessment,setAssessment]=useState('');
-  const [loading,setLoading]=useState(false);\n  const sessionId=useRef(null);
+  const [loading,setLoading]=useState(false);
+  const sessionId=useRef(null);
 
   function start(){
     sessionId.current=crypto.randomUUID();
