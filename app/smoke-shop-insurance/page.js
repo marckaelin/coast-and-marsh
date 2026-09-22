@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const initialMessages = [
   {from:'assistant',text:"Hi — I'm the Coast & Marsh Coverage Assistant. I can help organize the information we need to understand your smoke shop before a human coverage review. This is a preliminary assessment, not a quote or coverage determination."},
@@ -14,7 +14,7 @@ export default function SmokeShopPOC() {
   const [stage,setStage]=useState('intake');
   const [summary,setSummary]=useState({});
   const [assessment,setAssessment]=useState('');
-  const [loading,setLoading]=useState(false);
+  const [loading,setLoading]=useState(false);\n  const sessionId=useRef(null);
 
   function start(){
     setStarted(true);
@@ -34,7 +34,7 @@ export default function SmokeShopPOC() {
       const res=await fetch('/api/smoke-shop-chat',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({messages:next})
+        body:JSON.stringify({messages:next,sessionId:sessionId.current})
       });
       const data=await res.json();
       if(!res.ok) throw new Error(data.message || 'AI unavailable');
@@ -50,32 +50,6 @@ export default function SmokeShopPOC() {
     }
   }
 
-  const meetingBody = encodeURIComponent(
-    `Smoke Shop Coverage Review Request
-
-Name: ${summary.name || ''}
-Email: ${summary.email || ''}
-Phone: ${summary.phone || ''}
-Preferred meeting time: ${summary.preferredMeetingTime || ''}
-
-Location: ${summary.location || ''}
-Products: ${summary.products || ''}
-Product mix: ${summary.productMix || ''}
-Special exposures: ${summary.specialExposures || ''}
-Annual revenue: ${summary.annualRevenue || ''}
-Coverage need: ${summary.coverageNeed || ''}
-Current coverage: ${summary.currentCoverage || ''}
-Renewal timing: ${summary.renewalTiming || ''}
-
-Preliminary assessment:
-${assessment || 'Specialty coverage review requested.'}
-
-Please confirm a 15-minute coverage review.
-`
-  );
-
-  const meetingHref=`mailto:marc.kaelin@coastandmarsh.com?subject=${encodeURIComponent('Smoke Shop - 15 Minute Coverage Review Request')}&body=${meetingBody}`;
-
   return <main className="smoke-page">
     <header className="smoke-header"><a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a><a className="smoke-phone" href="tel:+19049885028">904-988-5028</a></header>
     <section className="smoke-hero">
@@ -85,7 +59,7 @@ Please confirm a 15-minute coverage review.
         <><div className="chat-top"><div className="assistant-badge">C&amp;M</div><div><strong>Coverage Assistant</strong><small>{stage==='meeting_ready'?'READY TO SCHEDULE':stage==='meeting'?'SCHEDULING REVIEW':'AI-GUIDED INTAKE'}</small></div></div>
         <div className="chat-messages">{messages.map((m,i)=><div key={i} className={'bubble '+m.from}>{m.text}</div>)}{loading&&<div className="bubble assistant thinking">Thinking…</div>}</div>
         {stage!=='meeting_ready'&&<div className="chat-input"><textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}} placeholder={stage==='meeting'?'Name, email, mobile and a good day/time...':'Type your answer in plain English...'} disabled={loading}/><button onClick={send} aria-label="Send" disabled={loading}>→</button></div>}
-        {stage==='meeting_ready'&&<div className="meeting-cta"><strong>Next step: 15-minute coverage review</strong><p>Send the prepared meeting request and Coast &amp; Marsh will confirm the time with you.</p><a href={meetingHref}>Request my 15-minute review <span>→</span></a><small>You can also call <a href="tel:+19049885028">904-988-5028</a>.</small></div>}
+        {stage==='meeting_ready'&&<div className="meeting-cta"><strong>Coverage review requested</strong><p>Your information and requested meeting time have been saved. Coast &amp; Marsh will follow up to confirm your 15-minute coverage review.</p><small>Need us sooner? Call <a href="tel:+19049885028">904-988-5028</a>.</small></div>}
         <div className="progress"><span style={{width: stage==='meeting_ready'?'100%':stage==='meeting'?'82%':'48%'}}/></div></>}
       </div>
     </section>
