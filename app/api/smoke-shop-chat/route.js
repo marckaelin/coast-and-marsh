@@ -1,7 +1,7 @@
 export const runtime = 'nodejs';
 
 const ALERT_TO = 'marc@coastandmarshinsurance.com';
-const ALERT_FROM = process.env.LEAD_ALERT_FROM_EMAIL || 'marc.kaelin@coastandmarsh.com';
+const ALERT_FROM = process.env.LEAD_ALERT_FROM_EMAIL || `leads@${process.env.RESEND_EMAIL_DOMAIN || 'coastandmarshinsurance.com'}`;
 
 const SYSTEM = `
 You are the Coast & Marsh Insurance Advisory Smoke Shop Coverage Assistant.
@@ -99,8 +99,8 @@ function esc(value) {
 }
 
 async function sendLeadAlert(sessionId, data) {
-  if (!process.env.SENDGRID_API_KEY) {
-    console.error('Lead alert not sent: SENDGRID_API_KEY is not configured');
+  if (!process.env.RESEND_API_KEY) {
+    console.error('Lead alert not sent: RESEND_API_KEY is not configured');
     return;
   }
   if (await alertAlreadySent(sessionId)) return;
@@ -133,21 +133,21 @@ async function sendLeadAlert(sessionId, data) {
     <p><small>Session: ${esc(sessionId)}</small></p>
   `;
 
-  const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
+  const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      personalizations: [{ to: [{ email: ALERT_TO }] }],
-      from: { email: ALERT_FROM, name: 'Coast & Marsh Lead Intake' },
+      from: `Coast & Marsh Lead Intake <${ALERT_FROM}>`,
+      to: [ALERT_TO],
       subject,
-      content: [{ type: 'text/html', value: html }]
+      html
     })
   });
 
-  if (!res.ok) throw new Error(`SendGrid alert failed ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  if (!res.ok) throw new Error(`Resend alert failed ${res.status}: ${(await res.text()).slice(0, 300)}`);
   await markAlertSent(sessionId);
 }
 
