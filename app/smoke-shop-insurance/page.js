@@ -65,6 +65,7 @@ export default function SmokeShopPOC() {
         <div className="progress"><span style={{width: stage==='meeting_ready'?'100%':stage==='meeting'?'82%':'48%'}}/></div></>}
       </div>
     </section>
+    <section className="smoke-direct"><div><p className="eyebrow">PREFER TO TALK DIRECTLY?</p><h2>Talk with Coast &amp; Marsh.</h2></div><div className="direct-links"><a href="tel:+19049885028"><small>CALL</small><strong>904-988-5028</strong></a><a href="mailto:marc@coastandmarshinsurance.com"><small>EMAIL</small><strong>marc@coastandmarshinsurance.com</strong></a></div></section>
     <section className="smoke-why"><p className="eyebrow">WHY COAST &amp; MARSH</p><h2>Complex products need a more focused insurance conversation.</h2><p>A tobacco retailer can look very different to an insurer than a business selling Delta-8, Delta-9, kratom, CBD, hemp-derived products, imported products or private-label brands. We focus the intake on those differences, organize the underwriting details, and have a human review every qualified submission.</p><div className="specialty-points"><span>Specialty-market access</span><span>Regulated-industry focus</span><span>Human review</span><span>Fast conversational intake</span></div></section>
     <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Preliminary assessment only. Coverage subject to carrier underwriting and eligibility.</div><div className="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>
