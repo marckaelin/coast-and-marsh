@@ -45,6 +45,13 @@ export default function SmokeShopPOC() {
       setStage(data.stage || 'intake');
       setSummary(data.summary || {});
       setAssessment(data.assessment || '');
+      if(data.stage === 'meeting_ready' && stage !== 'meeting_ready' && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-18468447688/WltECImM2oEdEMjLuOZE',
+          value: 1.0,
+          currency: 'USD'
+        });
+      }
     } catch (e) {
       setMessages([...next,{from:'assistant',text:"I hit a temporary problem processing that. Please try again, or call Coast & Marsh at 904-988-5028."}]);
     } finally {
