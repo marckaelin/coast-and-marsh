@@ -17,6 +17,7 @@ export default function SmokeShopPOC() {
   const [loading,setLoading]=useState(false);\n  const sessionId=useRef(null);
 
   function start(){
+    sessionId.current=crypto.randomUUID();
     setStarted(true);
     setMessages(initialMessages);
   }
