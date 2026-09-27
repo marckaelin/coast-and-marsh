@@ -9,7 +9,7 @@ const services = [
     title: 'Commercial Risk',
     text: 'Solutions for growing businesses, complex operations and evolving risk environments.',
     className: 'commercial-card',
-    href: '#commercial'
+    href: '/contractor-insurance'
   },
   {
     title: 'Cannabis & Hemp',
@@ -95,7 +95,15 @@ export default function Home() {
           <p>Our commercial practice focuses on businesses where regulation, product mix and evolving risk can make traditional placement difficult.</p>
         </div>
         <details open>
-          <summary><span>Cannabis &amp; Hemp</span><b>01</b></summary>
+          <summary><span>Contractors</span><b>01</b></summary>
+          <div className="detailbody">
+            <p>Insurance markets can view general contractors, electricians, HVAC contractors, plumbers, roofers and specialty trades very differently. We help Florida contractors organize their risk, review their current program and pursue standard or specialty markets appropriate for the work they perform.</p>
+            <div className="coverage"><span>General Liability</span><span>Workers&apos; Compensation</span><span>Commercial Auto</span><span>Tools &amp; Equipment</span><span>Umbrella / Excess</span><span>Builders Risk</span></div>
+            <p className="small"><a href="/contractor-insurance" style={{color:'inherit'}}>Explore Contractor Insurance →</a></p>
+          </div>
+        </details>
+        <details>
+          <summary><span>Cannabis &amp; Hemp</span><b>02</b></summary>
           <div className="detailbody">
             <p>We understand that a cannabis or hemp submission is more than a business name and revenue number. Product mix, cannabinoids, manufacturing, distribution, property, inventory and regulatory structure can materially change what coverage is available.</p>
             <div className="coverage"><span>General Liability</span><span>Property</span><span>Product Liability</span><span>Workers&apos; Compensation</span><span>Commercial Auto</span><span>Excess / Umbrella</span></div>
@@ -103,7 +111,7 @@ export default function Home() {
           </div>
         </details>
         <details>
-          <summary><span>Additional Regulated Industries</span><b>02</b></summary>
+          <summary><span>Additional Regulated Industries</span><b>03</b></summary>
           <div className="detailbody"><p>Our regulated-market practice is designed to expand as we develop carrier relationships and industry expertise in additional specialty segments.</p></div>
         </details>
       </section>
