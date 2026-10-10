@@ -8,7 +8,7 @@ export function SiteHeader({ cta = 'Get in Touch', ctaHref = 'mailto:marc.kaelin
 export function SiteFooter() {
   return <footer>
     <div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div>
-    <div>Personal · Commercial · Specialty Industries</div>
+    <div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div>
     <div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
   </footer>;
 }

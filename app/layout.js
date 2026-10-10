@@ -29,6 +29,12 @@ const orgSchema = {
   '@type': 'InsuranceAgency',
   '@id': `${SITE.url}/#agency`,
   name: SITE.name,
+  legalName: 'Coast and Marsh Insurance LLC',
+  identifier: [
+    { '@type': 'PropertyValue', name: 'Florida insurance agency license', value: 'G330108' },
+    { '@type': 'PropertyValue', name: 'National Producer Number (NPN)', value: '22179499' }
+  ],
+  address: { '@type': 'PostalAddress', addressLocality: 'Ponte Vedra Beach', addressRegion: 'FL', postalCode: '32082', addressCountry: 'US' },
   url: SITE.url,
   telephone: SITE.phone,
   email: SITE.email,
