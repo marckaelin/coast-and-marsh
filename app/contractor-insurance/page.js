@@ -1,6 +1,7 @@
 export const metadata = {
-  title: 'Florida Contractor Insurance | Coast & Marsh Insurance Advisory',
-  description: 'Insurance market reviews for Florida contractors, including electrical, HVAC, plumbing, roofing, general contractors and specialty trades.'
+  title: 'Florida Contractor Insurance',
+  description: 'Insurance market reviews for Florida contractors, including electrical, HVAC, plumbing, roofing, general contractors and specialty trades.',
+  alternates: { canonical: '/contractor-insurance' }
 };
 
 const trades = ['General Contractors','Building & Residential','Electrical','HVAC & Mechanical','Plumbing','Roofing','Painting','Flooring & Tile','Carpentry & Framing','Specialty Trades'];
@@ -65,6 +66,6 @@ export default function ContractorInsurance() {
       </div>
     </section>
 
-    <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Personal · Commercial · Specialty Industries</div><div className="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
+    <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>
 }
