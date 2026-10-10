@@ -1,9 +1,11 @@
+export const metadata = { alternates: { canonical: '/' } };
+
 const services = [
   {
     title: 'Personal Risk',
     text: 'Protect your home, assets and lifestyle with coverage designed for how you live.',
     className: 'personal-card',
-    href: '#personal'
+    href: '/boat-insurance'
   },
   {
     title: 'Commercial Risk',
@@ -35,9 +37,10 @@ export default function Home() {
           <span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span>
         </a>
         <nav className="navlinks">
-          <a href="#personal">Personal</a>
-          <a href="#commercial">Commercial</a>
+          <a href="/boat-insurance">Boat Insurance</a>
+          <a href="/contractor-insurance">Contractors</a>
           <a href="#commercial">Specialty Industries</a>
+          <a href="/tools/yacht-insurance-cost-calculator">Cost Estimator</a>
           <a href="#approach">Our Approach</a>
           <a href="#about">About</a>
         </nav>
@@ -108,6 +111,7 @@ export default function Home() {
             <p>We understand that a cannabis or hemp submission is more than a business name and revenue number. Product mix, cannabinoids, manufacturing, distribution, property, inventory and regulatory structure can materially change what coverage is available.</p>
             <div className="coverage"><span>General Liability</span><span>Property</span><span>Product Liability</span><span>Workers&apos; Compensation</span><span>Commercial Auto</span><span>Excess / Umbrella</span></div>
             <p className="small">We work with specialty-market partners and help clients prepare the underwriting information needed to pursue appropriate coverage. Coverage availability and eligibility vary by risk and carrier.</p>
+            <p className="small"><a href="/smoke-shop-insurance" style={{color:'inherit'}}>Start a smoke shop or hemp insurance review →</a></p>
           </div>
         </details>
         <details>
@@ -129,7 +133,7 @@ export default function Home() {
       <footer>
         <div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div>
         <div>Personal · Commercial · Specialty Industries</div>
-        <div className="legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+        <div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
       </footer>
     </main>
   );
