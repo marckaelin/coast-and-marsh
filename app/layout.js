@@ -18,7 +18,6 @@ export const metadata = {
     siteName: SITE.name,
     title: 'Coast & Marsh Insurance Advisory',
     description: 'Florida boat, contractor and specialty-industry insurance advisory.',
-    url: '/',
     locale: 'en_US'
   },
   twitter: { card: 'summary_large_image', title: 'Coast & Marsh Insurance Advisory', description: 'Florida boat, contractor and specialty-industry insurance advisory.' },
