@@ -1,8 +1,8 @@
 export const SITE = {
   url: 'https://www.coastandmarsh.com',
   name: 'Coast & Marsh Insurance Advisory',
-  phone: '+1-904-988-5028',
-  phoneDisplay: '904-988-5028',
+  phone: '+1-904-988-5026',
+  phoneDisplay: '904-988-5026',
   email: 'marc.kaelin@coastandmarsh.com'
 };
 

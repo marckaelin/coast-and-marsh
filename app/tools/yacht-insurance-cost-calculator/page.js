@@ -28,7 +28,7 @@ export default function YachtEstimator() {
     <JsonLd data={schema} />
     <header className="smoke-header">
       <a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a>
-      <div className="contractor-header-actions"><a href="tel:+19049885028">904-988-5028</a><a className="button olive" href="#quote">Request a Quote</a></div>
+      <div className="contractor-header-actions"><a href="tel:+19049885026">904-988-5026</a><a className="button olive" href="#quote">Request a Quote</a></div>
     </header>
 
     <section className="yc-intro">
