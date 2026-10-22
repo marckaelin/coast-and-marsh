@@ -53,14 +53,14 @@ export default function SmokeShopPOC() {
         });
       }
     } catch (e) {
-      setMessages([...next,{from:'assistant',text:"I hit a temporary problem processing that. Please try again, or call Coast & Marsh at 904-988-5028."}]);
+      setMessages([...next,{from:'assistant',text:"I hit a temporary problem processing that. Please try again, or call Coast & Marsh at 904-988-5026."}]);
     } finally {
       setLoading(false);
     }
   }
 
   return <main className="smoke-page">
-    <header className="smoke-header"><a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a><a className="smoke-phone" href="tel:+19049885028">904-988-5028</a></header>
+    <header className="smoke-header"><a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a><a className="smoke-phone" href="tel:+19049885026">904-988-5026</a></header>
     <section className="smoke-hero">
       <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Insurance for shops selling <em>Delta-8, Delta-9, Kratom &amp; Hemp.</em></h1><p>Some products can make ordinary business insurance difficult to place. Coast &amp; Marsh helps regulated-market businesses organize the details specialty insurance markets need to evaluate more complex risks.</p><div className="specialty-callout"><strong>Selling Delta-8, Delta-9, Kratom, CBD or Hemp?</strong><span>Tell our Coverage Assistant what you sell. In about 60 seconds, we'll gather the information needed for a human coverage review.</span></div><div className="trust-row"><span>Specialty-market focus</span><span>No long application</span><span>Human review</span></div></div>
       <div className="chat-card">
@@ -68,11 +68,11 @@ export default function SmokeShopPOC() {
         <><div className="chat-top"><div className="assistant-badge">C&amp;M</div><div><strong>Coverage Assistant</strong><small>{stage==='meeting_ready'?'READY TO SCHEDULE':stage==='meeting'?'SCHEDULING REVIEW':'AI-GUIDED INTAKE'}</small></div></div>
         <div className="chat-messages">{messages.map((m,i)=><div key={i} className={'bubble '+m.from}>{m.text}</div>)}{loading&&<div className="bubble assistant thinking">Thinking…</div>}</div>
         {stage!=='meeting_ready'&&<div className="chat-input"><textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}} placeholder={stage==='meeting'?'Name, email, mobile and a good day/time...':'Type your answer in plain English...'} disabled={loading}/><button onClick={send} aria-label="Send" disabled={loading}>→</button></div>}
-        {stage==='meeting_ready'&&<div className="meeting-cta"><strong>Coverage review requested</strong><p>Your information and requested meeting time have been saved. Coast &amp; Marsh will follow up to confirm your 15-minute coverage review.</p><small>Need us sooner? Call <a href="tel:+19049885028">904-988-5028</a>.</small></div>}
+        {stage==='meeting_ready'&&<div className="meeting-cta"><strong>Coverage review requested</strong><p>Your information and requested meeting time have been saved. Coast &amp; Marsh will follow up to confirm your 15-minute coverage review.</p><small>Need us sooner? Call <a href="tel:+19049885026">904-988-5026</a>.</small></div>}
         <div className="progress"><span style={{width: stage==='meeting_ready'?'100%':stage==='meeting'?'82%':'48%'}}/></div></>}
       </div>
     </section>
-    <section className="smoke-direct"><div><p className="eyebrow">PREFER TO TALK DIRECTLY?</p><h2>Talk with Coast &amp; Marsh.</h2></div><div className="direct-links"><a href="tel:+19049885028"><small>CALL</small><strong>904-988-5028</strong></a><a href="mailto:marc@coastandmarshinsurance.com"><small>EMAIL</small><strong>marc@coastandmarshinsurance.com</strong></a></div></section>
+    <section className="smoke-direct"><div><p className="eyebrow">PREFER TO TALK DIRECTLY?</p><h2>Talk with Coast &amp; Marsh.</h2></div><div className="direct-links"><a href="tel:+19049885026"><small>CALL</small><strong>904-988-5026</strong></a><a href="mailto:marc@coastandmarshinsurance.com"><small>EMAIL</small><strong>marc@coastandmarshinsurance.com</strong></a></div></section>
     <section className="smoke-why"><p className="eyebrow">WHY COAST &amp; MARSH</p><h2>Complex products need a more focused insurance conversation.</h2><p>A tobacco retailer can look very different to an insurer than a business selling Delta-8, Delta-9, kratom, CBD, hemp-derived products, imported products or private-label brands. We focus the intake on those differences, organize the underwriting details, and have a human review every qualified submission.</p><div className="specialty-points"><span>Specialty-market access</span><span>Regulated-industry focus</span><span>Human review</span><span>Fast conversational intake</span></div></section>
     <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Preliminary assessment only. Coverage subject to carrier underwriting and eligibility.<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>

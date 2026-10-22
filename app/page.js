@@ -45,7 +45,7 @@ export default function Home() {
           <a href="#about">About</a>
         </nav>
         <div className="header-actions">
-          <div className="contact-mini"><a href="tel:+19049885028">904-988-5028</a><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></div>
+          <div className="contact-mini"><a href="tel:+19049885026">904-988-5026</a><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></div>
           <a className="button olive" href="#contact">Get in Touch</a>
         </div>
       </header>
@@ -127,7 +127,7 @@ export default function Home() {
 
       <section className="contact" id="contact">
         <div><p className="eyebrow light">LET&apos;S TALK</p><h2>Start with a conversation.</h2><p>Tell us what you are protecting or building. We will help determine the next useful step.</p></div>
-        <div className="contactinfo"><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a><a href="tel:+19049885028">904-988-5028</a></div>
+        <div className="contactinfo"><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a><a href="tel:+19049885026">904-988-5026</a></div>
       </section>
 
       <footer>

@@ -1,7 +1,7 @@
 export function SiteHeader({ cta = 'Get in Touch', ctaHref = 'mailto:marc.kaelin@coastandmarsh.com' }) {
   return <header className="smoke-header">
     <a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a>
-    <div className="contractor-header-actions"><a href="tel:+19049885028">904-988-5028</a><a className="button olive" href={ctaHref}>{cta}</a></div>
+    <div className="contractor-header-actions"><a href="tel:+19049885026">904-988-5026</a><a className="button olive" href={ctaHref}>{cta}</a></div>
   </header>;
 }
 
