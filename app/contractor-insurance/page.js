@@ -4,6 +4,8 @@ export const metadata = {
   alternates: { canonical: '/contractor-insurance' }
 };
 
+import QuoteForm from './QuoteForm';
+
 const trades = ['General Contractors','Building & Residential','Electrical','HVAC & Mechanical','Plumbing','Roofing','Painting','Flooring & Tile','Carpentry & Framing','Specialty Trades'];
 const coverages = [
   ['General Liability','Protection for third-party bodily injury, property damage and covered operations.'],
@@ -57,13 +59,8 @@ export default function ContractorInsurance() {
     </section>
 
     <section className="review-section" id="review">
-      <div><p className="eyebrow light">START WITH YOUR RENEWAL</p><h2>Have a renewal coming up?</h2><p>You do not need to complete a long application to start. Send us the basics and we&apos;ll determine the next useful step.</p></div>
-      <div className="review-card">
-        <h3>A useful first conversation</h3>
-        <ul><li>Your trade and the work you perform</li><li>Residential, commercial or both</li><li>Annual revenue and payroll</li><li>Employees and subcontractor use</li><li>Current carrier and approximate premium</li><li>Your renewal date</li></ul>
-        <a className="button olive" href="mailto:marc.kaelin@coastandmarsh.com?subject=Contractor%20Insurance%20Review">Request my insurance review <span>→</span></a>
-        <a className="review-phone" href="tel:+19049885026">Or call 904-988-5026</a>
-      </div>
+      <div><p className="eyebrow light">START WITH YOUR RENEWAL</p><h2>Have a renewal coming up?</h2><p>You do not need to complete a long application to start. Send us the basics and we&apos;ll determine the next useful step.</p><ul className="cq-list"><li>Your trade and the work you perform</li><li>Residential, commercial or both</li><li>Employees and subcontractor use</li><li>Current carrier and your renewal date</li></ul></div>
+      <QuoteForm />
     </section>
 
     <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
