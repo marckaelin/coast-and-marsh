@@ -2,6 +2,8 @@ import './globals.css';
 import Script from 'next/script';
 
 import JsonLd from './components/JsonLd';
+import LinkTracking from './components/LinkTracking';
+import { GA4_ID, ADS_ID } from './lib/analytics';
 import { SITE } from './lib/site';
 
 export const metadata = {
@@ -46,12 +48,13 @@ const orgSchema = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body><JsonLd data={orgSchema} />{children}</body>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-18468447688" strategy="afterInteractive" />
-      <Script id="google-ads-tag" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
+      <body><JsonLd data={orgSchema} />{children}<LinkTracking /></body>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
+      <Script id="google-tag" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'AW-18468447688');`}</Script>
+gtag('config', '${GA4_ID}');
+gtag('config', '${ADS_ID}');`}</Script>
     </html>
   );
 }

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { trackLead } from '../lib/analytics';
 
 // The request is saved by the outbound project, which holds the database credentials.
 // Keep these choices in sync with app/api/leads/contractor/route.ts in the nextjs-boilerplate repo.
@@ -27,7 +28,7 @@ export default function QuoteForm() {
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'Something went wrong. Please try again.');
       setState('done');
-      if (typeof window !== 'undefined' && window.gtag) window.gtag('event', 'generate_lead', { form: 'contractor_quote' });
+      trackLead('contractor_quote', { trade: form.trade, coverages: form.coverages.join(', ') });
     } catch (x) { setErr(x instanceof Error ? x.message : 'Something went wrong.'); setState('error'); }
   }
 

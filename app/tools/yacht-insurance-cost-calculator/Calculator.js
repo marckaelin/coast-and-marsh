@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState } from 'react';
 import { OPTIONS, estimate } from './model';
+import { trackLead } from '../../lib/analytics';
 
 // The quote request is saved by the outbound project, which holds the database credentials.
 const LEAD_ENDPOINT = 'https://www.coastandmarshinsurance.com/api/leads/yacht';
@@ -37,6 +38,7 @@ export default function Calculator() {
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || 'Something went wrong. Please try again.');
       setState('done');
+      trackLead('yacht_quote');
     } catch (x) { setErr(x instanceof Error ? x.message : 'Something went wrong.'); setState('error'); }
   }
 
