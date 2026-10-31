@@ -5,6 +5,7 @@ export const metadata = {
 };
 
 import QuoteForm from './QuoteForm';
+import { TRADES as TRADE_PAGES } from '../lib/trades';
 
 const trades = ['General Contractors','Building & Residential','Electrical','HVAC & Mechanical','Plumbing','Roofing','Painting','Flooring & Tile','Carpentry & Framing','Specialty Trades'];
 const coverages = [
@@ -45,6 +46,7 @@ export default function ContractorInsurance() {
       <h2>Built around the work you actually do.</h2>
       <p className="section-lead">A roofer, electrician, plumber and commercial general contractor can have very different exposures. We organize the submission around your actual operations instead of treating “contractor” as one class.</p>
       <div className="trade-grid">{trades.map((trade,i)=><div key={trade}><b>{String(i+1).padStart(2,'0')}</b><span>{trade}</span></div>)}</div>
+      <p className="section-lead" style={{marginTop:28}}>Trade guides: {TRADE_PAGES.map((t,i)=><span key={t.slug}>{i>0&&' · '}<a href={`/contractor-insurance/${t.slug}`}>{t.title.replace(' in Florida','')}</a></span>)} · <a href="/guides/florida-contractor-license-insurance-requirements">License insurance requirements</a></p>
     </section>
 
     <section className="contractor-market">

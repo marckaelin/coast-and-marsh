@@ -14,6 +14,8 @@ export const PAGES = [
   { path: '/smoke-shop-insurance', priority: 0.7 },
   { path: '/guides/how-much-does-boat-insurance-cost-in-florida', priority: 0.7 },
   { path: '/guides/florida-contractor-insurance-cost', priority: 0.7 },
+  { path: '/guides/florida-contractor-license-insurance-requirements', priority: 0.7 },
+  ...['electrical', 'roofing', 'hvac', 'plumbing', 'general-contractors', 'new-contractors'].map((t) => ({ path: `/contractor-insurance/${t}`, priority: 0.8 })),
   { path: '/privacy', priority: 0.2 },
   { path: '/terms', priority: 0.2 }
 ];
