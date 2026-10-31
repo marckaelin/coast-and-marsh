@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { trackLead } from '../lib/analytics';
 
 const initialMessages = [
   {from:'assistant',text:"Hi — I'm the Coast & Marsh Coverage Assistant. I'll ask a few questions about your business and the products you sell so we can determine which insurance markets may be worth exploring. This is a preliminary assessment, not a quote or coverage determination."},
@@ -46,6 +47,7 @@ export default function SmokeShopPOC() {
       setSummary(data.summary || {});
       setAssessment(data.assessment || '');
       if(data.stage === 'meeting_ready' && stage !== 'meeting_ready' && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        trackLead('smoke_shop_review');
         window.gtag('event', 'conversion', {
           send_to: 'AW-18468447688/WltECImM2oEdEMjLuOZE',
           value: 1.0,
