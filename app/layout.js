@@ -23,6 +23,11 @@ export const metadata = {
     locale: 'en_US'
   },
   twitter: { card: 'summary_large_image', title: 'Coast & Marsh Insurance Advisory', description: 'Florida boat, contractor and specialty-industry insurance advisory.' },
+  // Search Console / Bing Webmaster HTML-tag verification. Set the tokens in Vercel env vars; unset = no tag.
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : {}),
+    ...(process.env.BING_SITE_VERIFICATION ? { other: { 'msvalidate.01': process.env.BING_SITE_VERIFICATION } } : {})
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } }
 };
 
@@ -33,7 +38,7 @@ const orgSchema = {
   name: SITE.name,
   legalName: 'Coast and Marsh Insurance LLC',
   identifier: [
-    { '@type': 'PropertyValue', name: 'Florida insurance agency license', value: 'G330108' },
+    { '@type': 'PropertyValue', name: 'Florida insurance agent license', value: 'G330108' },
     { '@type': 'PropertyValue', name: 'National Producer Number (NPN)', value: '22179499' }
   ],
   address: { '@type': 'PostalAddress', addressLocality: 'Ponte Vedra Beach', addressRegion: 'FL', postalCode: '32082', addressCountry: 'US' },
@@ -42,7 +47,7 @@ const orgSchema = {
   email: SITE.email,
   areaServed: { '@type': 'State', name: 'Florida' },
   description: 'Insurance advisory for Florida boat and yacht owners, contractors and regulated businesses.',
-  knowsAbout: ['Boat insurance', 'Yacht insurance', 'Contractor insurance', 'Smoke shop and hemp insurance']
+  knowsAbout: ['Boat insurance', 'Yacht insurance', 'Contractor insurance', 'General liability insurance', 'Workers compensation insurance', 'Smoke shop and hemp insurance']
 };
 
 export default function RootLayout({ children }) {

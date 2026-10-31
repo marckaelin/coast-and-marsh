@@ -12,8 +12,8 @@ const COVERAGES = ['General Liability', "Workers' Comp", 'Commercial Auto', 'Too
 const CONSENT = 'I agree that Coast & Marsh Insurance Advisory may contact me by email and phone about this request. I understand this form does not bind coverage.';
 const TEXT_CONSENT = 'Optional: Coast & Marsh may also text me at the number above about this request. Message and data rates may apply. Reply STOP to opt out. Consent is not required to get a quote.';
 
-export default function QuoteForm() {
-  const [form, setForm] = useState({ trade: '', work: '', employees: '', county: '', coverages: [], carrier: '', renewal: '', business: '', name: '', email: '', phone: '', message: '', consent: false, textConsent: false, website: '' });
+export default function QuoteForm({ defaultTrade = '' }) {
+  const [form, setForm] = useState({ trade: TRADES.includes(defaultTrade) ? defaultTrade : '', work: '', employees: '', county: '', coverages: [], carrier: '', renewal: '', business: '', name: '', email: '', phone: '', message: '', consent: false, textConsent: false, website: '' });
   const [state, setState] = useState('idle');
   const [err, setErr] = useState('');
   const [opened] = useState(() => Date.now());
