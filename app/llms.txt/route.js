@@ -1,0 +1,45 @@
+// /llms.txt: a plain-text summary of the site for AI assistants (llmstxt.org format).
+import { SITE } from '../lib/site';
+import { TRADES } from '../lib/trades';
+import { AGENCY_FAQS } from '../lib/faqs';
+
+export const dynamic = 'force-static';
+
+const u = (p) => `${SITE.url}${p}`;
+
+function body() {
+  return `# ${SITE.name}
+
+> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL, serving all of Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also places boat and yacht insurance and reviews smoke shop, CBD and hemp business insurance. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
+
+## Contractor insurance
+
+- [Florida contractor insurance](${u('/contractor-insurance')}): overview, coverages and a quote request form
+${TRADES.map((t) => `- [${t.title}](${u(`/contractor-insurance/${t.slug}`)}): ${t.description}`).join('\n')}
+- [Florida contractor license insurance requirements](${u('/guides/florida-contractor-license-insurance-requirements')}): CILB and electrical license liability minimums by trade, and the workers' comp rule
+- [What affects contractor insurance cost in Florida](${u('/guides/florida-contractor-insurance-cost')})
+
+## Boat and yacht insurance
+
+- [Florida boat and yacht insurance](${u('/boat-insurance')})
+- [Yacht insurance cost estimator](${u('/tools/yacht-insurance-cost-calculator')})
+- [How much boat insurance costs in Florida](${u('/guides/how-much-does-boat-insurance-cost-in-florida')})
+
+## Specialty businesses
+
+- [Smoke shop, vape and hemp insurance review](${u('/smoke-shop-insurance')})
+
+## About
+
+- [About Coast & Marsh](${u('/about')})
+- [Frequently asked questions](${u('/faq')})
+
+## Quick answers
+
+${AGENCY_FAQS.map(([q, a]) => `### ${q}\n\n${a}`).join('\n\n')}
+`;
+}
+
+export function GET() {
+  return new Response(body(), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+}

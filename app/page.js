@@ -17,7 +17,7 @@ const services = [
     title: 'Cannabis & Hemp',
     text: 'Specialized insurance for a dynamic, highly regulated industry backed by real expertise.',
     className: 'cannabis-card',
-    href: '#commercial'
+    href: '/smoke-shop-insurance'
   }
 ];
 
@@ -42,7 +42,7 @@ export default function Home() {
           <a href="#commercial">Specialty Industries</a>
           <a href="/tools/yacht-insurance-cost-calculator">Cost Estimator</a>
           <a href="#approach">Our Approach</a>
-          <a href="#about">About</a>
+          <a href="/about">About</a>
         </nav>
         <div className="header-actions">
           <div className="contact-mini"><a href="tel:+19049885026">904-988-5026</a><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></div>
@@ -120,6 +120,14 @@ export default function Home() {
         </details>
       </section>
 
+      <section className="seo-prose" aria-labelledby="at-a-glance" style={{ paddingTop: 56 }}>
+        <p className="eyebrow">AT A GLANCE</p>
+        <h2 id="at-a-glance" style={{ marginTop: 6 }}>An independent Florida insurance agency</h2>
+        <p>Coast &amp; Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach that works with clients across Florida. Most of our commercial work is contractor insurance: general liability, workers’ compensation, commercial auto, umbrella and builders risk for electricians, roofers, HVAC and plumbing contractors, general contractors and specialty trades. We shop standard carriers and specialty surplus lines markets, so new contracting businesses, contractors moving into Florida and hard-to-place risks have options.</p>
+        <p>We also place boat and yacht insurance and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
+        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
+      </section>
+
       <section className="closing" id="about">
         <div><p>Informed Risk Decisions for a Brighter Tomorrow</p><span>PERSONAL&nbsp;&nbsp; | &nbsp;&nbsp;COMMERCIAL&nbsp;&nbsp; | &nbsp;&nbsp;SPECIALTY INDUSTRIES</span></div>
         <a className="button closing-button" href="#contact">Get in Touch&nbsp; →</a>
@@ -133,7 +141,7 @@ export default function Home() {
       <footer>
         <div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div>
         <div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div>
-        <div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+        <div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
       </footer>
     </main>
   );
