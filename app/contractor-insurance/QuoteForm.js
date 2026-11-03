@@ -68,5 +68,6 @@ export default function QuoteForm({ defaultTrade = '' }) {
       <div className="yc-full"><button className="button olive yc-submit" disabled={state === 'sending'}>{state === 'sending' ? 'Sending…' : 'Request my insurance review →'}</button></div>
     </div>
     <a className="review-phone" href="tel:+19049885026">Or call 904-988-5026</a>
+    <p style={{ display: 'block', fontSize: 14, lineHeight: 1.5, margin: '12px 0 0', textAlign: 'center' }}>Prefer email? Send your details, current declarations page or contract requirements to <a href="mailto:marc.kaelin@coastandmarsh.com?subject=Contractor%20insurance%20quote">marc.kaelin@coastandmarsh.com</a>.</p>
   </form>;
 }
