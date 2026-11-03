@@ -11,6 +11,9 @@ const AUTO_CTA = { short: 'Text for a quote', label: 'Text QUOTE to 904-988-5026
 const PEST_NOTE = 'General information only, not legal advice, a quote or a coverage determination. License insurance minimums reflect section 482.071, Florida Statutes, as of November 2026; confirm current requirements with FDACS. Eligibility, pricing and terms are set by the insurer.';
 const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance shopped?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
 
+const LOCAL_NOTE = 'General information only, not a quote or coverage determination. Coverage needs depend on your business, lease and contracts. Eligibility, pricing and terms are set by the insurer.';
+const LOCAL_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your business insurance reviewed?', text: 'Call or text 904-988-5026, or email your current declarations page or lease insurance section to marc.kaelin@coastandmarsh.com.' };
+
 export const GUIDES = {
   // ---------- Hemp, CBD and smoke shops ----------
   hempStore: {
@@ -317,7 +320,88 @@ export const GUIDES = {
     related: ['pestControl', 'termiteWdo'],
     cta: PEST_CTA,
     note: PEST_NOTE
-  }
+  },
+  // ---------- Local and new business ----------
+  localBusiness: {
+    kind: 'service',
+    group: 'local',
+    serviceType: 'Business insurance',
+    path: '/business-insurance-ponte-vedra-beach-st-johns-county',
+    eyebrow: 'PONTE VEDRA BEACH & ST. JOHNS COUNTY',
+    title: 'Business Insurance in Ponte Vedra Beach and St. Johns County',
+    metaTitle: 'Business Insurance Agent in Ponte Vedra Beach & St. Johns County',
+    description: 'Independent business insurance agent in Ponte Vedra Beach, FL serving St. Johns County and Northeast Florida: general liability, business owner’s policies, workers’ comp, commercial auto and specialty coverage, with standard and surplus lines markets.',
+    lead: 'Coast & Marsh is an independent insurance agency based in Ponte Vedra Beach. We work with businesses across St. Johns County, including Ponte Vedra, Nocatee, St. Johns, St. Augustine and the Jacksonville Beaches, and with clients across Florida.',
+    sections: [
+      { h: 'Who we work with', grid: [
+        ['Contractors and trades', 'General, residential and specialty contractors, from new LLCs to established crews. See Florida contractor insurance.'],
+        ['Auto repair and service businesses', 'Repair, tire and body shops that need garage liability and garagekeepers coverage for customer cars.'],
+        ['Pest control, lawn and specialty services', 'Pest, termite and lawn and ornamental companies that need pesticide and errors and omissions coverage.'],
+        ['Retail, offices and new businesses', 'Shops, offices and startups signing their first lease, plus hemp and CBD retailers that need specialty markets.']
+      ] },
+      { h: 'How we compare options', list: [
+        'We start with what you do, your lease or contracts, and what your current policy actually covers',
+        'We shop standard carriers and, when a risk needs it, specialty surplus lines markets through wholesale partners',
+        'We show you the differences in coverage, not just the price, before you decide',
+        'Once you bind, we issue certificates and handle additional insured requests for landlords and customers'
+      ] },
+      { h: 'Coverage local businesses ask about most', list: [
+        'General liability and business owner’s policies (BOPs), including the limits a landlord requires',
+        'Workers’ compensation: required for most Florida businesses with four or more employees, and for construction businesses with one',
+        'Commercial auto, or hired and non-owned auto when employees drive their own cars for work',
+        'Property, equipment and business income, with Florida wind and flood in mind',
+        'Umbrella, professional liability and cyber where contracts call for them'
+      ] }
+    ],
+    faqs: [
+      ['Is there an independent business insurance agent in Ponte Vedra Beach?', 'Yes. Coast & Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach, FL, run by licensed agent Marc Kaelin (Florida license G330108). It serves St. Johns County, Northeast Florida and clients statewide.'],
+      ['Do you meet in person?', 'Most quotes are handled by phone and email, which is faster for most owners. For businesses in St. Johns County and the Jacksonville area, an in-person meeting can be arranged.'],
+      ['What areas do you serve?', 'Ponte Vedra Beach, Nocatee, St. Johns, St. Augustine, the Jacksonville Beaches and the rest of St. Johns and Duval counties, plus businesses anywhere in Florida.'],
+      ['What should I send to get a quote?', 'Your current declarations page if you have one, what your business does, your annual sales, number of employees, vehicles, and the insurance section of your lease or any contract that sets requirements.']
+    ],
+    related: ['newBusiness', 'contractorHub', 'autoRepair', 'pestControl', 'hempStore'],
+    cta: LOCAL_CTA,
+    note: LOCAL_NOTE
+  },
+  newBusiness: {
+    kind: 'article',
+    group: 'local',
+    date: '2026-11-03',
+    parent: 'localBusiness',
+    path: '/guides/what-insurance-does-a-new-business-need-florida',
+    eyebrow: 'NEW BUSINESS INSURANCE',
+    title: 'What Insurance Does a New Business Need in Florida?',
+    description: 'A plain guide for new Florida and St. Johns County businesses: which insurance you need based on leased space, employees, vehicles, equipment and contracts, and what to have ready for a quote.',
+    lead: 'There is no single starter package. What a new Florida business needs depends on five things: where you work, who works for you, what you drive, what you own, and what your lease and contracts require. Work through them in order.',
+    sections: [
+      { h: '1. Where you work', grid: [
+        ['Leased space', 'Most commercial leases require general liability, often $1,000,000 per occurrence, with the landlord as additional insured. Many also require property coverage for your improvements. Read the insurance section before you sign.'],
+        ['Home-based', 'A homeowners policy usually excludes business activity. Customers visiting, inventory at home or business equipment generally need their own coverage.'],
+        ['Customers’ sites', 'If you work at customers’ homes or job sites, general liability is the core of your program. Contractors also need it for their license.']
+      ] },
+      { h: '2. Who works for you', p: ['In Florida, most businesses must carry workers’ compensation once they have four or more employees, full- or part-time. Construction businesses need it with just one employee. Corporate officers can usually elect an exemption for themselves; employees can’t be exempted. Independent contractors who are really employees are a common audit surprise.'] },
+      { h: '3. What you drive', p: ['Vehicles titled to the business need commercial auto. If you or employees use personal cars for business errands, hired and non-owned auto coverage fills a gap a personal auto policy may not cover.'] },
+      { h: '4. What you own', p: ['Equipment, tools, inventory and improvements to leased space need property or inland marine coverage. In Northeast Florida, check how wind and named storms are covered, and whether you need separate flood insurance.'] },
+      { h: '5. What your contracts require', list: [
+        'Specific liability limits and additional insured wording',
+        'Waiver of subrogation or primary and non-contributory language',
+        'Professional liability (errors and omissions) for advice or design work',
+        'Cyber liability if you store customer payment or personal data'
+      ] },
+      { h: 'A common starting point', p: ['Many small new businesses start with a business owner’s policy (BOP), which combines general liability and property, then add workers’ comp, commercial auto or professional liability as they hire, buy vehicles or sign contracts. Higher-risk trades and specialty products often need a separate general liability policy from a specialty market instead.'] }
+    ],
+    faqs: [
+      ['What insurance is legally required for a new business in Florida?', 'Workers’ compensation once you have four or more employees (one in construction), auto liability on business vehicles, and any insurance your professional or contractor license requires. Leases and contracts add requirements of their own.'],
+      ['Can a brand-new business with no history get insurance?', 'Yes. Most small business policies don’t require a track record. Some higher-risk trades are harder, and specialty markets fill that gap.'],
+      ['When should I buy insurance for a new business?', 'Before you sign a lease, start a job, hire or open to customers. Landlords and customers usually want a certificate of insurance before you start.'],
+      ['Do you help new businesses in St. Johns County?', 'Yes. Coast & Marsh is based in Ponte Vedra Beach and works with new businesses in St. Johns County and across Florida.']
+    ],
+    related: ['localBusiness', 'newContractors', 'contractorHub'],
+    cta: { ...LOCAL_CTA, title: 'Starting a business?', text: 'Call or text 904-988-5026 with what you do, your lease and your start date.' },
+    note: LOCAL_NOTE
+  },
+  contractorHub: { path: '/contractor-insurance', title: 'Florida contractor insurance' },
+  newContractors: { path: '/contractor-insurance/new-contractors', title: 'Insurance for new Florida contractors and startups' },
 };
 
 export const GUIDE_PAGES = Object.values(GUIDES).filter((g) => g.kind);

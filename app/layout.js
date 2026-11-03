@@ -52,7 +52,7 @@ const orgSchema = {
       telephone: SITE.phone,
       email: SITE.email,
       contactPoint: { '@type': 'ContactPoint', telephone: SITE.phone, email: SITE.email, contactType: 'sales', areaServed: 'US-FL', availableLanguage: 'English' },
-      areaServed: { '@type': 'State', name: 'Florida' },
+      areaServed: [{ '@type': 'State', name: 'Florida' }, { '@type': 'AdministrativeArea', name: 'St. Johns County, Florida' }, { '@type': 'City', name: 'Ponte Vedra Beach' }, { '@type': 'City', name: 'Jacksonville' }, { '@type': 'City', name: 'St. Augustine' }],
       founder: { '@id': `${SITE.url}/#marc-kaelin` },
       employee: { '@id': `${SITE.url}/#marc-kaelin` },
       description: 'Independent Florida insurance agency in Ponte Vedra Beach. Places contractor insurance (general liability, workers compensation, commercial auto, umbrella, tools, builders risk) through standard and surplus lines markets, including for startups, out-of-state contractors working in Florida and hard-to-place trades. Also boat and yacht insurance and smoke shop and hemp business insurance.',
@@ -61,6 +61,7 @@ const orgSchema = {
         '@type': 'OfferCatalog',
         name: 'Insurance placed by Coast & Marsh',
         itemListElement: [
+          ['Business insurance in Ponte Vedra Beach and St. Johns County', '/business-insurance-ponte-vedra-beach-st-johns-county'],
           ['Florida contractor insurance', '/contractor-insurance'],
           ['Insurance for new Florida contractors and startups', '/contractor-insurance/new-contractors'],
           ['Florida boat and yacht insurance', '/boat-insurance'],
