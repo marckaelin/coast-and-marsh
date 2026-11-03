@@ -5,6 +5,8 @@ export const metadata = {
 };
 
 import QuoteForm from './QuoteForm';
+import JsonLd from '../components/JsonLd';
+import { SITE } from '../lib/site';
 import { TRADES as TRADE_PAGES } from '../lib/trades';
 
 const trades = ['General Contractors','Building & Residential','Electrical','HVAC & Mechanical','Plumbing','Roofing','Painting','Flooring & Tile','Carpentry & Framing','Specialty Trades'];
@@ -17,8 +19,26 @@ const coverages = [
   ['Builders Risk','Property coverage options for eligible buildings and projects while construction is underway.']
 ];
 
+const faqs = [
+  ['Can a new contracting business get general liability insurance in Florida?', 'Yes. Some insurers won’t quote a business with no history, but others will, especially with a clear description of your experience in the trade and the work you plan to do. Coast & Marsh quotes startups, newly licensed contractors and new LLCs.'],
+  ['I’m a contractor from another state. Can I get Florida coverage?', 'Yes. We quote Florida general liability for contractors expanding into the state and help work out how Florida workers’ compensation applies to your crew.'],
+  ['What liability limits do Florida contractors need?', 'The license minimums are set by the Construction Industry Licensing Board, but most contracts ask for $1,000,000 per occurrence and $2,000,000 aggregate, often with additional insured status and a waiver of subrogation.'],
+  ['Do I need workers’ comp?', 'In Florida, a construction business with one or more employees generally must carry workers’ compensation. Up to three corporate officers or LLC members who each own at least 10% may apply for an exemption. Employees can’t be exempted.'],
+  ['My trade is hard to insure. Can you still help?', 'Often, yes. Roofing, high-hazard work and contractors with past claims are commonly placed with specialty surplus lines carriers, which we can reach through wholesale partners.'],
+  ['Where in Florida do you work?', 'Statewide. The office is in Ponte Vedra Beach and quotes are handled by phone and email.']
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Service', name: 'Florida contractor insurance', serviceType: 'Contractor insurance', url: `${SITE.url}/contractor-insurance`, provider: { '@id': `${SITE.url}/#agency` }, areaServed: { '@type': 'State', name: 'Florida' }, description: metadata.description },
+    { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }
+  ]
+};
+
 export default function ContractorInsurance() {
   return <main className="contractor-page">
+    <JsonLd data={schema} />
     <header className="smoke-header">
       <a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a>
       <div className="contractor-header-actions"><a href="tel:+19049885026">904-988-5026</a><a className="button olive" href="#review">Request a Review</a></div>
@@ -60,11 +80,17 @@ export default function ContractorInsurance() {
       <p className="coverage-note">Coverage needs, availability and eligibility vary by contractor, operations, project mix and carrier. This page is general information, not a quote or coverage determination.</p>
     </section>
 
+    <section className="seo-prose" style={{ paddingTop: 40 }}>
+      <h2>Common questions from Florida contractors</h2>
+      <div className="seo-faq">{faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
+      <p>More answers on the <a href="/faq">FAQ page</a> and in the <a href="/guides/florida-contractor-license-insurance-requirements">license insurance requirements guide</a>.</p>
+    </section>
+
     <section className="review-section" id="review">
       <div><p className="eyebrow light">START WITH YOUR RENEWAL</p><h2>Have a renewal coming up?</h2><p>You do not need to complete a long application to start. Send us the basics and we&apos;ll determine the next useful step.</p><ul className="cq-list"><li>Your trade and the work you perform</li><li>Residential, commercial or both</li><li>Employees and subcontractor use</li><li>Current carrier and your renewal date</li></ul></div>
       <QuoteForm />
     </section>
 
-    <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
+    <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL</small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>
 }
