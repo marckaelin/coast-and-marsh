@@ -8,6 +8,9 @@ const AUTO_NOTE = 'General information only, not a quote or coverage determinati
 const HEMP_CTA = { short: 'Get a review', label: 'Start a hemp shop review', href: '/smoke-shop-insurance', title: 'Want your policy checked before December 11?', text: 'Start the online review, or call or text 904-988-5026 with your renewal date.' };
 const AUTO_CTA = { short: 'Text for a quote', label: 'Text QUOTE to 904-988-5026', href: 'sms:+19049885026?body=QUOTE', title: 'Want your shop insurance shopped?', text: 'Text QUOTE to 904-988-5026 and answer six quick questions. No forms.' };
 
+const PEST_NOTE = 'General information only, not legal advice, a quote or a coverage determination. License insurance minimums reflect section 482.071, Florida Statutes, as of November 2026; confirm current requirements with FDACS. Eligibility, pricing and terms are set by the insurer.';
+const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance shopped?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
+
 export const GUIDES = {
   // ---------- Hemp, CBD and smoke shops ----------
   hempStore: {
@@ -210,6 +213,110 @@ export const GUIDES = {
     related: ['autoRepair', 'garagekeepers'],
     cta: AUTO_CTA,
     note: AUTO_NOTE
+  },
+  // ---------- Pest control and termite ----------
+  pestControl: {
+    kind: 'service',
+    group: 'pest',
+    serviceType: 'Pest control insurance',
+    path: '/pest-control-insurance',
+    eyebrow: 'PEST CONTROL INSURANCE',
+    title: 'Pest Control and Termite Company Insurance in Florida',
+    description: 'Insurance for Florida pest control, termite and lawn and ornamental companies: general liability with pesticide coverage, termite and WDO errors and omissions, pollution, commercial auto, workers’ comp and the FDACS license insurance minimum.',
+    lead: 'A standard general liability policy usually excludes the things a pest control company actually does: applying pesticides, and promising that a house is free of termites. Florida pest and termite companies need a program written for the trade.',
+    sections: [
+      { h: 'Florida license insurance requirement', p: ['Under section 482.071 of the Florida Statutes, a pest control business can’t operate without insurance. The minimum is $250,000 per person and $500,000 per occurrence for bodily injury, plus $250,000 per occurrence and $500,000 aggregate for property damage, or a $500,000 combined single limit. Each business location is licensed separately by FDACS, and a certificate of insurance is due with every application and annual renewal.'] },
+      { h: 'Coverage pest control companies usually need', grid: [
+        ['General liability with pesticide coverage', 'Injury or damage from your work, including pesticide and herbicide applications. Many standard policies exclude pesticides, so confirm it is covered.'],
+        ['Termite and WDO errors and omissions', 'Claims that you missed termites or damage, or that a treatment or termite bond didn’t work. This is usually the biggest exposure for termite companies.'],
+        ['Pollution liability', 'Drift, spills and contamination from the chemicals you store and apply, which general liability often excludes.'],
+        ['Commercial auto, workers’ comp and equipment', 'Service trucks with chemical tanks, technicians in attics and crawlspaces, and rigs, sprayers and fumigation equipment.']
+      ] },
+      { h: 'What insurers ask', list: [
+        'Your mix of work: general household pest, termite (subterranean and drywood), fumigation, WDO inspections for real estate, lawn and ornamental, mosquito, commercial accounts',
+        'Annual sales by type of work, number of technicians and service vehicles',
+        'Your FDACS license and certified operator, years in business and claims history',
+        'Termite bonds or warranties you offer, and how you document inspections and treatments'
+      ], p: ['Fumigation and real estate WDO inspections change the price the most, so mention them up front.'] }
+    ],
+    faqs: [
+      ['How much insurance does a Florida pest control license require?', 'Section 482.071 requires bodily injury coverage of $250,000 per person and $500,000 per occurrence plus property damage of $250,000 per occurrence and $500,000 aggregate, or a $500,000 combined single limit. Many commercial customers ask for $1,000,000 per occurrence.'],
+      ['Does general liability cover termite claims?', 'Usually not by itself. Claims that you missed termites, or that a treatment failed, are typically excluded from general liability and need termite or WDO errors and omissions coverage.'],
+      ['Can a new pest control company get insurance?', 'Yes. Specialty pest control programs write startups, especially when the certified operator has experience. Expect questions about the work mix and whether you will do termite work in year one.'],
+      ['Do you work with pest control companies across Florida?', 'Yes. Coast & Marsh is an independent agency in Ponte Vedra Beach with access to specialty pest control insurance programs and serves companies statewide.']
+    ],
+    related: ['termiteWdo', 'pestPollution'],
+    cta: PEST_CTA,
+    note: PEST_NOTE
+  },
+  termiteWdo: {
+    kind: 'article',
+    group: 'pest',
+    date: '2026-11-03',
+    parent: 'pestControl',
+    path: '/guides/termite-wdo-errors-and-omissions-insurance',
+    eyebrow: 'PEST CONTROL INSURANCE',
+    title: 'Termite and WDO Inspection Errors and Omissions Insurance',
+    description: 'How errors and omissions insurance works for Florida termite companies and wood-destroying organism (WDO) inspectors: real estate inspection claims, treatment failures, termite bonds and how to reduce claims.',
+    lead: 'Termite claims rarely come from something you did on the job site. They come from something you missed, or a treatment that didn’t hold. That is professional liability, and in Florida it is the biggest risk a termite company carries.',
+    sections: [
+      { h: 'Where termite claims come from', grid: [
+        ['Real estate WDO inspections', 'A buyer closes on a house with a clean WDO report, then finds termite damage behind the drywall and sues the inspector.'],
+        ['Treatment failures', 'Termites return after a treatment, and the homeowner claims the damage you should have prevented.'],
+        ['Termite bonds and warranties', 'A repair bond or retreatment warranty is a promise. Claims under it can exceed what you charged for years of renewals.'],
+        ['Fumigation', 'Tent fumigation brings its own risks: re-entry injuries, damaged roofs and plants, and theft during the tent period.']
+      ] },
+      { h: 'What termite E&O covers', p: ['Errors and omissions (professional liability) covers claims that your inspection, report or treatment was wrong or incomplete, including defense costs. General liability normally excludes these claims. Some policies cover inspections but not treatment failures, or exclude damage covered by a repair bond, so read the wording.'] },
+      { h: 'How to reduce termite claims', list: [
+        'Use the current FDACS wood-destroying organisms inspection report form and note every area you couldn’t access',
+        'Photograph conditions at each inspection and treatment, and keep the records for years',
+        'Put the limits of a bond or warranty in writing, and know whether it is retreatment-only or includes repairs',
+        'Keep annual re-inspection records for every active bond'
+      ] }
+    ],
+    faqs: [
+      ['Do WDO inspectors in Florida need errors and omissions insurance?', 'State law sets general liability minimums for pest control licensees, and E&O is not part of that minimum. Most termite companies and inspectors carry it anyway, because missed-damage claims after a home sale are common and general liability usually excludes them.'],
+      ['Does termite E&O cover a repair bond?', 'It depends on the policy. Some cover retreatment and repair claims under your contracts, and some exclude damage you promised to repair. Ask before you sell repair bonds.'],
+      ['Is fumigation covered under a normal pest control policy?', 'Not always. Fumigation is often rated or endorsed separately. Tell your agent if you tent houses yourself or subcontract it.']
+    ],
+    related: ['pestControl', 'pestPollution'],
+    cta: PEST_CTA,
+    note: PEST_NOTE
+  },
+  pestPollution: {
+    kind: 'article',
+    group: 'pest',
+    date: '2026-11-03',
+    parent: 'pestControl',
+    path: '/guides/pesticide-pollution-liability-insurance',
+    eyebrow: 'PEST CONTROL INSURANCE',
+    title: 'Pesticide and Pollution Liability for Pest Control Companies',
+    description: 'Why Florida pest control and lawn care companies need pesticide and pollution liability: drift, spills, misapplication, the pollution exclusion in general liability, and vehicle spills.',
+    lead: 'Most general liability policies have a pollution exclusion, and to an insurer a pesticide can be a pollutant. If your policy wasn’t written for pest control, a drift or spill claim may not be covered at all.',
+    sections: [
+      { h: 'Claims that start with a chemical', list: [
+        'Drift onto a neighbor’s garden, pool, fish pond or bees',
+        'A customer or pet reacting to a treatment',
+        'Misapplication: the wrong product, rate or location',
+        'A spill from a service truck or at your shop that reaches soil or a storm drain',
+        'Damage to lawns and ornamentals from herbicides'
+      ] },
+      { h: 'How coverage is usually built', grid: [
+        ['Pesticide or herbicide applicator coverage', 'An endorsement or program form that puts back coverage for your applications, which a standard pollution exclusion takes away.'],
+        ['Contractor’s pollution liability', 'Broader coverage for pollution from your operations at customers’ sites, including clean-up costs.'],
+        ['Auto pollution', 'Spills from vehicles in transit are often excluded from both the auto policy and general liability unless added back.'],
+        ['Premises pollution', 'Your shop or chemical storage area, if you keep bulk product on site.']
+      ] },
+      { h: 'Records that help after a claim', p: ['Keep application records: product, rate, location, weather and the technician’s license number. Florida already requires many of these records, and they are often the best defense against a drift or misapplication claim.'] }
+    ],
+    faqs: [
+      ['Does my general liability cover pesticide drift?', 'Only if the policy was written for pest control or has a pesticide or herbicide applicator endorsement. Standard policies often exclude it under the pollution exclusion.'],
+      ['Do lawn care companies need pollution coverage?', 'If you apply fertilizer with pesticides or herbicides, yes. Lawn and ornamental work has the same drift and misapplication risks.'],
+      ['Is a chemical spill from my truck covered?', 'Often not, unless your auto or pollution policy specifically covers pollution in transit. Ask your agent to confirm.']
+    ],
+    related: ['pestControl', 'termiteWdo'],
+    cta: PEST_CTA,
+    note: PEST_NOTE
   }
 };
 
