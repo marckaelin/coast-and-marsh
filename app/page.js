@@ -111,12 +111,16 @@ export default function Home() {
             <p>We understand that a cannabis or hemp submission is more than a business name and revenue number. Product mix, cannabinoids, manufacturing, distribution, property, inventory and regulatory structure can materially change what coverage is available.</p>
             <div className="coverage"><span>General Liability</span><span>Property</span><span>Product Liability</span><span>Workers&apos; Compensation</span><span>Commercial Auto</span><span>Excess / Umbrella</span></div>
             <p className="small">We work with specialty-market partners and help clients prepare the underwriting information needed to pursue appropriate coverage. Coverage availability and eligibility vary by risk and carrier.</p>
-            <p className="small"><a href="/smoke-shop-insurance" style={{color:'inherit'}}>Start a smoke shop or hemp insurance review →</a></p>
+            <p className="small"><a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>Hemp and CBD store insurance →</a> · <a href="/guides/hemp-shop-insurance-after-december-11" style={{color:'inherit'}}>What to check before December 11 →</a> · <a href="/smoke-shop-insurance" style={{color:'inherit'}}>Start a review →</a></p>
           </div>
         </details>
         <details>
-          <summary><span>Additional Regulated Industries</span><b>03</b></summary>
-          <div className="detailbody"><p>Our regulated-market practice is designed to expand as we develop carrier relationships and industry expertise in additional specialty segments.</p></div>
+          <summary><span>Auto Repair Shops</span><b>03</b></summary>
+          <div className="detailbody">
+            <p>Repair, tire, transmission and body shops need coverage for the work they do and for the customer cars they hold. We shop garage liability, garagekeepers and workers&apos; compensation for Florida shops.</p>
+            <div className="coverage"><span>Garage Liability</span><span>Garagekeepers</span><span>Workers&apos; Compensation</span><span>Property &amp; Tools</span><span>Business Income</span><span>Umbrella</span></div>
+            <p className="small"><a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>Auto repair shop insurance →</a> · <a href="/guides/garage-liability-vs-garagekeepers" style={{color:'inherit'}}>Garage liability vs garagekeepers →</a></p>
+          </div>
         </details>
       </section>
 
@@ -124,7 +128,7 @@ export default function Home() {
         <p className="eyebrow">AT A GLANCE</p>
         <h2 id="at-a-glance" style={{ marginTop: 6 }}>An independent Florida insurance agency</h2>
         <p>Coast &amp; Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach that works with clients across Florida. Most of our commercial work is contractor insurance: general liability, workers’ compensation, commercial auto, umbrella and builders risk for electricians, roofers, HVAC and plumbing contractors, general contractors and specialty trades. We shop standard carriers and specialty surplus lines markets, so new contracting businesses, contractors moving into Florida and hard-to-place risks have options.</p>
-        <p>We also place boat and yacht insurance and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
+        <p>We also insure auto repair shops, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
         <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
       </section>
 

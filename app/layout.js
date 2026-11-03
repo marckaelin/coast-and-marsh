@@ -56,7 +56,7 @@ const orgSchema = {
       founder: { '@id': `${SITE.url}/#marc-kaelin` },
       employee: { '@id': `${SITE.url}/#marc-kaelin` },
       description: 'Independent Florida insurance agency in Ponte Vedra Beach. Places contractor insurance (general liability, workers compensation, commercial auto, umbrella, tools, builders risk) through standard and surplus lines markets, including for startups, out-of-state contractors working in Florida and hard-to-place trades. Also boat and yacht insurance and smoke shop and hemp business insurance.',
-      knowsAbout: ['Contractor insurance', 'General liability insurance', 'Workers compensation insurance', 'Commercial auto insurance', 'Umbrella and excess liability insurance', 'Builders risk insurance', 'Surplus lines insurance', 'Roofing contractor insurance', 'Electrical contractor insurance', 'New contractor insurance', 'Boat insurance', 'Yacht insurance', 'Smoke shop and hemp insurance'],
+      knowsAbout: ['Contractor insurance', 'General liability insurance', 'Workers compensation insurance', 'Commercial auto insurance', 'Umbrella and excess liability insurance', 'Builders risk insurance', 'Surplus lines insurance', 'Roofing contractor insurance', 'Electrical contractor insurance', 'New contractor insurance', 'Boat insurance', 'Yacht insurance', 'Smoke shop and hemp insurance', 'Hemp and CBD products liability', 'Auto repair shop insurance', 'Garagekeepers insurance'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Insurance placed by Coast & Marsh',
@@ -64,7 +64,8 @@ const orgSchema = {
           ['Florida contractor insurance', '/contractor-insurance'],
           ['Insurance for new Florida contractors and startups', '/contractor-insurance/new-contractors'],
           ['Florida boat and yacht insurance', '/boat-insurance'],
-          ['Smoke shop and hemp business insurance', '/smoke-shop-insurance']
+          ['Hemp, CBD and smoke shop insurance', '/hemp-cbd-store-insurance'],
+          ['Auto repair shop insurance', '/auto-repair-shop-insurance']
         ].map(([name, path]) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, url: `${SITE.url}${path}`, areaServed: { '@type': 'State', name: 'Florida' } } }))
       }
     },

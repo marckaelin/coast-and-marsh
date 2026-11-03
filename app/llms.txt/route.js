@@ -2,6 +2,11 @@
 import { SITE } from '../lib/site';
 import { TRADES } from '../lib/trades';
 import { AGENCY_FAQS } from '../lib/faqs';
+import { GUIDE_PAGES } from '../lib/industry-guides';
+
+const line = (g) => `- [${g.title}](${SITE.url}${g.path}): ${g.description}`;
+const hemp = GUIDE_PAGES.filter((g) => g.cta.href === '/smoke-shop-insurance');
+const auto = GUIDE_PAGES.filter((g) => g.cta.href !== '/smoke-shop-insurance');
 
 export const dynamic = 'force-static';
 
@@ -10,7 +15,7 @@ const u = (p) => `${SITE.url}${p}`;
 function body() {
   return `# ${SITE.name}
 
-> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL, serving all of Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also places boat and yacht insurance and reviews smoke shop, CBD and hemp business insurance. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
+> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL, serving all of Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also insures auto repair shops (garage liability, garagekeepers, workers' comp), places boat and yacht insurance, and places hemp, CBD and smoke shop insurance through specialty markets. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
 
 ## Contractor insurance
 
@@ -28,6 +33,11 @@ ${TRADES.map((t) => `- [${t.title}](${u(`/contractor-insurance/${t.slug}`)}): ${
 ## Specialty businesses
 
 - [Smoke shop, vape and hemp insurance review](${u('/smoke-shop-insurance')})
+${hemp.map(line).join('\n')}
+
+## Auto repair shops
+
+${auto.map(line).join('\n')}
 
 ## About
 
