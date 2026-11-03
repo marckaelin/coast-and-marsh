@@ -1,4 +1,6 @@
 import JsonLd from '../components/JsonLd';
+import EmailQuote from '../components/EmailQuote';
+import { EMAIL_QUOTE_BOAT } from '../lib/email-quote';
 import { SiteHeader, SiteFooter } from '../components/SiteChrome';
 import { SITE } from '../lib/site';
 
@@ -114,6 +116,8 @@ export default function BoatInsurance() {
         <div><strong>Ready for a real number?</strong><span>Send the details and we will reply by email.</span></div>
         <a className="button olive" href="/tools/yacht-insurance-cost-calculator#quote">Request a quote <span>→</span></a>
       </div>
+
+      <EmailQuote subject="Boat insurance quote" items={EMAIL_QUOTE_BOAT} />
       <p className="coverage-note">General information only, not a quote or coverage determination. Coverage availability and eligibility vary by insurer, vessel and owner.</p>
     </section>
 

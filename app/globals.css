@@ -24,3 +24,4 @@
 .review-section:has(.cq-form){align-items:start}.cq-form h3{font-family:Georgia,serif;font-size:26px;font-weight:400;margin:0}.cq-form .yc-note{margin:6px 0 18px}.cq-coverages{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 16px}.cq-coverages legend{margin-bottom:8px}.cq-coverages label{display:flex;gap:6px;align-items:center;font-size:13px;color:#315b66}.cq-list{margin:22px 0 0;padding-left:20px;line-height:1.8;font-size:15px}
 
 footer>*{min-width:0}footer .legal{flex-wrap:wrap;row-gap:8px}
+.email-quote{border-left:3px solid #0b4652;padding:4px 0 4px 20px;margin:30px 0 10px}.email-quote h2{margin-top:0}.email-quote ul{font-size:16px}.email-quote-note{font-size:14px;color:#526d75}

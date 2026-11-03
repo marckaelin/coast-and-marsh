@@ -1,3 +1,4 @@
+import EmailQuote from '../components/EmailQuote';
 export const metadata = {
   title: 'Florida Contractor Insurance',
   description: 'Insurance market reviews for Florida contractors, including electrical, HVAC, plumbing, roofing, general contractors and specialty trades.',
@@ -84,6 +85,7 @@ export default function ContractorInsurance() {
       <h2>Common questions from Florida contractors</h2>
       <div className="seo-faq">{faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
       <p>More answers on the <a href="/faq">FAQ page</a> and in the <a href="/guides/florida-contractor-license-insurance-requirements">license insurance requirements guide</a>.</p>
+      <EmailQuote subject="Contractor insurance quote" />
     </section>
 
     <section className="review-section" id="review">

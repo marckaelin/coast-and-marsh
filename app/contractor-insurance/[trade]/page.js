@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import EmailQuote from '../../components/EmailQuote';
 import JsonLd from '../../components/JsonLd';
 import { SiteHeader, SiteFooter } from '../../components/SiteChrome';
 import { SITE } from '../../lib/site';
@@ -68,6 +69,8 @@ export default async function TradePage({ params }) {
         <div><strong>Need a quote or a certificate fast?</strong><span>Call {SITE.phoneDisplay} or send the basics below.</span></div>
         <a className="button olive" href="#review">Request a quote <span>→</span></a>
       </div>
+
+      <EmailQuote subject={`${t.title} quote`} />
 
       <h2>Frequently asked questions</h2>
       <div className="seo-faq">{t.faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>

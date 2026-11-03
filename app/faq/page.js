@@ -1,4 +1,5 @@
 import JsonLd from '../components/JsonLd';
+import EmailQuote from '../components/EmailQuote';
 import { SiteHeader, SiteFooter } from '../components/SiteChrome';
 import { SITE } from '../lib/site';
 import { AGENCY_FAQS } from '../lib/faqs';
@@ -32,6 +33,7 @@ export default function Faq() {
         <div><strong>Need contractor insurance?</strong><span>Send the basics and Marc will follow up directly.</span></div>
         <a className="button olive" href="/contractor-insurance#review">Request a quote <span>→</span></a>
       </div>
+      <EmailQuote />
       <p>More: <a href="/about">About Coast &amp; Marsh</a> · <a href="/contractor-insurance">Florida contractor insurance</a> · <a href="/contractor-insurance/new-contractors">new contractor insurance</a> · <a href="/guides/florida-contractor-license-insurance-requirements">license insurance requirements</a> · <a href="/boat-insurance">boat insurance</a>.</p>
     </section>
     <SiteFooter />

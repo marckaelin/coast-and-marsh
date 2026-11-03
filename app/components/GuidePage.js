@@ -1,4 +1,5 @@
 import JsonLd from './JsonLd';
+import EmailQuote from './EmailQuote';
 import { SiteHeader, SiteFooter } from './SiteChrome';
 import { SITE } from '../lib/site';
 import { GUIDES } from '../lib/industry-guides';
@@ -50,6 +51,8 @@ export default function GuidePage({ id }) {
         <div><strong>{g.cta.title}</strong><span>{g.cta.text}</span></div>
         <a className="button olive" href={g.cta.href}>{g.cta.label} <span>→</span></a>
       </div>
+
+      <EmailQuote subject={g.emailSubject || 'Insurance quote request'} />
 
       <h2>Frequently asked questions</h2>
       <div className="seo-faq">{g.faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
