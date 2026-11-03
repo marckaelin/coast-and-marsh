@@ -128,8 +128,8 @@ export default function Home() {
         <p className="eyebrow">AT A GLANCE</p>
         <h2 id="at-a-glance" style={{ marginTop: 6 }}>An independent Florida insurance agency</h2>
         <p>Coast &amp; Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach that works with clients across Florida. Most of our commercial work is contractor insurance: general liability, workers’ compensation, commercial auto, umbrella and builders risk for electricians, roofers, HVAC and plumbing contractors, general contractors and specialty trades. We shop standard carriers and specialty surplus lines markets, so new contracting businesses, contractors moving into Florida and hard-to-place risks have options.</p>
-        <p>We also insure auto repair shops, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
-        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
+        <p>We also insure auto repair shops and pest control and termite companies, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
+        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/auto-repair-shop-insurance">Auto repair shops</a> · <a href="/pest-control-insurance">Pest control</a> · <a href="/hemp-cbd-store-insurance">Hemp and CBD</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
       </section>
 
       <section className="closing" id="about">
