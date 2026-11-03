@@ -1,3 +1,5 @@
+import { GUIDE_PAGES } from './industry-guides';
+
 export const SITE = {
   url: 'https://www.coastandmarsh.com',
   name: 'Coast & Marsh Insurance Advisory',
@@ -12,6 +14,7 @@ export const PAGES = [
   { path: '/tools/yacht-insurance-cost-calculator', priority: 0.9 },
   { path: '/contractor-insurance', priority: 0.8 },
   { path: '/smoke-shop-insurance', priority: 0.7 },
+  ...GUIDE_PAGES.map((g) => ({ path: g.path, priority: g.kind === 'service' ? 0.8 : 0.7 })),
   { path: '/guides/how-much-does-boat-insurance-cost-in-florida', priority: 0.7 },
   { path: '/guides/florida-contractor-insurance-cost', priority: 0.7 },
   { path: '/guides/florida-contractor-license-insurance-requirements', priority: 0.7 },

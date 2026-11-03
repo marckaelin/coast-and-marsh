@@ -26,7 +26,7 @@ export default function About() {
     </section>
     <section className="seo-prose">
       <h2>What we do</h2>
-      <p>We place commercial insurance for Florida contractors, including general liability, workers’ compensation, commercial auto, umbrella and excess, tools and equipment, and builders risk. We also place boat and yacht insurance and review coverage for smoke shop, CBD and hemp businesses.</p>
+      <p>We place commercial insurance for Florida contractors, including general liability, workers’ compensation, commercial auto, umbrella and excess, tools and equipment, and builders risk. We also insure Florida auto repair shops (garage liability, garagekeepers and workers’ comp), place boat and yacht insurance, and review coverage for hemp, CBD and smoke shop businesses.</p>
       <p>Because we are independent, we can shop both standard carriers and specialty (surplus lines) markets through wholesale partners. That matters for roofers, high-hazard trades, startups and businesses that have been declined elsewhere.</p>
 
       <h2>Who we help most</h2>
