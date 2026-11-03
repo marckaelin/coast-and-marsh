@@ -32,13 +32,16 @@ const faqs = [
   ['What is a named-storm deductible?', 'Many Florida marine policies apply a separate, higher deductible to damage from a named storm, often a percentage of the insured value. Ask how it is calculated before you buy.'],
   ['Do I need a marine survey?', 'Insurers often ask for a survey on older or larger vessels, and some require one before they will insure a boat you have just bought. Requirements vary by carrier and boat.'],
   ['Can I get insured if I keep my boat on a trailer?', 'Yes. Trailered boats are insured routinely, and storage location is one of the factors insurers price.'],
+  ['Do you insure boats in Ponte Vedra Beach, St. Augustine and Jacksonville?', 'Yes. Coast & Marsh is based in Ponte Vedra Beach and works with boat owners on the Intracoastal Waterway, the St. Johns River and the Northeast Florida coast, as well as across the state.'],
+  ['Does my policy cover a trip to the Bahamas?', 'Only if your navigational limits include it. Many Florida policies cover coastal waters but need an extension for the Bahamas or longer offshore passages. Ask before you go.'],
+  ['What do insurers want in a hurricane plan?', 'Where the boat goes when a named storm is forecast (haul-out, a lift, a dry stack or a protected mooring), who moves it, and how it is secured. Some policies share the cost of a haul-out.'],
   ['How do I find out what mine would cost?', 'Use the free estimator for a rough range in about two minutes, then ask us for a real number. We will gather the details and approach insurers on your behalf.']
 ];
 
 const schema = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Service', name: 'Florida boat and yacht insurance advisory', serviceType: 'Boat insurance', provider: { '@id': `${SITE.url}/#agency` }, areaServed: { '@type': 'State', name: 'Florida' }, url: `${SITE.url}/boat-insurance` },
+    { '@type': 'Service', name: 'Florida boat and yacht insurance advisory', serviceType: 'Boat insurance', provider: { '@id': `${SITE.url}/#agency` }, areaServed: [{ '@type': 'State', name: 'Florida' }, { '@type': 'AdministrativeArea', name: 'Northeast Florida' }], url: `${SITE.url}/boat-insurance` },
     { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }
   ]
 };
@@ -51,7 +54,7 @@ export default function BoatInsurance() {
     <section className="yc-intro">
       <p className="eyebrow">FLORIDA BOAT &amp; YACHT INSURANCE</p>
       <h1>Boat insurance for Florida waters.</h1>
-      <p>Hurricane season, marina requirements and navigational limits make Florida marine coverage different from a policy written anywhere else. Coast &amp; Marsh helps boat and yacht owners understand what they are buying and approach the insurers that fit the vessel.</p>
+      <p>Hurricane season, marina requirements and navigational limits make Florida marine coverage different from a policy written anywhere else. Coast &amp; Marsh, an independent agency in Ponte Vedra Beach, helps boat and yacht owners understand what they are buying and approach the insurers that fit the vessel.</p>
     </section>
 
     <section className="seo-prose">
@@ -71,6 +74,31 @@ export default function BoatInsurance() {
         <li><strong>Navigational limits.</strong> Coverage usually applies within defined waters. Offshore trips, the Bahamas and the Keys can fall outside a standard limit.</li>
         <li><strong>Marina and lender requirements.</strong> Marinas often ask for proof of liability coverage, and lenders require physical-damage coverage on financed boats.</li>
       </ul>
+
+      <h2>Boating in Northeast Florida</h2>
+      <p>Coast &amp; Marsh is based in Ponte Vedra Beach, so we know the questions local owners get from insurers. Boats here are kept on the Intracoastal Waterway, the St. Johns River and the Tolomato and Matanzas rivers, on lifts behind homes, in dry stack storage and in wet slips at marinas from Jacksonville Beach to St. Augustine.</p>
+      <ul>
+        <li><strong>Storage changes the price.</strong> Dry stack and lift storage are usually viewed more favorably than a wet slip during hurricane season. Tell your agent exactly where the boat lives and where it goes in a storm.</li>
+        <li><strong>Inlets and offshore runs.</strong> Running the St. Augustine or St. Johns inlets to fish offshore is common. Check that your navigational limits cover how far out you go, and any trips north to Georgia or south to the Keys and Bahamas.</li>
+        <li><strong>Hurricane plans.</strong> Many insurers ask how and where you will secure or haul the boat before a named storm. A written plan can matter at underwriting and after a loss.</li>
+      </ul>
+
+      <h2>Vessels we help insure</h2>
+      <ul>
+        <li>Center consoles, bay boats and offshore fishing boats</li>
+        <li>Sportfish and cruising yachts, including larger vessels that need a survey</li>
+        <li>Sailboats and catamarans</li>
+        <li>Pontoons, deck boats and ski and wake boats</li>
+        <li>Personal watercraft (jet skis)</li>
+      </ul>
+
+      <h2>How a quote works</h2>
+      <ol>
+        <li>Send the basics: year, make, model, length, engines, value and where the boat is kept. The <a href="/tools/yacht-insurance-cost-calculator">cost estimator</a> collects them in two minutes.</li>
+        <li>We ask about your experience, any prior claims, how you use the boat and how far you cruise.</li>
+        <li>For older or larger boats, insurers may ask for a recent marine survey.</li>
+        <li>We approach the marine insurers that fit the vessel and walk you through the differences in coverage, not just price.</li>
+      </ol>
 
       <h2>What affects the price</h2>
       <ul>{factors.map(f => <li key={f}>{f}</li>)}</ul>

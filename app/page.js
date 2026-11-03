@@ -17,7 +17,7 @@ const services = [
     title: 'Cannabis & Hemp',
     text: 'Specialized insurance for a dynamic, highly regulated industry backed by real expertise.',
     className: 'cannabis-card',
-    href: '/smoke-shop-insurance'
+    href: '/hemp-cbd-store-insurance'
   }
 ];
 
@@ -53,9 +53,9 @@ export default function Home() {
       <section className="hero">
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="eyebrow">RISK IS EVERYWHERE.</p>
+          <p className="eyebrow">INDEPENDENT INSURANCE ADVISORY · PONTE VEDRA BEACH, FLORIDA</p>
           <h1>Protection Should<br/>Be Intentional.</h1>
-          <p className="hero-copy">Coast &amp; Marsh helps individuals and businesses understand their risks, identify gaps, and build insurance strategies designed around what they actually need to protect.</p>
+          <p className="hero-copy">Coast &amp; Marsh is an independent insurance agency in Ponte Vedra Beach serving businesses and boat owners across Florida. We place <a href="/contractor-insurance" style={{color:'inherit'}}>contractor</a>, <a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>auto repair</a>, <a href="/pest-control-insurance" style={{color:'inherit'}}>pest control</a>, <a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>hemp and CBD</a>, <a href="/business-insurance-ponte-vedra-beach-st-johns-county" style={{color:'inherit'}}>local business</a> and <a href="/boat-insurance" style={{color:'inherit'}}>boat and yacht</a> insurance with standard and specialty markets.</p>
           <div className="hero-actions">
             <a className="button olive" href="#contact">Let&apos;s Talk About Your Risk <span>→</span></a>
             <a className="button outline" href="#approach">Our Approach <span>→</span></a>
