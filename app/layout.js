@@ -76,6 +76,7 @@ const orgSchema = {
       '@id': `${SITE.url}/#marc-kaelin`,
       name: 'Marc Kaelin',
       jobTitle: 'Licensed insurance agent',
+      description: 'Licensed Florida insurance agent (license G330108, NPN 22179499) with about 15 years in personal and commercial insurance, mostly on the corporate side. Founded Coast & Marsh Insurance Advisory in Ponte Vedra Beach to help clients get real value from insurance they are required to buy.',
       worksFor: { '@id': `${SITE.url}/#agency` },
       email: SITE.email,
       telephone: SITE.phone,
