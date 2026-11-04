@@ -40,7 +40,7 @@ export default function About() {
       <h2>Who you’ll work with</h2>
       <p>Marc Kaelin is the licensed Florida agent behind Coast &amp; Marsh (Florida license G330108, National Producer Number 22179499). He spent about 15 years in insurance, mostly on the corporate side, working across both personal and commercial lines.</p>
       <p>He started Coast &amp; Marsh for a simple reason. Most people buy insurance because a lender, a landlord, a contract or the state says they have to. If you are going to spend the money anyway, you should get real value from it: the right coverage, at limits that fit, with someone who explains what you are actually buying. That is the job here.</p>
-      <p>You deal with Marc directly, from the first email to the certificate of insurance. Outside the office he is a father of four daughters, a tennis player and all-around sports fan, and the cook of the house.</p>
+      <p>You deal with Marc directly, from the first email to the certificate of insurance. Outside the office he is a father of four daughters who enjoys tennis, follows just about every sport and loves to cook.</p>
 
       <h2>Where we work</h2>
       <p>All of Florida. The office is in Ponte Vedra Beach in Northeast Florida, and everything from quote to policy can be handled by phone and email.</p>
