@@ -45,7 +45,7 @@ export const GUIDES = {
       ['Do I need workers’ comp for my shop?', 'In Florida, a non-construction business generally must carry workers’ compensation once it has four or more employees, including part-time workers.'],
       ['What do I need to start a quote?', 'Your product mix as a rough percentage of sales, annual sales, years open, store address, your current policy’s declarations page if you have one, and any claims in the last three years.']
     ],
-    related: ['hempDec11', 'hempProducts', 'smokeReview'],
+    related: ['hempDec11', 'hempReadiness', 'hempProducts', 'smokeReview'],
     cta: HEMP_CTA,
     note: HEMP_NOTE
   },
@@ -83,8 +83,87 @@ export const GUIDES = {
       ['Can I still get insurance if I mostly sell CBD?', 'Usually yes. Specialty markets are still writing Florida stores where CBD and accessories are most of sales and intoxicating hemp products are a small share.'],
       ['Which products can I legally sell after December 11?', 'That’s a question for an attorney. An insurance agent can tell you what your policy covers, not what is legal to sell.']
     ],
-    related: ['hempStore', 'hempProducts', 'smokeReview'],
+    related: ['hempReadiness', 'hempStore', 'hempProducts', 'smokeReview'],
     cta: HEMP_CTA,
+    note: HEMP_NOTE
+  },
+  hempReadiness: {
+    kind: 'article',
+    date: '2026-11-05',
+    parent: 'hempStore',
+    path: '/guides/hemp-december-11-checklist',
+    eyebrow: 'HEMP SHOP INSURANCE',
+    title: 'December 11 Hemp Change: A Checklist for Florida Shop Owners',
+    metaTitle: 'December 11 Hemp Change Checklist for Florida Hemp and CBD Shops',
+    description: 'A plain-English readiness guide for Florida hemp, CBD and smoke shop owners: what the December 11, 2026 federal hemp change is, whether it affects your store, a week-by-week timeline, a checklist, staff talking points and where to get help.',
+    lead: 'The federal definition of hemp changes on December 11, 2026. If you own a Florida hemp, CBD or smoke shop, this guide walks you through it the way a business would plan any big change: what is changing, whether it affects you, what to do and when, and who to call.',
+    sections: [
+      { h: 'What is changing', list: [
+        'Hemp will be measured by total THC, including THCA and delta-8, not delta-9 alone.',
+        'A finished product with more than 0.4 mg of total THC per container will no longer count as hemp under federal law. That covers most THCA flower and most THC gummies, drinks and vapes.',
+        'Synthetic cannabinoids that the plant can’t naturally produce lose hemp status earlier, on November 12, 2026.',
+        'Florida’s own hemp rules still apply on top of the federal change, including your FDACS hemp food establishment permit, the age-21 sales rule and certificates of analysis.'
+      ], p: ['Status as of November 5, 2026: the December 11 date stands. Congress already moved it once, from November 12, and bills to delay, repeal or regulate instead are pending. Federal funding also runs out on December 11, so watch for news in early December.'] },
+      { h: 'Does this affect your store?', p: ['Answer these five questions. If you answer yes to any of the first three, plan for the change now.'], list: [
+        'Do THCA flower, delta-8, delta-9 or other THC products make up any of your sales?',
+        'Do you sell private-label or house-brand products with your store’s name on them?',
+        'Do you have more than a few weeks of THC inventory on hand or on order?',
+        'Do you know what share of your sales each product type makes up?',
+        'Do you know your insurance renewal date and what your policy says about hemp and THC products?'
+      ] },
+      { h: 'What it means for your business', grid: [
+        ['Inventory', 'Products over the limit that are still on your shelves or in the back after December 11 are a legal and insurance risk. Plan to sell through, return or stop reordering them.'],
+        ['Sales mix', 'If THC products are a big share of sales, revenue will drop unless CBD, accessories or other lines make up the difference. Know your numbers now.'],
+        ['Suppliers', 'Ask each supplier what they will stop making, whether they will take returns and whether their products liability insurance stays in place.'],
+        ['Staff and customers', 'Customers will ask what is still for sale. Clerks need a short, consistent answer and should never give legal advice.']
+      ] },
+      { h: 'What it means for your insurance', grid: [
+        ['Exclusions', 'Insurers are adding THC and hemp exclusions or rewriting policy forms, often at renewal.'],
+        ['Products liability', 'A claim can arrive months after a sale. Ask whether products you sold before December 11 are still covered.'],
+        ['Inventory', 'Property insurance usually won’t pay for goods that are illegal to own, so reclassified stock may not be covered after a theft or fire.'],
+        ['Cancellation and renewal', 'Some hemp policies written this fall have been cancelled, and some markets have paused new hemp business until after December 11.']
+      ], link: 'hempDec11' },
+      { h: 'Timeline', steps: [
+        ['Now', 'Pull your policy and declarations page, note your renewal date, and work out your sales mix by product type.'],
+        ['By November 11', 'Remove any synthetic cannabinoid products. Stop reordering THC products you won’t be able to sell after December 11.'],
+        ['November 12 to December 10', 'Sell through or arrange returns of THC inventory. Brief your staff. Save invoices and certificates of analysis. Ask your insurer or agent how your policy treats the change.'],
+        ['December 11', 'The new federal definition takes effect. Products over the limit should be off your shelves.'],
+        ['After December 11 and at renewal', 'Read every endorsement and renewal offer before you accept it. Keep your records, and re-check your coverage if your product mix changes.']
+      ] },
+      { h: 'Checklist', checklist: [
+        'I know my insurance renewal date',
+        'I have a copy of my current policy and declarations page',
+        'I know what share of my sales is CBD, THC products, vape and tobacco, kratom and accessories',
+        'I have asked my attorney which products I can keep selling',
+        'I have a plan to sell through or return THC inventory before December 11',
+        'I have asked my suppliers about returns and their own products liability coverage',
+        'I am saving invoices and certificates of analysis for everything sold before December 11',
+        'My staff know what is coming off the shelves, when, and what to tell customers',
+        'I have read any notice or endorsement my insurer has sent',
+        'I have had my coverage reviewed for the change'
+      ] },
+      { h: 'What to tell your staff', p: ['Give clerks three simple points, and tell them to send any legal question to you.'], list: [
+        'Which products are coming off the shelves, and on what date',
+        'What the store still sells, and which products to suggest instead',
+        'That the store still checks ID for everyone under 21, and that they should never guess about what is legal'
+      ] },
+      { h: 'Where to get help', grid: [
+        ['An attorney', 'Which products you may sell, and what to do with what you have left. An insurance agent can’t answer that.'],
+        ['FDACS', 'Your Florida hemp food establishment permit, labeling and testing rules.'],
+        ['Your suppliers', 'What they will still make, returns and certificates of analysis.'],
+        ['Your insurance agent', 'What your policy covers now, what changes at renewal, and whether other markets are a better fit.']
+      ] }
+    ],
+    faqs: [
+      ['When does the federal hemp change take effect?', 'December 11, 2026 for most products, after Congress moved it from November 12. Synthetic cannabinoids lose hemp status on November 12, 2026. Bills to delay it again are pending, so check the news in early December.'],
+      ['Can I still sell CBD after December 11?', 'Products with 0.4 mg or less of total THC per container still count as hemp under the federal definition, and most CBD-dominant stores will keep operating. Ask an attorney about your specific products.'],
+      ['What happens to claims for products I sold before December 11?', 'It depends on your policy. Some insurers are adding endorsements for products that were legal when made or sold. Keep your invoices and certificates of analysis, and ask your agent to confirm in writing.'],
+      ['Will my insurance be cancelled?', 'Not automatically, but some insurers are cancelling, adding exclusions or not renewing hemp policies. Know your renewal date and read every notice you get.'],
+      ['Do I still need to follow Florida’s hemp rules?', 'Yes. Florida’s FDACS permit, age-21, labeling and testing rules still apply alongside the federal change.']
+    ],
+    related: ['hempDec11', 'hempStore', 'hempProducts', 'smokeReview'],
+    cta: { ...HEMP_CTA, title: 'Want a free policy review before December 11?', text: 'Start the online review, or call or text 904-988-5026 with your renewal date. It takes about 15 minutes.' },
+    emailSubject: 'December 11 hemp policy review',
     note: HEMP_NOTE
   },
   hempProducts: {
@@ -117,7 +196,7 @@ export const GUIDES = {
       ['Is products liability included in general liability?', 'Often, as “products and completed operations,” but many hemp shop policies exclude specific product types. Check the exclusions page, not just the limits.'],
       ['Do I need products liability if my supplier has it?', 'Yes. Your supplier’s policy protects you only if you are named as an additional insured, and only up to its limits. Your own policy covers your defense.']
     ],
-    related: ['hempStore', 'hempDec11', 'smokeReview'],
+    related: ['hempStore', 'hempDec11', 'hempReadiness', 'smokeReview'],
     cta: HEMP_CTA,
     note: HEMP_NOTE
   },

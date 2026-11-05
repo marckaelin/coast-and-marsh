@@ -45,6 +45,9 @@ export default function GuidePage({ id }) {
         {(s.p || []).map((p, i) => <p key={i}>{p}</p>)}
         {s.list && <ul>{s.list.map((li) => <li key={li}>{li}</li>)}</ul>}
         {s.grid && <div className="seo-grid">{s.grid.map(([h, p]) => <article key={h}><h3>{h}</h3><p>{p}</p></article>)}</div>}
+        {s.steps && <ol className="seo-steps">{s.steps.map(([when, what]) => <li key={when}><strong>{when}</strong><span>{what}</span></li>)}</ol>}
+        {s.checklist && <ul className="seo-checklist">{s.checklist.map((item) => <li key={item}><label><input type="checkbox" /> {item}</label></li>)}</ul>}
+        {s.link && <p>More detail: <a href={GUIDES[s.link].path}>{GUIDES[s.link].title}</a></p>}
       </div>)}
 
       <div className="seo-cta">
