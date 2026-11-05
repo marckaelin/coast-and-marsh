@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   const { trade } = await params;
   const t = tradeBySlug[trade];
   if (!t) return {};
-  return { title: t.title, description: t.description, alternates: { canonical: `/contractor-insurance/${t.slug}` } };
+  return { title: t.metaTitle || t.title, description: t.description, alternates: { canonical: `/contractor-insurance/${t.slug}` } };
 }
 
 export default async function TradePage({ params }) {

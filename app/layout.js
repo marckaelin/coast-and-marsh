@@ -9,10 +9,10 @@ import { SITE } from './lib/site';
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Coast & Marsh Insurance Advisory | Florida Boat, Contractor & Specialty Insurance',
-    template: '%s | Coast & Marsh Insurance Advisory'
+    default: 'Coast & Marsh Insurance | Florida Business & Boat Insurance',
+    template: '%s | Coast & Marsh'
   },
-  description: 'Florida insurance advisory for boat and yacht owners, contractors and regulated businesses. Coast & Marsh reviews your risk and pursues the insurance markets that fit.',
+  description: 'Independent insurance agency in Ponte Vedra Beach for Florida businesses and boat owners: contractor, auto repair, pest control, hemp and boat insurance.',
   applicationName: SITE.name,
   alternates: { canonical: '/' },
   openGraph: {

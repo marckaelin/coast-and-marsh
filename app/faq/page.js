@@ -5,8 +5,8 @@ import { SITE } from '../lib/site';
 import { AGENCY_FAQS } from '../lib/faqs';
 
 export const metadata = {
-  title: 'Questions About Coast & Marsh Insurance',
-  description: 'Who Coast & Marsh Insurance is, what it quotes, where in Florida it works, and how new and out-of-state contractors can get general liability, workers’ comp and other coverage.',
+  title: { absolute: 'FAQ | Coast & Marsh Insurance Advisory' },
+  description: 'Who Coast & Marsh is, what it quotes, where in Florida it works, and how new and out-of-state contractors can get general liability and workers’ comp.',
   alternates: { canonical: '/faq' }
 };
 

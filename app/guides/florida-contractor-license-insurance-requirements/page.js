@@ -5,7 +5,7 @@ import { SITE } from '../../lib/site';
 const path = '/guides/florida-contractor-license-insurance-requirements';
 
 export const metadata = {
-  title: 'Florida Contractor License Insurance Requirements',
+  title: 'Florida Contractor License Insurance Rules',
   description: 'The general liability and property damage minimums Florida requires for contractor licenses, by trade, plus the workers’ comp rule for construction businesses.',
   alternates: { canonical: path }
 };

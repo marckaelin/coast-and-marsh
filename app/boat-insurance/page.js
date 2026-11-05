@@ -6,7 +6,7 @@ import { SITE } from '../lib/site';
 
 export const metadata = {
   title: 'Florida Boat & Yacht Insurance',
-  description: 'How boat and yacht insurance works in Florida: coverage types, named-storm deductibles, what affects the price, and how to get a real quote. Free cost estimator included.',
+  description: 'How Florida boat and yacht insurance works: coverage types, named-storm deductibles, what drives the price and how to get a real quote. Free estimator.',
   alternates: { canonical: '/boat-insurance' }
 };
 

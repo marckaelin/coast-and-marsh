@@ -3,8 +3,8 @@ import { SiteHeader, SiteFooter } from '../components/SiteChrome';
 import { SITE } from '../lib/site';
 
 export const metadata = {
-  title: 'About Coast & Marsh Insurance',
-  description: 'Coast & Marsh Insurance Advisory is an independent Florida insurance agency in Ponte Vedra Beach, run by licensed agent Marc Kaelin. Contractor, specialty business and boat insurance statewide.',
+  title: { absolute: 'About Coast & Marsh Insurance Advisory' },
+  description: 'Coast & Marsh is an independent Florida insurance agency in Ponte Vedra Beach run by licensed agent Marc Kaelin. Contractor, specialty and boat insurance.',
   alternates: { canonical: '/about' }
 };
 
