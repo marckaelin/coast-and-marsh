@@ -94,7 +94,17 @@ export default function RootLayout({ children }) {
       <Script id="google-tag" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA4_ID}');
+// Internal-traffic flag for Marc's own browsers: visit any page with ?internal=1 once
+// (?internal=0 clears it). Flagged visits carry traffic_type=internal, which GA4's
+// "Internal Traffic" data filter drops from reports.
+var cmInternal = false;
+try {
+  var q = new URLSearchParams(location.search).get('internal');
+  if (q === '1') localStorage.setItem('cm_internal', '1');
+  if (q === '0') localStorage.removeItem('cm_internal');
+  cmInternal = localStorage.getItem('cm_internal') === '1';
+} catch (e) {}
+gtag('config', '${GA4_ID}', cmInternal ? { traffic_type: 'internal' } : {});
 gtag('config', '${ADS_ID}');`}</Script>
     </html>
   );
