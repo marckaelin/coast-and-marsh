@@ -37,8 +37,14 @@ export default function Home() {
           <span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span>
         </a>
         <nav className="navlinks" aria-label="Main">
-          <a href="/private-client">Private Client</a>
-          <a href="/boat-insurance">Boat &amp; Yacht</a>
+          <div className="navgroup">
+            <a href="#personal" aria-haspopup="true">Personal Insurance ▾</a>
+            <div className="navmenu">
+              <a href="/private-client">Private Client</a>
+              <a href="/boat-insurance">Boat &amp; Yacht</a>
+              <a href="/tools/yacht-insurance-cost-calculator">Yacht Cost Estimator</a>
+            </div>
+          </div>
           <div className="navgroup">
             <a href="#commercial" aria-haspopup="true">Business Insurance ▾</a>
             <div className="navmenu">
