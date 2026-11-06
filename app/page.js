@@ -36,14 +36,21 @@ export default function Home() {
           <span className="logo-mark">≋</span>
           <span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span>
         </a>
-        <nav className="navlinks">
+        <nav className="navlinks" aria-label="Main">
           <a href="/private-client">Private Client</a>
-          <a href="/boat-insurance">Boat Insurance</a>
-          <a href="/contractor-insurance">Contractors</a>
-          <a href="#commercial">Specialty Industries</a>
-          <a href="/tools/yacht-insurance-cost-calculator">Cost Estimator</a>
-          <a href="#approach">Our Approach</a>
+          <a href="/boat-insurance">Boat &amp; Yacht</a>
+          <div className="navgroup">
+            <a href="#commercial" aria-haspopup="true">Business Insurance ▾</a>
+            <div className="navmenu">
+              <a href="/contractor-insurance">Contractors</a>
+              <a href="/auto-repair-shop-insurance">Auto Repair Shops</a>
+              <a href="/pest-control-insurance">Pest Control</a>
+              <a href="/hemp-cbd-store-insurance">Hemp &amp; CBD</a>
+              <a href="/business-insurance-ponte-vedra-beach-st-johns-county">Local Businesses</a>
+            </div>
+          </div>
           <a href="/about">About</a>
+          <a href="/faq">FAQ</a>
         </nav>
         <div className="header-actions">
           <div className="contact-mini"><a href="tel:+19049885026">904-988-5026</a><a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></div>
