@@ -1,6 +1,6 @@
 export const runtime = 'nodejs';
 
-const ALERT_TO = 'marc@coastandmarshinsurance.com';
+const ALERT_TO = 'marc.kaelin@coastandmarsh.com';
 const ALERT_FROM = process.env.LEAD_ALERT_FROM_EMAIL || `leads@${process.env.RESEND_EMAIL_DOMAIN || 'coastandmarshinsurance.com'}`;
 
 const SYSTEM = `
