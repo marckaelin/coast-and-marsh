@@ -9,6 +9,7 @@ import QuoteForm from './QuoteForm';
 import JsonLd from '../components/JsonLd';
 import { SITE } from '../lib/site';
 import { TRADES as TRADE_PAGES } from '../lib/trades';
+import { SiteHeader } from '../components/SiteChrome';
 
 const trades = ['General Contractors','Building & Residential','Electrical','HVAC & Mechanical','Plumbing','Roofing','Painting','Flooring & Tile','Carpentry & Framing','Specialty Trades'];
 const coverages = [
@@ -40,10 +41,7 @@ const schema = {
 export default function ContractorInsurance() {
   return <main className="contractor-page">
     <JsonLd data={schema} />
-    <header className="smoke-header">
-      <a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a>
-      <div className="contractor-header-actions"><a href="tel:+19049885026">904-988-5026</a><a className="button olive" href="#review">Request a Review</a></div>
-    </header>
+    <SiteHeader cta="Request a Review" ctaHref="#review" />
 
     <section className="contractor-hero">
       <div className="contractor-copy">

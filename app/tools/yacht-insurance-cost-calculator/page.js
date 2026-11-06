@@ -1,6 +1,7 @@
 import Calculator from './Calculator';
 import JsonLd from '../../components/JsonLd';
 import { SITE } from '../../lib/site';
+import { SiteHeader } from '../../components/SiteChrome';
 
 const faqs = [
   ['How accurate is the yacht insurance estimate?', 'It is a planning range based on the boat’s value, size, age, use, storage and location. It is not a quote, and an insurer’s actual price can be higher or lower.'],
@@ -26,10 +27,7 @@ export const metadata = {
 export default function YachtEstimator() {
   return <main className="contractor-page">
     <JsonLd data={schema} />
-    <header className="smoke-header">
-      <a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a>
-      <div className="contractor-header-actions"><a href="tel:+19049885026">904-988-5026</a><a className="button olive" href="#quote">Request a Quote</a></div>
-    </header>
+    <SiteHeader cta="Request a Quote" ctaHref="#quote" />
 
     <section className="yc-intro">
       <p className="eyebrow">YACHT &amp; BOAT INSURANCE</p>

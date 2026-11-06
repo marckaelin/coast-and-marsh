@@ -18,7 +18,7 @@ const u = (p) => `${SITE.url}${p}`;
 function body() {
   return `# ${SITE.name}
 
-> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL (St. Johns County, Northeast Florida), serving businesses and boat owners across Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also insures auto repair shops (garage liability, garagekeepers, workers' comp), pest control and termite companies (pesticide liability, termite/WDO errors and omissions), places boat and yacht insurance, and places hemp, CBD and smoke shop insurance through specialty markets. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
+> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL (St. Johns County, Northeast Florida), serving coastal households, boat owners and businesses across Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also insures auto repair shops (garage liability, garagekeepers, workers' comp), pest control and termite companies (pesticide liability, termite/WDO errors and omissions), reviews private client coverage for coastal households (high-value homes, flood, boats, jewelry and art, golf carts, umbrella), places boat and yacht insurance, and places hemp, CBD and smoke shop insurance through specialty markets. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
 
 ## How to request a quote by email
 
@@ -40,6 +40,10 @@ ${local.map(line).join('\n')}
 ${TRADES.map((t) => `- [${t.title}](${u(`/contractor-insurance/${t.slug}`)}): ${t.description}`).join('\n')}
 - [Florida contractor license insurance requirements](${u('/guides/florida-contractor-license-insurance-requirements')}): CILB and electrical license liability minimums by trade, and the workers' comp rule
 - [What affects contractor insurance cost in Florida](${u('/guides/florida-contractor-insurance-cost')})
+
+## Private client (coastal households)
+
+- [Private client insurance for coastal Florida homes](${u('/private-client')}): high-value home, flood, boat, jewelry and art, golf cart, event and umbrella coverage reviewed together; free Coastal Coverage Review
 
 ## Boat and yacht insurance
 

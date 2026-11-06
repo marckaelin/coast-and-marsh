@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { trackLead } from '../lib/analytics';
+import { SiteHeader } from '../components/SiteChrome';
 
 const initialMessages = [
   {from:'assistant',text:"Hi — I'm the Coast & Marsh Coverage Assistant. I'll ask a few questions about your business and the products you sell so we can determine which insurance markets may be worth exploring. This is a preliminary assessment, not a quote or coverage determination."},
@@ -62,7 +63,7 @@ export default function SmokeShopPOC() {
   }
 
   return <main className="smoke-page">
-    <header className="smoke-header"><a className="logo" href="/"><span className="logo-mark">≋</span><span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span></a><a className="smoke-phone" href="tel:+19049885026">904-988-5026</a></header>
+    <SiteHeader cta="Start a Review" ctaHref="#review" />
     <section className="smoke-hero">
       <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Insurance for shops selling <em>Delta-8, Delta-9, Kratom &amp; Hemp.</em></h1><p>Some products can make ordinary business insurance difficult to place. Coast &amp; Marsh helps regulated-market businesses organize the details specialty insurance markets need to evaluate more complex risks.</p><div className="specialty-callout"><strong>Selling Delta-8, Delta-9, Kratom, CBD or Hemp?</strong><span>Tell our Coverage Assistant what you sell. In about 60 seconds, we'll gather the information needed for a human coverage review.</span></div><div className="trust-row"><span>Specialty-market focus</span><span>No long application</span><span>Human review</span></div></div>
       <div className="chat-card">

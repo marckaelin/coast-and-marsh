@@ -11,6 +11,7 @@ export const SITE = {
 export const PAGES = [
   { path: '/', priority: 1 },
   { path: '/boat-insurance', priority: 0.9 },
+  { path: '/private-client', priority: 0.9 },
   { path: '/tools/yacht-insurance-cost-calculator', priority: 0.9 },
   { path: '/contractor-insurance', priority: 0.8 },
   { path: '/smoke-shop-insurance', priority: 0.7 },
