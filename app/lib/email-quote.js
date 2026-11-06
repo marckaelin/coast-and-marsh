@@ -23,4 +23,12 @@ export const EMAIL_QUOTE_BOAT = [
   'Your current declarations page, if you happen to have it handy'
 ];
 
+export const EMAIL_QUOTE_PRIVATE_CLIENT = [
+  'Your city or community, and whether the home is oceanfront, on the Intracoastal or inland',
+  'Approximate home value, and any second or seasonal homes',
+  'What else you want reviewed: flood, boats, jewelry and watches, art or collectibles, golf carts, autos, umbrella, events at home',
+  'Your renewal months, if you know them',
+  'Your current policy pages, if you happen to have them handy'
+];
+
 export const EMAIL_QUOTE_NOTE = 'None of this is required. Send whatever you have, even one line, and Marc will ask for the rest. If an AI assistant is helping you write the email, it can use this list.';

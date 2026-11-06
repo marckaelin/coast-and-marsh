@@ -2,10 +2,10 @@ export const metadata = { alternates: { canonical: '/' } };
 
 const services = [
   {
-    title: 'Personal Risk',
-    text: 'Protect your home, assets and lifestyle with coverage designed for how you live.',
+    title: 'Private Client',
+    text: 'Coastal homes, boats, jewelry and art, golf carts and the parties you host, reviewed together.',
     className: 'personal-card',
-    href: '/boat-insurance'
+    href: '/private-client'
   },
   {
     title: 'Commercial Risk',
@@ -37,6 +37,7 @@ export default function Home() {
           <span className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></span>
         </a>
         <nav className="navlinks">
+          <a href="/private-client">Private Client</a>
           <a href="/boat-insurance">Boat Insurance</a>
           <a href="/contractor-insurance">Contractors</a>
           <a href="#commercial">Specialty Industries</a>
@@ -55,7 +56,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow">INDEPENDENT INSURANCE ADVISORY · PONTE VEDRA BEACH, FLORIDA</p>
           <h1>Protection Should<br/>Be Intentional.</h1>
-          <p className="hero-copy">Coast &amp; Marsh is an independent insurance agency in Ponte Vedra Beach serving businesses and boat owners across Florida. We place <a href="/contractor-insurance" style={{color:'inherit'}}>contractor</a>, <a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>auto repair</a>, <a href="/pest-control-insurance" style={{color:'inherit'}}>pest control</a>, <a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>hemp and CBD</a>, <a href="/business-insurance-ponte-vedra-beach-st-johns-county" style={{color:'inherit'}}>local business</a> and <a href="/boat-insurance" style={{color:'inherit'}}>boat and yacht</a> insurance with standard and specialty markets.</p>
+          <p className="hero-copy">Coast &amp; Marsh is an independent insurance agency in Ponte Vedra Beach serving coastal households, boat owners and businesses across Florida. We review <a href="/private-client" style={{color:'inherit'}}>high-value home and private client</a> coverage and place <a href="/contractor-insurance" style={{color:'inherit'}}>contractor</a>, <a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>auto repair</a>, <a href="/pest-control-insurance" style={{color:'inherit'}}>pest control</a>, <a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>hemp and CBD</a>, <a href="/business-insurance-ponte-vedra-beach-st-johns-county" style={{color:'inherit'}}>local business</a> and <a href="/boat-insurance" style={{color:'inherit'}}>boat and yacht</a> insurance with standard and specialty markets.</p>
           <div className="hero-actions">
             <a className="button olive" href="#contact">Let&apos;s Talk About Your Risk <span>→</span></a>
             <a className="button outline" href="#approach">Our Approach <span>→</span></a>
@@ -69,7 +70,7 @@ export default function Home() {
           <a href={service.href} className={`service-card ${service.className}`} key={service.title}>
             <div className="card-shade" />
             <div className="service-copy">
-              <div className="service-icon" aria-hidden="true">{service.title === 'Personal Risk' ? '⌂' : service.title === 'Commercial Risk' ? '▦' : '✦'}</div>
+              <div className="service-icon" aria-hidden="true">{service.title === 'Private Client' ? '⌂' : service.title === 'Commercial Risk' ? '▦' : '✦'}</div>
               <h2>{service.title}</h2>
               <p>{service.text}</p>
               <span className="learn">Learn More&nbsp; →</span>
@@ -128,8 +129,8 @@ export default function Home() {
         <p className="eyebrow">AT A GLANCE</p>
         <h2 id="at-a-glance" style={{ marginTop: 6 }}>An independent Florida insurance agency</h2>
         <p>Coast &amp; Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach that works with clients across Florida. Most of our commercial work is contractor insurance: general liability, workers’ compensation, commercial auto, umbrella and builders risk for electricians, roofers, HVAC and plumbing contractors, general contractors and specialty trades. We shop standard carriers and specialty surplus lines markets, so new contracting businesses, contractors moving into Florida and hard-to-place risks have options.</p>
-        <p>We also insure auto repair shops and pest control and termite companies, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
-        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/auto-repair-shop-insurance">Auto repair shops</a> · <a href="/pest-control-insurance">Pest control</a> · <a href="/hemp-cbd-store-insurance">Hemp and CBD</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
+        <p>For coastal households, we review <a href="/private-client">private client coverage</a>: high-value homes, flood, boats, jewelry and art, golf carts and umbrella liability. We also insure auto repair shops and pest control and termite companies, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
+        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/auto-repair-shop-insurance">Auto repair shops</a> · <a href="/pest-control-insurance">Pest control</a> · <a href="/hemp-cbd-store-insurance">Hemp and CBD</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/private-client">Private client</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
       </section>
 
       <section className="closing" id="about">
@@ -145,7 +146,7 @@ export default function Home() {
       <footer>
         <div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div>
         <div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL · <a href="tel:+19049885026">904-988-5026</a> · <a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></small></div>
-        <div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+        <div className="legal"><a href="/private-client">Private Client</a><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
       </footer>
     </main>
   );
