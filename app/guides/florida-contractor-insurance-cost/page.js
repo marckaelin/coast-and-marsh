@@ -5,8 +5,8 @@ import { SITE } from '../../lib/site';
 const path = '/guides/florida-contractor-insurance-cost';
 
 export const metadata = {
-  title: 'What Affects Contractor Insurance Cost in Florida',
-  description: 'The factors that set contractor insurance premiums in Florida: trade, payroll, subcontractors, claims history and project type, and how to prepare for a renewal.',
+  title: 'Florida Contractor Insurance Cost Factors',
+  description: 'What sets contractor insurance premiums in Florida: trade, payroll, subcontractors, claims history and project type, and how to prepare for renewal.',
   alternates: { canonical: path }
 };
 

@@ -5,7 +5,7 @@ import { SITE } from '../../lib/site';
 const path = '/guides/how-much-does-boat-insurance-cost-in-florida';
 
 export const metadata = {
-  title: 'How Much Does Boat Insurance Cost in Florida?',
+  title: 'How Much Is Boat Insurance in Florida?',
   description: 'What drives boat and yacht insurance premiums in Florida: value, age, storage, location, experience and storm exposure, plus ways to get an accurate number.',
   alternates: { canonical: path }
 };

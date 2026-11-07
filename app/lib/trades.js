@@ -11,7 +11,7 @@ export const TRADES = [
     formTrade: 'Electrical',
     name: 'Electrical Contractor',
     title: 'Electrical Contractor Insurance in Florida',
-    description: 'General liability, workers’ comp, umbrella and tools coverage for Florida electrical contractors, including the state license insurance minimums and what insurers ask about.',
+    description: 'General liability, workers’ comp, umbrella and tools coverage for Florida electrical contractors, plus state license minimums and what insurers ask.',
     lead: 'Florida electrical contractors are rated on the work they actually do: service and repair versus new construction, residential versus commercial, and whether jobs touch hospitals, high voltage, solar or fire alarm systems.',
     license: 'Certified and registered electrical contractors must carry liability and property damage insurance under Rule 61G6-5.008: at least $100,000 per person and $300,000 per occurrence for liability plus $500,000 for property damage, or an $800,000 combined single limit, including products and completed operations.',
     exposures: [
@@ -51,7 +51,7 @@ export const TRADES = [
     formTrade: 'HVAC & Mechanical',
     name: 'HVAC Contractor',
     title: 'HVAC Contractor Insurance in Florida',
-    description: 'Insurance for Florida HVAC and air conditioning contractors: general liability, workers’ comp, commercial auto and tools, plus the state license insurance minimum.',
+    description: 'Insurance for Florida HVAC and A/C contractors: general liability, workers’ comp, commercial auto and tools, plus the state license insurance minimum.',
     lead: 'In Florida, HVAC contractors are mostly service and replacement businesses with vans on the road every day. General liability, workers’ comp and commercial auto make up most of the program.',
     license: 'Certified and registered air conditioning and mechanical contractors must carry at least $100,000 of public liability and $25,000 of property damage insurance under Rule 61G4-15.003.',
     exposures: [
@@ -91,7 +91,7 @@ export const TRADES = [
     formTrade: 'General Contractor',
     name: 'General Contractor',
     title: 'General Contractor Insurance in Florida',
-    description: 'Insurance for Florida general, building and residential contractors: general liability, workers’ comp, umbrella and builders risk, subcontractor certificates and license minimums.',
+    description: 'Insurance for Florida general and residential contractors: general liability, workers’ comp, umbrella, builders risk, sub certificates and license minimums.',
     lead: 'For Florida general contractors, subcontractors drive the insurance. Insurers want to see what you subcontract, whether your subs carry their own coverage, and whether your contracts transfer risk to them.',
     license: 'Under Rule 61G4-15.003, certified and registered general and building contractors must carry at least $300,000 of public liability and $50,000 of property damage insurance. Residential contractors must carry at least $100,000 and $25,000.',
     exposures: [
@@ -111,7 +111,8 @@ export const TRADES = [
     formTrade: '',
     name: 'New Contractor',
     title: 'Insurance for New Florida Contractors and Startups',
-    description: 'Starting a contracting business in Florida or moving one here? What insurance you need for your license, your first contracts and your first hire, and what insurers ask a startup.',
+    metaTitle: 'Insurance for New Florida Contractors',
+    description: 'Starting or moving a contracting business in Florida? The insurance you need for your license, first contracts and first hire, and what insurers ask.',
     lead: 'A new LLC, a brand-new license, or a company that already works in another state and is now taking jobs in Florida. Many insurers won’t quote a business with no history, but some will, and a clear submission improves your odds.',
     license: 'Florida contractor licenses require proof of general liability before the license is issued: $300,000/$50,000 for general and building contractors, $100,000/$25,000 for most other trades under Rule 61G4-15.003, and the electrical minimums in Rule 61G6-5.008. Contracts usually ask for more.',
     exposures: [

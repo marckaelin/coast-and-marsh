@@ -22,7 +22,7 @@ export const GUIDES = {
     path: '/hemp-cbd-store-insurance',
     eyebrow: 'HEMP, CBD & SMOKE SHOP INSURANCE',
     title: 'Hemp and CBD Store Insurance in Florida',
-    description: 'Insurance for Florida hemp, CBD and smoke shops: general and products liability, property and inventory, and what underwriters ask about your product mix before and after the December 11 federal hemp change.',
+    description: 'Insurance for Florida hemp, CBD and smoke shops: general and products liability, property and inventory, and what underwriters ask before December 11.',
     lead: 'Most standard insurers won’t write a store that sells hemp-derived products, so Florida hemp, CBD and smoke shops are usually placed with specialty markets. What you sell, and how much of your sales each product makes up, decides which markets will quote.',
     sections: [
       { h: 'Coverage hemp and CBD stores usually need', grid: [
@@ -56,7 +56,8 @@ export const GUIDES = {
     path: '/guides/hemp-shop-insurance-after-december-11',
     eyebrow: 'HEMP SHOP INSURANCE',
     title: 'Hemp Shop Insurance After December 11: What to Check',
-    description: 'What the December 11, 2026 federal hemp definition change means for a Florida hemp, CBD or smoke shop’s insurance: exclusions, products liability, inventory and renewals.',
+    metaTitle: 'Hemp Shop Insurance After December 11',
+    description: 'What the December 11, 2026 federal hemp change means for a Florida hemp, CBD or smoke shop’s insurance: exclusions, products, inventory and renewals.',
     lead: 'On December 11, 2026 the federal definition of hemp changes. Many products sold in Florida hemp and smoke shops today won’t count as hemp after that date, and insurance policies are changing to match. Here is what to check before then.',
     sections: [
       { h: 'What changes on December 11', list: [
@@ -173,7 +174,8 @@ export const GUIDES = {
     path: '/guides/hemp-cbd-products-liability-insurance',
     eyebrow: 'HEMP SHOP INSURANCE',
     title: 'Products Liability Insurance for Hemp and CBD Stores',
-    description: 'How products liability works for Florida hemp and CBD retailers: private label, supplier coverage, certificates of analysis, vendor endorsements and common exclusions.',
+    metaTitle: 'Hemp & CBD Products Liability Insurance',
+    description: 'How products liability works for Florida hemp and CBD retailers: private label, supplier coverage, COAs, vendor endorsements and common exclusions.',
     lead: 'If a customer says a gummy, tincture or vape you sold made them sick, the claim usually lands on the store as well as the manufacturer. Products liability is the part of a hemp shop’s insurance that responds, if the policy includes it.',
     sections: [
       { h: 'Why retailers get named in claims', p: ['A customer usually sues everyone in the chain: the brand, the manufacturer and the store that sold it. Even when the manufacturer is at fault, the store has to defend itself, and defense costs alone can be large.'] },
@@ -209,7 +211,7 @@ export const GUIDES = {
     path: '/auto-repair-shop-insurance',
     eyebrow: 'AUTO REPAIR SHOP INSURANCE',
     title: 'Auto Repair Shop Insurance in Florida',
-    description: 'Insurance for Florida auto repair, mechanic, tire, transmission and body shops: garage liability, garagekeepers, workers’ comp, property and tools, and what insurers ask.',
+    description: 'Florida auto repair, tire and body shop insurance: garage liability, garagekeepers, workers’ comp, property and tools, and what insurers will ask you.',
     lead: 'A Florida repair shop needs coverage for two different things: injuries and damage caused by your work, and the customer cars sitting in your bays and on your lot. Many shops have the first and are thin on the second.',
     sections: [
       { h: 'Coverage repair shops usually need', grid: [
@@ -242,7 +244,7 @@ export const GUIDES = {
     path: '/guides/garage-liability-vs-garagekeepers',
     eyebrow: 'AUTO REPAIR SHOP INSURANCE',
     title: 'Garage Liability vs Garagekeepers Coverage',
-    description: 'The difference between garage liability and garagekeepers insurance for Florida auto repair shops, the coverage options (legal liability, direct, primary and excess), and how to pick a limit.',
+    description: 'Garage liability vs garagekeepers for Florida auto repair shops: what each covers, legal liability vs direct and primary options, and how to pick a limit.',
     lead: 'They sound alike, but they cover different things. Garage liability protects you when your shop hurts someone or damages their property. Garagekeepers protects the customer cars you are holding.',
     sections: [
       { h: 'Garage liability', p: ['Covers bodily injury and property damage to others from your shop’s operations: a customer slips in the bay, or a brake job you did fails and causes an accident after the car leaves. It is the repair shop’s version of general liability.'] },
@@ -304,7 +306,8 @@ export const GUIDES = {
     path: '/pest-control-insurance',
     eyebrow: 'PEST CONTROL INSURANCE',
     title: 'Pest Control and Termite Company Insurance in Florida',
-    description: 'Insurance for Florida pest control, termite and lawn and ornamental companies: general liability with pesticide coverage, termite and WDO errors and omissions, pollution, commercial auto, workers’ comp and the FDACS license insurance minimum.',
+    metaTitle: 'Pest Control & Termite Insurance in Florida',
+    description: 'Insurance for Florida pest control, termite and lawn companies: GL with pesticide coverage, WDO errors and omissions, pollution, auto and workers’ comp.',
     lead: 'A standard general liability policy usually excludes the things a pest control company actually does: applying pesticides, and promising that a house is free of termites. Florida pest and termite companies need a program written for the trade.',
     sections: [
       { h: 'Florida license insurance requirement', p: ['Under section 482.071 of the Florida Statutes, a pest control business can’t operate without insurance. The minimum is $250,000 per person and $500,000 per occurrence for bodily injury, plus $250,000 per occurrence and $500,000 aggregate for property damage, or a $500,000 combined single limit. Each business location is licensed separately by FDACS, and a certificate of insurance is due with every application and annual renewal.'] },
@@ -339,7 +342,8 @@ export const GUIDES = {
     path: '/guides/termite-wdo-errors-and-omissions-insurance',
     eyebrow: 'PEST CONTROL INSURANCE',
     title: 'Termite and WDO Inspection Errors and Omissions Insurance',
-    description: 'How errors and omissions insurance works for Florida termite companies and wood-destroying organism (WDO) inspectors: real estate inspection claims, treatment failures, termite bonds and how to reduce claims.',
+    metaTitle: 'Termite & WDO Errors and Omissions Insurance',
+    description: 'Errors and omissions insurance for Florida termite companies and WDO inspectors: inspection claims, treatment failures, termite bonds and claim prevention.',
     lead: 'Termite claims rarely come from something you did on the job site. They come from something you missed, or a treatment that didn’t hold. That is professional liability, and in Florida it is the biggest risk a termite company carries.',
     sections: [
       { h: 'Where termite claims come from', grid: [
@@ -373,7 +377,8 @@ export const GUIDES = {
     path: '/guides/pesticide-pollution-liability-insurance',
     eyebrow: 'PEST CONTROL INSURANCE',
     title: 'Pesticide and Pollution Liability for Pest Control Companies',
-    description: 'Why Florida pest control and lawn care companies need pesticide and pollution liability: drift, spills, misapplication, the pollution exclusion in general liability, and vehicle spills.',
+    metaTitle: 'Pesticide & Pollution Liability Insurance',
+    description: 'Why Florida pest control and lawn care companies need pesticide and pollution liability: drift, spills, misapplication and the GL pollution exclusion.',
     lead: 'Most general liability policies have a pollution exclusion, and to an insurer a pesticide can be a pollutant. If your policy wasn’t written for pest control, a drift or spill claim may not be covered at all.',
     sections: [
       { h: 'Claims that start with a chemical', list: [
@@ -408,8 +413,8 @@ export const GUIDES = {
     path: '/business-insurance-ponte-vedra-beach-st-johns-county',
     eyebrow: 'PONTE VEDRA BEACH & ST. JOHNS COUNTY',
     title: 'Business Insurance in Ponte Vedra Beach and St. Johns County',
-    metaTitle: 'Business Insurance Agent in Ponte Vedra Beach & St. Johns County',
-    description: 'Independent business insurance agent in Ponte Vedra Beach, FL serving St. Johns County and Northeast Florida: general liability, business owner’s policies, workers’ comp, commercial auto and specialty coverage, with standard and surplus lines markets.',
+    metaTitle: 'Business Insurance in Ponte Vedra Beach, FL',
+    description: 'Independent business insurance agent in Ponte Vedra Beach serving St. Johns County: general liability, BOPs, workers’ comp, commercial auto and specialty.',
     lead: 'Coast & Marsh is an independent insurance agency based in Ponte Vedra Beach. We work with businesses across St. Johns County, including Ponte Vedra, Nocatee, St. Johns, St. Augustine and the Jacksonville Beaches, and with clients across Florida.',
     sections: [
       { h: 'Who we work with', grid: [
@@ -450,7 +455,8 @@ export const GUIDES = {
     path: '/guides/what-insurance-does-a-new-business-need-florida',
     eyebrow: 'NEW BUSINESS INSURANCE',
     title: 'What Insurance Does a New Business Need in Florida?',
-    description: 'A plain guide for new Florida and St. Johns County businesses: which insurance you need based on leased space, employees, vehicles, equipment and contracts, and what to have ready for a quote.',
+    metaTitle: 'Insurance a New Florida Business Needs',
+    description: 'Which insurance a new Florida business needs based on its lease, employees, vehicles, equipment and contracts, and what to have ready for a quote.',
     lead: 'There is no single starter package. What a new Florida business needs depends on five things: where you work, who works for you, what you drive, what you own, and what your lease and contracts require. Work through them in order.',
     sections: [
       { h: '1. Where you work', grid: [
