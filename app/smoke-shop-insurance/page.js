@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { SMOKE_WHO, SMOKE_ASKS, SMOKE_FAQS } from '../lib/smoke-shop-content';
 import { trackLead } from '../lib/analytics';
 import { SiteHeader } from '../components/SiteChrome';
 
@@ -65,7 +66,7 @@ export default function SmokeShopPOC() {
   return <main className="smoke-page">
     <SiteHeader cta="Start a Review" ctaHref="#review" />
     <section className="smoke-hero">
-      <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Insurance for shops selling <em>Delta-8, Delta-9, Kratom &amp; Hemp.</em></h1><p>Some products can make ordinary business insurance difficult to place. Coast &amp; Marsh helps regulated-market businesses organize the details specialty insurance markets need to evaluate more complex risks.</p><div className="specialty-callout"><strong>Selling Delta-8, Delta-9, Kratom, CBD or Hemp?</strong><span>Tell our Coverage Assistant what you sell. In about 60 seconds, we'll gather the information needed for a human coverage review.</span></div><div className="trust-row"><span>Specialty-market focus</span><span>No long application</span><span>Human review</span></div></div>
+      <div className="smoke-copy"><p className="eyebrow">SMOKE SHOP INSURANCE</p><h1>Insurance for shops selling <em>Delta-8, Delta-9, Kratom &amp; Hemp.</em></h1><p>Many standard insurers won’t write a store that sells Delta-8, Delta-9, kratom or hemp products. Coast &amp; Marsh shops the specialty markets that do review these stores, including shops another agent declined or a carrier non-renewed. Call or text <a href="tel:+19049885026">904-988-5026</a> or email <a href="mailto:marc.kaelin@coastandmarsh.com?subject=Smoke%20shop%20insurance">marc.kaelin@coastandmarsh.com</a>.</p><div className="specialty-callout"><strong>Selling Delta-8, Delta-9, Kratom, CBD or Hemp?</strong><span>Tell our Coverage Assistant what you sell. In about 60 seconds, we'll gather the information needed for a human coverage review.</span></div><div className="trust-row"><span>Specialty-market focus</span><span>No long application</span><span>Human review</span></div></div>
       <div className="chat-card">
         {!started ? <div className="chat-start"><div className="assistant-badge">C&amp;M</div><h2>Tell us what you sell.</h2><p>Delta-8, Delta-9, kratom, CBD, hemp, vape and tobacco products can create very different insurance considerations. Answer a few questions in plain English and we'll organize the details for a human coverage review.</p><button onClick={start}>Start my coverage review <b>→</b></button><small>Not a quote, binder, underwriting decision, or guarantee of coverage.</small></div> :
         <><div className="chat-top"><div className="assistant-badge">C&amp;M</div><div><strong>Coverage Assistant</strong><small>{stage==='meeting_ready'?'READY TO SCHEDULE':stage==='meeting'?'SCHEDULING REVIEW':'AI-GUIDED INTAKE'}</small></div></div>
@@ -75,8 +76,21 @@ export default function SmokeShopPOC() {
         <div className="progress"><span style={{width: stage==='meeting_ready'?'100%':stage==='meeting'?'82%':'48%'}}/></div></>}
       </div>
     </section>
-    <section className="smoke-direct"><div><p className="eyebrow">PREFER TO TALK DIRECTLY?</p><h2>Talk with Coast &amp; Marsh.</h2></div><div className="direct-links"><a href="tel:+19049885026"><small>CALL</small><strong>904-988-5026</strong></a><a href="mailto:marc@coastandmarshinsurance.com"><small>EMAIL</small><strong>marc@coastandmarshinsurance.com</strong></a></div></section>
+    <section className="smoke-direct"><div><p className="eyebrow">PREFER TO TALK DIRECTLY?</p><h2>Talk with Coast &amp; Marsh.</h2></div><div className="direct-links"><a href="tel:+19049885026"><small>CALL</small><strong>904-988-5026</strong></a><a href="mailto:marc.kaelin@coastandmarsh.com?subject=Smoke%20shop%20insurance"><small>EMAIL</small><strong>marc.kaelin@coastandmarsh.com</strong></a></div></section>
     <section className="smoke-why"><p className="eyebrow">WHY COAST &amp; MARSH</p><h2>Complex products need a more focused insurance conversation.</h2><p>A tobacco retailer can look very different to an insurer than a business selling Delta-8, Delta-9, kratom, CBD, hemp-derived products, imported products or private-label brands. We focus the intake on those differences, organize the underwriting details, and have a human review every qualified submission.</p><div className="specialty-points"><span>Specialty-market access</span><span>Regulated-industry focus</span><span>Human review</span><span>Fast conversational intake</span></div></section>
+    <section className="seo-prose">
+      <h2>Stores we help</h2>
+      <ul>{SMOKE_WHO.map((w)=><li key={w}>{w}</li>)}</ul>
+      <h2>What specialty insurers will ask</h2>
+      <p>You don’t need a long application to start, but these are the details that decide which markets will quote. Send what you have and we will ask for the rest.</p>
+      <ul>{SMOKE_ASKS.map((w)=><li key={w}>{w}</li>)}</ul>
+      <h2>Before December 11, 2026</h2>
+      <p>The federal definition of hemp changes on December 11, 2026, and insurers are changing policies to match. Read <a href="/guides/hemp-shop-insurance-after-december-11">what the change means for your insurance</a>, the <a href="/guides/hemp-december-11-checklist">store readiness guide</a>, and <a href="/hemp-cbd-store-insurance">hemp and CBD store insurance in Florida</a>.</p>
+      <h2>Frequently asked questions</h2>
+      <div className="seo-faq">{SMOKE_FAQS.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
+      <p>Coast &amp; Marsh is an independent Florida insurance agency in Ponte Vedra Beach serving stores statewide. Call or text <a href="tel:+19049885026">904-988-5026</a> or email <a href="mailto:marc.kaelin@coastandmarsh.com?subject=Smoke%20shop%20insurance">marc.kaelin@coastandmarsh.com</a>.</p>
+      <p className="coverage-note">General information only, not legal advice, a quote or a coverage determination. Ask an attorney what your store may legally sell. Eligibility, pricing and terms are set by the insurer.</p>
+    </section>
     <footer><div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div><div>Preliminary assessment only. Coverage subject to carrier underwriting and eligibility.<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL · <a href="tel:+19049885026">904-988-5026</a> · <a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></small></div><div className="legal"><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
   </main>
 }

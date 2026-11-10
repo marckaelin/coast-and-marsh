@@ -210,7 +210,7 @@ export const GUIDES = {
     eyebrow: 'AUTO REPAIR SHOP INSURANCE',
     title: 'Auto Repair Shop Insurance in Florida',
     description: 'Insurance for Florida auto repair, mechanic, tire, transmission and body shops: garage liability, garagekeepers, workers’ comp, property and tools, and what insurers ask.',
-    lead: 'A Florida repair shop needs coverage for two different things: injuries and damage caused by your work, and the customer cars sitting in your bays and on your lot. Many shops have the first and are thin on the second.',
+    lead: 'Coast & Marsh insures Florida repair, tire, transmission and body shops, including new shops, shops with past claims and shops another agent couldn’t place. Every shop needs coverage for two different things: injuries and damage caused by your work, and the customer cars sitting in your bays and on your lot. Many have the first and are thin on the second.',
     sections: [
       { h: 'Coverage repair shops usually need', grid: [
         ['Garage liability', 'Customer injuries at the shop and damage caused by your operations or by faulty work after the car leaves.'],

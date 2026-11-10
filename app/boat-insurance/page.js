@@ -37,6 +37,10 @@ const faqs = [
   ['Do you insure boats in Ponte Vedra Beach, St. Augustine and Jacksonville?', 'Yes. Coast & Marsh is based in Ponte Vedra Beach and works with boat owners on the Intracoastal Waterway, the St. Johns River and the Northeast Florida coast, as well as across the state.'],
   ['Does my policy cover a trip to the Bahamas?', 'Only if your navigational limits include it. Many Florida policies cover coastal waters but need an extension for the Bahamas or longer offshore passages. Ask before you go.'],
   ['What do insurers want in a hurricane plan?', 'Where the boat goes when a named storm is forecast (haul-out, a lift, a dry stack or a protected mooring), who moves it, and how it is secured. Some policies share the cost of a haul-out.'],
+  ['My insurer non-renewed my boat. Can you help?', 'Often, yes. Non-renewals in Florida usually follow a storm claim, a change in mooring or an insurer pulling back from the coast. Send us the non-renewal notice and your current declarations page if you have it, and we will see which marine markets will look at the boat.'],
+  ['Can I insure an older boat?', 'Usually. Many insurers ask for a recent marine survey on boats over a certain age, typically 15 to 25 years, and some limit hull coverage to actual cash value. A clean survey opens up more options.'],
+  ['I am a first-time boat owner. Will insurers write me?', 'Yes, though some prefer experienced owners for larger or faster boats. A boating safety course and an honest description of how you will use the boat help.'],
+  ['Can you insure a high-performance or high-horsepower boat?', 'We can shop it. Speed, horsepower and value narrow the list of insurers, so these boats are placed with marine specialists rather than standard home-and-auto carriers.'],
   ['How do I find out what mine would cost?', 'Use the free estimator for a rough range in about two minutes, then ask us for a real number. We will gather the details and approach insurers on your behalf.']
 ];
 
@@ -55,8 +59,8 @@ export default function BoatInsurance() {
 
     <section className="yc-intro">
       <p className="eyebrow">FLORIDA BOAT &amp; YACHT INSURANCE</p>
-      <h1>Boat insurance for Florida waters.</h1>
-      <p>Hurricane season, marina requirements and navigational limits make Florida marine coverage different from a policy written anywhere else. Coast &amp; Marsh, an independent agency in Ponte Vedra Beach, helps boat and yacht owners understand what they are buying and approach the insurers that fit the vessel.</p>
+      <h1>Florida boat insurance, including the boats other insurers pass on.</h1>
+      <p>Older boats, high-horsepower center consoles, first-time owners, boats kept in a wet slip through hurricane season and boats non-renewed after a storm are hard to place in Florida. Coast &amp; Marsh, an independent agency in Ponte Vedra Beach, shops the marine insurers that will look at them and tells you quickly whether there is a fit. Call or text <a href="tel:+19049885026">904-988-5026</a> or email <a href="mailto:marc.kaelin@coastandmarsh.com?subject=Boat%20insurance%20quote">marc.kaelin@coastandmarsh.com</a> with the year, make, length and where the boat is kept.</p>
     </section>
 
     <section className="seo-prose">
@@ -64,6 +68,19 @@ export default function BoatInsurance() {
         <div><strong>Not sure what to expect?</strong><span>Get a rough annual premium range in about two minutes.</span></div>
         <a className="button olive" href="/tools/yacht-insurance-cost-calculator">Try the cost estimator <span>→</span></a>
       </div>
+
+      <h2>Boats we are often asked to place</h2>
+      <p>If a direct insurer or your current agent said no, these are the situations we see most. Each one goes to a different kind of marine market.</p>
+      <ul>
+        <li><strong>Non-renewed or declined boats</strong>, including after a hurricane claim or a change in where the boat is kept.</li>
+        <li><strong>Older boats</strong> that need a current marine survey before most insurers will quote.</li>
+        <li><strong>First-time owners</strong> and owners moving up to a larger boat without much logged experience.</li>
+        <li><strong>High-performance and high-horsepower boats</strong>, including triple and quad outboard center consoles.</li>
+        <li><strong>Higher-value yachts</strong> that need agreed-value hull coverage, higher liability limits or crew coverage.</li>
+        <li><strong>Boats kept in a wet slip or on the water</strong> in Northeast Florida during hurricane season.</li>
+        <li><strong>Boats bought out of state</strong> and brought to Florida, where a new insurer and a Florida storm plan are needed.</li>
+      </ul>
+      <p>Eligibility, pricing and terms are set by the insurer. We do not promise coverage, but we will tell you plainly what the options are.</p>
 
       <h2>What boat insurance covers</h2>
       <p>Most recreational policies combine several coverages. The names differ between insurers, but these are the pieces to look for.</p>
