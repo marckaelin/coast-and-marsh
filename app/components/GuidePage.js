@@ -55,7 +55,7 @@ export default function GuidePage({ id }) {
         <a className="button olive" href={g.cta.href}>{g.cta.label} <span>→</span></a>
       </div>
 
-      <EmailQuote subject={g.emailSubject || 'Insurance quote request'} />
+      <EmailQuote subject={g.emailSubject || 'Insurance quote request'} {...(g.emailItems ? { items: g.emailItems } : {})} />
 
       <h2>Frequently asked questions</h2>
       <div className="seo-faq">{g.faqs.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div>
@@ -64,7 +64,7 @@ export default function GuidePage({ id }) {
         <h2>Related pages</h2>
         <ul>{related.map((r) => <li key={r.path}><a href={r.path}>{r.title}</a></li>)}</ul>
       </>}
-      <p>Coast &amp; Marsh is an independent Florida insurance agency in Ponte Vedra Beach serving businesses statewide. Call or text <a href="tel:+19049885026">{SITE.phoneDisplay}</a> or email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      <p>Coast &amp; Marsh is an independent Florida insurance agency in Ponte Vedra Beach serving {g.group === 'private' ? 'households and businesses' : 'businesses'} statewide. Call or text <a href="tel:+19049885026">{SITE.phoneDisplay}</a> or email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
       <p className="coverage-note">{g.note}</p>
     </section>
     <SiteFooter />

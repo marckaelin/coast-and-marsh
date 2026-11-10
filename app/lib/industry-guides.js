@@ -2,6 +2,8 @@
 // Rules for this copy: never name a carrier or wholesaler, never promise coverage or price,
 // and never tell a hemp retailer which products are legal. Re-check dated facts (marked below).
 
+import { EMAIL_QUOTE_PRIVATE_CLIENT } from './email-quote';
+
 const HEMP_NOTE = 'General information only, not legal advice, a quote or a coverage determination. Federal and Florida hemp rules are changing; dates reflect federal law as of November 2026. Ask an attorney which products you may sell. Eligibility, pricing and terms are set by the insurer.';
 const AUTO_NOTE = 'General information only, not a quote or coverage determination. Coverage forms differ by insurer; read your policy for exact terms. Eligibility, pricing and terms are set by the insurer.';
 
@@ -13,6 +15,9 @@ const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026'
 
 const LOCAL_NOTE = 'General information only, not a quote or coverage determination. Coverage needs depend on your business, lease and contracts. Eligibility, pricing and terms are set by the insurer.';
 const LOCAL_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your business insurance reviewed?', text: 'Call or text 904-988-5026, or email your current declarations page or lease insurance section to marc.kaelin@coastandmarsh.com.' };
+
+const PRIVATE_NOTE = 'General information only, not a quote, legal advice or a coverage determination. Florida rules summarized here reflect our understanding as of November 2026; policy terms differ by insurer. Eligibility, pricing and terms are set by the insurer. We do not promise savings or coverage.';
+const PRIVATE_CTA = { short: 'Request a review', label: 'Request a Coastal Coverage Review', href: '/private-client#review', title: 'Want your coverage looked at together?', text: 'Request a review online, call or text 904-988-5026, or email marc.kaelin@coastandmarsh.com.' };
 
 export const GUIDES = {
   // ---------- Hemp, CBD and smoke shops ----------
@@ -479,6 +484,137 @@ export const GUIDES = {
     cta: { ...LOCAL_CTA, title: 'Starting a business?', text: 'Call or text 904-988-5026 with what you do, your lease and your start date.' },
     note: LOCAL_NOTE
   },
+  // ---------- Private client (coastal households) ----------
+  privateNonRenewal: {
+    kind: 'article',
+    group: 'private',
+    date: '2026-11-10',
+    parent: 'privateClient',
+    path: '/guides/florida-home-insurance-non-renewed',
+    eyebrow: 'PRIVATE CLIENT',
+    title: 'Florida Home Insurance Non-Renewed? What to Do Next',
+    metaTitle: 'Florida Home Insurance Non-Renewed: What to Do Next',
+    description: 'What to do when a Florida homeowners policy is non-renewed: the notice period, roof age and inspection rules, Citizens, high-value home carriers and surplus lines, and how to avoid a gap.',
+    lead: 'A non-renewal letter is stressful, but it usually leaves time to act. Coast & Marsh, an independent agency in Ponte Vedra Beach, helps Florida homeowners replace non-renewed coverage, including oceanfront, older and higher-value homes that a standard carrier has stepped away from.',
+    sections: [
+      { h: 'First, check the dates', p: ['Florida generally requires an insurer to give written notice well before a homeowners policy ends; for most policies that is at least 120 days. Find the expiration date on the notice and work back from it. Starting early matters, because some inspections take a few weeks to schedule and flood coverage usually has a waiting period.'] },
+      { h: 'Why Florida homes are non-renewed', list: [
+        'The insurer is reducing how many homes it writes on the coast or in your county',
+        'The age or condition of the roof',
+        'Older plumbing, electrical or heating systems, often found on a 4-point inspection',
+        'Prior claims, especially water or wind',
+        'A home value above what the insurer wants to carry'
+      ], p: ['A non-renewal for the insurer’s own business reasons says nothing bad about your home, and other markets may still want it.'] },
+      { h: 'Roof age rules', p: ['Under Florida law, an insurer generally may not refuse to write or renew a home policy solely because the roof is less than 15 years old. For an older roof, the insurer must generally let you show its condition through an inspection before refusing on age alone. Keep any roof permit, inspection report or replacement invoice handy.'] },
+      { h: 'Where the replacement coverage may come from', grid: [
+        ['Standard carriers', 'Many Florida insurers still write homes in good condition, especially with a recent roof and a wind mitigation inspection.'],
+        ['High-value home carriers', 'Some insurers specialize in higher-value homes and offer features like extended or guaranteed replacement cost and cash settlement options. Their appetite varies by county and by home.'],
+        ['Surplus lines', 'Specialty insurers that can write homes standard carriers will not, often with different deductibles and terms. These policies are not covered by the Florida Insurance Guaranty Association.'],
+        ['Citizens Property Insurance', 'Florida’s insurer of last resort. It has eligibility rules and coverage limits that many higher-value homes exceed, and it now requires flood coverage on many policies.']
+      ] },
+      { h: 'What helps an insurer say yes', list: [
+        'A wind mitigation inspection, which can also earn premium credits for roof shape, roof-to-wall connections and opening protection',
+        'A 4-point inspection for an older home',
+        'Roof age and permit records',
+        'Photos of the home, inside and out',
+        'Your claims history for the last five years'
+      ] },
+      { h: 'How Coast & Marsh helps', p: ['We read the non-renewal notice with you, gather the inspections insurers will ask for, and approach the standard, high-value and surplus lines markets that fit the home. If you own more than one property, a boat or collections, we look at those at the same time so the umbrella and flood limits still line up.'], link: 'privateClient' }
+    ],
+    faqs: [
+      ['My homeowners insurance was non-renewed. Can you help?', 'Often, yes. Send the non-renewal notice and your current declarations page if you have them, and we will look across the markets that may fit your home. There are no promises: availability depends on the home, its location and its history.'],
+      ['How much notice does a Florida insurer have to give?', 'For most homeowners policies, Florida generally requires at least 120 days’ written notice of non-renewal. Check the date on your notice and start early.'],
+      ['Can an insurer drop me for my roof’s age?', 'Florida law generally prevents an insurer from refusing to write or renew solely because a roof is less than 15 years old. For older roofs, the insurer generally must allow an inspection showing the roof’s condition.'],
+      ['Should I just go to Citizens?', 'Citizens can be an option, but it has eligibility rules, coverage limits and flood requirements, and you may be required to take a private offer if one is available within a set range of the Citizens premium. A higher-value home often needs a different market.'],
+      ['Is a surplus lines policy safe?', 'Surplus lines insurers are regulated differently and are not backed by the Florida Insurance Guaranty Association. They can be the right fit for homes the standard market will not write. We explain the differences before you decide.']
+    ],
+    related: ['privateFlood', 'privateValuables', 'privateClient'],
+    cta: PRIVATE_CTA,
+    emailItems: EMAIL_QUOTE_PRIVATE_CLIENT,
+    emailSubject: 'Home insurance non-renewal',
+    note: PRIVATE_NOTE
+  },
+  privateFlood: {
+    kind: 'article',
+    group: 'private',
+    date: '2026-11-10',
+    parent: 'privateClient',
+    path: '/guides/private-flood-insurance-florida',
+    eyebrow: 'PRIVATE CLIENT',
+    title: 'Private and Excess Flood Insurance in Florida',
+    metaTitle: 'Private Flood Insurance in Florida: Coverage Above $250,000',
+    description: 'How Florida homeowners insure a home worth more than the $250,000 NFIP building limit: private flood, excess flood, waiting periods, flood zones and Citizens flood requirements.',
+    lead: 'A government flood policy covers a home’s structure up to $250,000 and its contents up to $100,000. On a coastal Florida home worth several times that, the rest is often uninsured. Coast & Marsh, an independent agency in Ponte Vedra Beach, places private and excess flood for homeowners across Florida.',
+    sections: [
+      { h: 'The gap on higher-value homes', p: ['Homeowners policies exclude flood, so storm surge and rising water fall on a flood policy. The National Flood Insurance Program (NFIP) caps building coverage at $250,000 and contents at $100,000, and it generally does not cover living expenses while you are out of the home. For an oceanfront or Intracoastal home, that can leave most of the rebuild cost exposed.'] },
+      { h: 'Private flood and excess flood', grid: [
+        ['Private flood', 'Replaces the NFIP policy. It can offer higher limits, replacement cost on contents, and sometimes additional living expenses or pool and landscaping coverage. Terms differ by insurer.'],
+        ['Excess flood', 'Sits above an NFIP policy and picks up where its $250,000 building and $100,000 contents limits stop. Useful when you want to keep the NFIP policy, for example for its rating history.']
+      ] },
+      { h: 'Waiting periods', p: ['Most new NFIP policies take effect 30 days after purchase, with some exceptions, such as when a lender requires coverage at closing. Private flood waiting periods vary by insurer, and many insurers stop binding new flood coverage when a named storm is approaching. The time to buy is before hurricane season.'] },
+      { h: 'Flood zone is not the whole story', p: ['A home outside a high-risk flood zone can still flood, and lenders may not require coverage there. Many Florida flood claims come from homes outside the high-risk zones. If you are a Citizens policyholder, Citizens now requires flood coverage on many policies.'] },
+      { h: 'What insurers ask for', list: [
+        'An elevation certificate, if you have one',
+        'The home’s replacement cost and year built',
+        'Foundation type and the number of floors',
+        'Prior flood claims',
+        'Your current flood declarations page'
+      ] },
+      { h: 'How Coast & Marsh helps', p: ['We review flood alongside the home, wind deductible, boats and umbrella, so a storm does not expose a gap between policies. If you have a second or seasonal home, we review its flood coverage too.'], link: 'privateClient' }
+    ],
+    faqs: [
+      ['How do I insure a home worth more than $250,000 for flood?', 'Either replace the NFIP policy with a private flood policy that has higher limits, or keep the NFIP policy and add excess flood above it. Which fits depends on the home and the markets available.'],
+      ['Do I need flood insurance if I am not in a flood zone?', 'Lenders may not require it, but flooding happens outside high-risk zones too. It is worth pricing, and Citizens requires flood on many of its policies.'],
+      ['Is there a waiting period on flood insurance?', 'Most new NFIP policies have a 30-day waiting period, with some exceptions. Private flood waiting periods vary, and insurers usually stop binding new coverage when a storm is approaching.'],
+      ['Does flood insurance cover my pool, seawall or dock?', 'NFIP policies generally exclude them. Some private flood policies include limited coverage. Check the policy wording, and ask us to compare.']
+    ],
+    related: ['privateNonRenewal', 'privateValuables', 'privateClient'],
+    cta: PRIVATE_CTA,
+    emailItems: EMAIL_QUOTE_PRIVATE_CLIENT,
+    emailSubject: 'Flood insurance review',
+    note: PRIVATE_NOTE
+  },
+  privateValuables: {
+    kind: 'article',
+    group: 'private',
+    date: '2026-11-10',
+    parent: 'privateClient',
+    path: '/guides/insure-jewelry-watches-art-florida',
+    eyebrow: 'PRIVATE CLIENT',
+    title: 'How to Insure Jewelry, Watches and Art in Florida',
+    metaTitle: 'How to Insure Jewelry, Watches and Fine Art in Florida',
+    description: 'Why homeowners policies cap theft of jewelry and watches, how scheduling and agreed value work, when to update appraisals, and what to know about insuring art and collections in Florida.',
+    lead: 'A homeowners policy covers jewelry and watches, but usually only up to a small theft limit, often a few thousand dollars in total. Coast & Marsh, an independent agency in Ponte Vedra Beach, helps Florida households insure jewelry, watches, art, wine and collections for what they are actually worth.',
+    sections: [
+      { h: 'The limit most people miss', p: ['Standard home policies set a special limit for theft of jewelry, watches and similar items, often far less than one engagement ring or watch is worth. Loss, such as a stone falling out or a ring left in a hotel, is often not covered at all.'] },
+      { h: 'Scheduling: how it works', list: [
+        'Each piece is listed on the policy with its appraised value',
+        'Coverage is often broader, frequently including loss and mysterious disappearance',
+        'Many insurers apply little or no deductible to scheduled items',
+        'You may be able to choose a jeweler or receive cash settlement, depending on the insurer'
+      ] },
+      { h: 'Keep appraisals current', p: ['Values for gold, diamonds and collectible watches move. Many owners update appraisals every three to five years, or after a big change in the market, so the scheduled value still matches the replacement cost. Keep receipts, appraisals, serial numbers and photos stored somewhere other than the home.'] },
+      { h: 'Fine art, wine and collections', grid: [
+        ['Agreed value', 'Art is usually insured for an agreed value set by appraisal, so a total loss pays that amount without an argument about value.'],
+        ['Breakage', 'Breakage of fragile pieces may need to be added. Ask about it for sculpture, glass and ceramics.'],
+        ['Transit and loans', 'Moving a piece, lending it to a museum or consigning it can fall outside coverage unless the policy includes it.'],
+        ['Climate and storms', 'Florida humidity, power loss and evacuations matter. Some insurers ask about climate control and storm plans for valuable collections.']
+      ] },
+      { h: 'How Coast & Marsh helps', p: ['We review what is scheduled against what you own, help arrange updated appraisals, and keep the schedule current as you buy, sell or inherit pieces. Valuables are reviewed alongside the home, flood and umbrella in a Coastal Coverage Review.'], link: 'privateClient' }
+    ],
+    faqs: [
+      ['Is my engagement ring covered by homeowners insurance?', 'Usually only up to the policy’s special theft limit for jewelry, which is often far below the ring’s value, and loss may not be covered. Scheduling the ring covers it for its appraised value.'],
+      ['How often should I get jewelry appraised for insurance?', 'Many owners update every three to five years, or sooner after a big move in gold, diamond or watch prices, so the scheduled value matches what it would cost to replace.'],
+      ['Are luxury watches covered when I travel?', 'Scheduled items are often covered worldwide, but terms vary by insurer. Check the policy before a trip, and ask about limits for items in a hotel safe.'],
+      ['How is fine art insured?', 'Usually on an agreed value basis set by appraisal, with options for breakage, transit and pieces on loan. Larger collections may need a separate fine art policy.']
+    ],
+    related: ['privateNonRenewal', 'privateFlood', 'privateClient'],
+    cta: PRIVATE_CTA,
+    emailItems: EMAIL_QUOTE_PRIVATE_CLIENT,
+    emailSubject: 'Jewelry, watch and art coverage',
+    note: PRIVATE_NOTE
+  },
+  privateClient: { path: '/private-client', title: 'Private client insurance for coastal Florida homes' },
   contractorHub: { path: '/contractor-insurance', title: 'Florida contractor insurance' },
   newContractors: { path: '/contractor-insurance/new-contractors', title: 'Insurance for new Florida contractors and startups' },
 };

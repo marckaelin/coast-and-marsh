@@ -10,6 +10,7 @@ const hemp = GUIDE_PAGES.filter((g) => g.cta.href === '/smoke-shop-insurance');
 const pest = GUIDE_PAGES.filter((g) => g.group === 'pest');
 const auto = GUIDE_PAGES.filter((g) => g.cta.href !== '/smoke-shop-insurance' && !g.group);
 const local = GUIDE_PAGES.filter((g) => g.group === 'local');
+const privateGuides = GUIDE_PAGES.filter((g) => g.group === 'private');
 
 export const dynamic = 'force-static';
 
@@ -43,7 +44,8 @@ ${TRADES.map((t) => `- [${t.title}](${u(`/contractor-insurance/${t.slug}`)}): ${
 
 ## Private client (coastal households)
 
-- [Private client insurance for coastal Florida homes](${u('/private-client')}): high-value home, flood, boat, jewelry and art, golf cart, event and umbrella coverage reviewed together; free Coastal Coverage Review
+- [Private client insurance for coastal Florida homes](${u('/private-client')}): high-value home, flood, boat, jewelry and art, golf cart, event and umbrella coverage reviewed together; free Coastal Coverage Review, plus ongoing service: renewal and photo inspections handled, appraisers for replacement cost estimates, valuables schedules kept current, check-ins and visits around storms. Usually a fit for homes around $1M and up, more than one property, boats or collections
+${privateGuides.map(line).join('\n')}
 
 ## Boat and yacht insurance
 
