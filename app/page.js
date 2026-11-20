@@ -50,7 +50,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow">INDEPENDENT INSURANCE ADVISORY · PONTE VEDRA BEACH, FLORIDA</p>
           <h1>Protection Should<br/>Be Intentional.</h1>
-          <p className="hero-copy">Coast &amp; Marsh is an independent insurance agency in Ponte Vedra Beach serving coastal households, boat owners and businesses across Florida. We review <a href="/private-client" style={{color:'inherit'}}>high-value home and private client</a> coverage and place <a href="/contractor-insurance" style={{color:'inherit'}}>contractor</a>, <a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>auto repair</a>, <a href="/pest-control-insurance" style={{color:'inherit'}}>pest control</a>, <a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>hemp and CBD</a>, <a href="/business-insurance-ponte-vedra-beach-st-johns-county" style={{color:'inherit'}}>local business</a> and <a href="/boat-insurance" style={{color:'inherit'}}>boat and yacht</a> insurance with standard and specialty markets.</p>
+          <p className="hero-copy">Coast &amp; Marsh is an independent insurance agency in Ponte Vedra Beach serving coastal households, boat owners and businesses across Florida. We review <a href="/private-client" style={{color:'inherit'}}>high-value home and private client</a> coverage and place <a href="/contractor-insurance" style={{color:'inherit'}}>contractor</a>, <a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>auto repair</a>, <a href="/pest-control-insurance" style={{color:'inherit'}}>pest control</a>, <a href="/home-care-agency-insurance" style={{color:'inherit'}}>home care agency</a>, <a href="/hemp-cbd-store-insurance" style={{color:'inherit'}}>hemp and CBD</a>, <a href="/business-insurance-ponte-vedra-beach-st-johns-county" style={{color:'inherit'}}>local business</a> and <a href="/boat-insurance" style={{color:'inherit'}}>boat and yacht</a> insurance with standard and specialty markets.</p>
           <div className="hero-actions">
             <a className="button olive" href="#contact">Let&apos;s Talk About Your Risk <span>→</span></a>
             <a className="button outline" href="#approach">Our Approach <span>→</span></a>
@@ -117,14 +117,22 @@ export default function Home() {
             <p className="small"><a href="/auto-repair-shop-insurance" style={{color:'inherit'}}>Auto repair shop insurance →</a> · <a href="/guides/garage-liability-vs-garagekeepers" style={{color:'inherit'}}>Garage liability vs garagekeepers →</a></p>
           </div>
         </details>
+        <details>
+          <summary><span>Home Care Agencies</span><b>04</b></summary>
+          <div className="detailbody">
+            <p>Companion, homemaker and home health agencies send caregivers into clients&apos; homes, often in their own cars. Tell us your revenue and caregiver count, and we&apos;ll quote a package built to your franchise agreement or contract requirements.</p>
+            <div className="coverage"><span>General &amp; Professional Liability</span><span>Abuse &amp; Molestation</span><span>Hired &amp; Non-Owned Auto</span><span>Workers&apos; Compensation</span><span>Client Theft Bond</span><span>Umbrella, EPLI &amp; Cyber</span></div>
+            <p className="small"><a href="/home-care-agency-insurance" style={{color:'inherit'}}>Home care agency insurance →</a> · <a href="/guides/home-care-franchise-insurance-requirements" style={{color:'inherit'}}>Franchise insurance requirements →</a></p>
+          </div>
+        </details>
       </section>
 
       <section className="seo-prose" aria-labelledby="at-a-glance" style={{ paddingTop: 56 }}>
         <p className="eyebrow">AT A GLANCE</p>
         <h2 id="at-a-glance" style={{ marginTop: 6 }}>An independent Florida insurance agency</h2>
         <p>Coast &amp; Marsh Insurance Advisory is an independent agency in Ponte Vedra Beach that works with clients across Florida. Most of our commercial work is contractor insurance: general liability, workers’ compensation, commercial auto, umbrella and builders risk for electricians, roofers, HVAC and plumbing contractors, general contractors and specialty trades. We shop standard carriers and specialty surplus lines markets, so new contracting businesses, contractors moving into Florida and hard-to-place risks have options.</p>
-        <p>For coastal households, we review <a href="/private-client">private client coverage</a>: high-value homes, flood, boats, jewelry and art, golf carts and umbrella liability. We also insure auto repair shops and pest control and termite companies, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
-        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/auto-repair-shop-insurance">Auto repair shops</a> · <a href="/pest-control-insurance">Pest control</a> · <a href="/hemp-cbd-store-insurance">Hemp and CBD</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/private-client">Private client</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
+        <p>For coastal households, we review <a href="/private-client">private client coverage</a>: high-value homes, flood, boats, jewelry and art, golf carts and umbrella liability. We also insure auto repair shops, pest control and termite companies, and home care agencies, place boat and yacht insurance, and review coverage for smoke shop, CBD and hemp businesses. You work directly with Marc Kaelin, a licensed Florida agent (license G330108).</p>
+        <p><a href="/contractor-insurance">Contractor insurance</a> · <a href="/contractor-insurance/new-contractors">New contractors</a> · <a href="/auto-repair-shop-insurance">Auto repair shops</a> · <a href="/pest-control-insurance">Pest control</a> · <a href="/home-care-agency-insurance">Home care agencies</a> · <a href="/hemp-cbd-store-insurance">Hemp and CBD</a> · <a href="/boat-insurance">Boat insurance</a> · <a href="/private-client">Private client</a> · <a href="/about">About us</a> · <a href="/faq">FAQ</a></p>
       </section>
 
       <section className="closing" id="about">

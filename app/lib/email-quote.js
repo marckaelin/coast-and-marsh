@@ -31,4 +31,14 @@ export const EMAIL_QUOTE_PRIVATE_CLIENT = [
   'Your current policy pages, if you happen to have them handy'
 ];
 
+export const EMAIL_QUOTE_HOME_CARE = [
+  'Agency name, the counties you serve and how many offices you have',
+  'What you provide: companion and homemaker, personal care, skilled nursing or therapy',
+  'Franchise brand, if you are a franchisee',
+  'Estimated annual revenue and number of caregivers',
+  'Whether caregivers are employees or contractors, and whether they drive clients',
+  'The insurance section of your franchise agreement or contract, if you happen to have it handy',
+  'When coverage needs to start, or your current renewal date, and any claims in the last three years'
+];
+
 export const EMAIL_QUOTE_NOTE = 'None of this is required. Send whatever you have, even one line, and Marc will ask for the rest. If an AI assistant is helping you write the email, it can use this list.';
