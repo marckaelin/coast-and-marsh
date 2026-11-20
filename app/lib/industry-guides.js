@@ -2,7 +2,7 @@
 // Rules for this copy: never name a carrier or wholesaler, never promise coverage or price,
 // and never tell a hemp retailer which products are legal. Re-check dated facts (marked below).
 
-import { EMAIL_QUOTE_PRIVATE_CLIENT } from './email-quote';
+import { EMAIL_QUOTE_PRIVATE_CLIENT, EMAIL_QUOTE_HOME_CARE } from './email-quote';
 
 const HEMP_NOTE = 'General information only, not legal advice, a quote or a coverage determination. Federal and Florida hemp rules are changing; dates reflect federal law as of November 2026. Ask an attorney which products you may sell. Eligibility, pricing and terms are set by the insurer.';
 const AUTO_NOTE = 'General information only, not a quote or coverage determination. Coverage forms differ by insurer; read your policy for exact terms. Eligibility, pricing and terms are set by the insurer.';
@@ -12,6 +12,9 @@ const AUTO_CTA = { short: 'Text for a quote', label: 'Text QUOTE to 904-988-5026
 
 const PEST_NOTE = 'General information only, not legal advice, a quote or a coverage determination. License insurance minimums reflect section 482.071, Florida Statutes, as of November 2026; confirm current requirements with FDACS. Eligibility, pricing and terms are set by the insurer.';
 const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance shopped?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
+
+const HOMECARE_NOTE = 'General information only, not legal advice, a quote or a coverage determination. Franchise requirements summarized here come from publicly filed franchise disclosure documents (Senior Helpers, April 2025; Visiting Angels and Home Instead, April 2026) and may have changed; your signed agreement and operations manual control. Coast & Marsh is not affiliated with or endorsed by any franchisor. Eligibility, pricing and terms are set by the insurer.';
+const HOMECARE_CTA = { short: 'Get your quote', label: 'Get your quote', href: '/home-care-agency-insurance#quote', title: 'Want a quote built to your franchise agreement?', text: 'Pick your franchise or independent agency, see the requirements, and get a quote by email or text. Or call or text 904-988-5026.' };
 
 const LOCAL_NOTE = 'General information only, not a quote or coverage determination. Coverage needs depend on your business, lease and contracts. Eligibility, pricing and terms are set by the insurer.';
 const LOCAL_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your business insurance reviewed?', text: 'Call or text 904-988-5026, or email your current declarations page or lease insurance section to marc.kaelin@coastandmarsh.com.' };
@@ -404,6 +407,202 @@ export const GUIDES = {
     related: ['pestControl', 'termiteWdo'],
     cta: PEST_CTA,
     note: PEST_NOTE
+  },
+  // ---------- Home care and home health agencies ----------
+  homeCare: {
+    kind: 'service',
+    group: 'homecare',
+    serviceType: 'Home care agency insurance',
+    quoteFlow: 'homecare',
+    path: '/home-care-agency-insurance',
+    eyebrow: 'HOME CARE AGENCY INSURANCE',
+    title: 'Home Care Agency Insurance in Florida',
+    metaTitle: 'Home Care Agency Insurance in Florida: Franchisees and Independents',
+    description: 'Insurance for Florida home care agencies, companion and homemaker providers, home health agencies and home care franchisees: general and professional liability, abuse and molestation, hired and non-owned auto, workers’ comp, client theft bonds, umbrella, EPLI and cyber, quoted to your franchise agreement.',
+    lead: 'Your caregivers work alone in clients’ homes, often drive their own cars, and sometimes handle a client’s money or medications. A home care agency needs a package written for care work, with limits that match your franchise agreement or contracts. Tell us your annual revenue and caregiver count, and we’ll build the quote to your requirements.',
+    sections: [
+      { h: 'Who we work with', grid: [
+        ['Non-medical home care', 'Companion and homemaker agencies registered with AHCA, and agencies that add personal care such as bathing, dressing and mobility help.'],
+        ['Home health agencies', 'Licensed home health agencies providing skilled nursing and therapy in the home, alongside aide and personal care services.'],
+        ['Home care franchisees', 'Owners of national home care franchise locations who need every line to match the insurance section of their franchise agreement.'],
+        ['Multi-location independents', 'Independent agencies with several offices or counties under one owner, where one program and one renewal date make life simpler.']
+      ] },
+      { h: 'Coverage home care agencies usually need', grid: [
+        ['General and professional liability', 'Injury or property damage in a client’s home, and claims that care was given wrongly or not at all. Franchise agreements commonly ask for $1,000,000 per occurrence and $3,000,000 aggregate on each.'],
+        ['Abuse and molestation', 'Allegations of abuse against a caregiver. Many general liability policies exclude it or cap it at a small sublimit, so it has to be added on purpose.'],
+        ['Hired and non-owned auto', 'Caregivers drive to visits and run errands, and some drive clients. If there is a crash, the agency can be sued too. This covers the agency’s liability when staff use their own cars.'],
+        ['Workers’ compensation', 'Lifting and transferring clients makes back and shoulder injuries common. Florida generally requires it once a non-construction business has four employees, and franchise agreements usually require it regardless.'],
+        ['Client theft (third-party crime) bond', 'Pays when a caregiver steals from a client. It is not the same as a license or surety bond, and franchise agreements often ask for $25,000.'],
+        ['Umbrella, EPLI and cyber', 'Extra liability limits over general, professional, auto and employer’s liability; employment practices liability for a large hourly workforce; and cyber for client health and payment records.']
+      ] },
+      { h: 'A straight package, quoted to your requirements', p: [
+        'Start with a few numbers: annual revenue, caregiver count, the services you provide and where you operate. We come back with an indication first, and only ask for a full application when you are ready to bind.',
+        'If you are a franchisee, send the insurance section of your franchise agreement and we check the quote against it line by line before you see it, so your certificate of insurance isn’t sent back.'
+      ], list: [
+        'The limit required for each line, including abuse and molestation, crime and cyber',
+        'Any minimum carrier rating your agreement requires',
+        'Additional insured wording for the franchisor and its affiliates, such as ISO form CG 20 26',
+        'Primary and non-contributory wording and waiver of subrogation',
+        'Notice of cancellation to the franchisor, and the deadline for proof of coverage'
+      ], link: 'homeCareFranchise' },
+      { h: 'What underwriters ask', list: [
+        'The services you provide: companion and homemaker, personal care, skilled nursing or therapy, and any specialty care such as dementia or overnight care',
+        'Annual revenue and billable hours, and how many caregivers you have',
+        'Whether caregivers are W-2 employees or independent contractors',
+        'Whether caregivers drive clients, run errands, or handle clients’ money or medications',
+        'Hiring and supervision: Level 2 background screening, reference and driving record checks, training and visit verification',
+        'Your AHCA license or registration, years in business, locations and claims history'
+      ], p: ['Whether caregivers transport clients, and whether they are employees or contractors, change the price and the number of markets the most, so mention them up front.'] },
+      { h: 'Florida details that matter', p: [
+        'Florida home health agencies are licensed by the Agency for Health Care Administration (AHCA), and companion and homemaker providers register with AHCA. Each license or registration has an expiration date, so keep your certificate of insurance current before each renewal.',
+        'Medicaid managed care plans, VA community care, hospitals and senior living communities that refer clients often set their own insurance requirements. Send us the contract language and we’ll make sure the quote meets it.'
+      ] }
+    ],
+    faqs: [
+      ['What insurance does a home care agency need in Florida?', 'Most agencies carry general and professional liability, abuse and molestation coverage, hired and non-owned auto, workers’ compensation, and a client theft (third-party crime) bond. Many also carry umbrella, employment practices liability and cyber, especially franchisees whose agreements require them.'],
+      ['Does general liability cover a caregiver accused of abuse?', 'Often not. Many general liability policies exclude abuse and molestation or limit it to a small sublimit. Home care agencies usually need abuse and molestation coverage added to the general or professional liability policy.'],
+      ['Do I need commercial auto if caregivers drive their own cars?', 'You need hired and non-owned auto liability. The caregiver’s personal auto policy pays first, but the agency can be sued after a crash during work, and hired and non-owned auto covers the agency’s liability. If the agency owns vehicles, those need a commercial auto policy.'],
+      ['Is a client theft bond the same as a surety bond?', 'No. A client theft or third-party crime bond pays when an employee steals from a client. A license or surety bond guarantees that you follow a law or contract. Franchise agreements usually ask for the client theft kind.'],
+      ['Do home care agencies need workers’ comp in Florida?', 'Florida generally requires workers’ compensation once a non-construction business has four or more employees, including part-time workers. Home care franchise agreements usually require it regardless of headcount.'],
+      ['Can you quote to my franchise agreement?', 'Yes. Send the insurance section of your franchise agreement or operations manual, and we check every limit, rating and endorsement against it before we send the quote. Coast & Marsh is an independent agency and is not affiliated with or endorsed by any franchisor.'],
+      ['Do you work with home care agencies across Florida?', 'Yes. Coast & Marsh is an independent agency in Ponte Vedra Beach and works with home care and home health agencies statewide, by phone and email.']
+    ],
+    related: ['homeCareFranchise', 'homeCareAbuse', 'homeCareAuto'],
+    cta: HOMECARE_CTA,
+    emailItems: EMAIL_QUOTE_HOME_CARE,
+    emailSubject: 'Home care agency insurance quote',
+    note: HOMECARE_NOTE
+  },
+  homeCareFranchise: {
+    kind: 'article',
+    group: 'homecare',
+    date: '2026-11-20',
+    parent: 'homeCare',
+    path: '/guides/home-care-franchise-insurance-requirements',
+    eyebrow: 'HOME CARE AGENCY INSURANCE',
+    title: 'Home Care Franchise Insurance Requirements: A Guide for Florida Franchisees',
+    metaTitle: 'Home Care Franchise Insurance Requirements for Florida Franchisees',
+    description: 'What home care franchise agreements typically require for insurance, from the 2025 and 2026 franchise disclosure documents of Visiting Angels, Home Instead and Senior Helpers: limits by line, carrier rating, additional insured, primary and non-contributory, notice and proof deadlines.',
+    lead: 'Every home care franchise agreement has an insurance section, and a certificate that misses one line can hold up training, opening or renewal. Here is what three of the largest home care franchise systems ask for in their current franchise disclosure documents, and the fine print that most often causes a certificate to be sent back.',
+    sections: [
+      { h: 'Limits by line', p: ['From the franchise disclosure documents issued by Visiting Angels (April 2026), Home Instead (April 2026) and Senior Helpers (April 2025). Your signed agreement and operations manual control.'], grid: [
+        ['General liability', 'All three: $1,000,000 per occurrence and $3,000,000 aggregate. Senior Helpers also lists personal injury and property damage limits of $1,000,000.'],
+        ['Professional liability', 'All three: $1,000,000 per occurrence or incident and $3,000,000 aggregate.'],
+        ['Abuse and molestation', 'Visiting Angels: $500,000. Home Instead and Senior Helpers don’t list it in the franchise agreement, but an operations manual or a referral contract may.'],
+        ['Auto', 'All three: $1,000,000 including hired and non-owned auto, and owned autos if you have them.'],
+        ['Umbrella or excess', 'Visiting Angels: $1,000,000 over professional, general, auto and employer’s liability. Home Instead: $1,000,000. Senior Helpers: “reasonable” excess may be required.'],
+        ['Workers’ comp and employer’s liability', 'All three require it. Visiting Angels and Home Instead require it even where state law wouldn’t.'],
+        ['Client theft or crime bond', 'All three: $25,000. Senior Helpers allows a $2,500 deductible, or a higher amount if the state or operations manual requires one.'],
+        ['EPLI and cyber', 'EPLI of $500,000 in all three (Home Instead: $500,000 per claim, $1,000,000 aggregate). Cyber of $500,000 for Visiting Angels and Senior Helpers.']
+      ] },
+      { h: 'The fine print that gets certificates sent back', list: [
+        'Carrier rating: Home Instead requires carriers rated A or better by AM Best (workers’ comp excepted) and “satisfactory to” the franchisor. A quote from a lower-rated carrier won’t work no matter the price.',
+        'Additional insured: the franchisor, and often its affiliates, officers and directors. Senior Helpers names ISO form CG 20 26 for ongoing and completed operations. Visiting Angels asks for additional insured status on professional, general and EPLI.',
+        'Primary and non-contributory: Home Instead asks for coverage on a primary basis, and Senior Helpers asks for primary and non-contributory.',
+        'Waiver of subrogation: Home Instead and Senior Helpers ask for it.',
+        'Notice: Home Instead and Senior Helpers require 30 days’ notice to the franchisor before cancellation or a material change. Visiting Angels requires you to report changes within 10 days.',
+        'Proof deadline: Visiting Angels wants proof before you attend training. Home Instead wants a certificate within 90 days of signing and every year after.'
+      ] },
+      { h: 'Do you have to use the franchisor’s insurance program?', p: [
+        'Not under these three disclosure documents. Visiting Angels says it does not designate insurance suppliers and that its vendor list is optional. Senior Helpers lets franchisees choose their own agent and carrier. Home Instead does not require a program today, but its disclosure document says its parent company is expected to become the designated sole supplier of insurance services in the future.',
+        'Check Item 8 of your own disclosure document and your current operations manual before you change agents, because these rules can change between editions.'
+      ] },
+      { h: 'If coverage lapses', p: ['All three franchisors can buy coverage for you and bill you for it, and Visiting Angels and Senior Helpers can add fees. A lapse can also be grounds to terminate the franchise. Put your renewal date on the calendar and send the new certificate before the old one expires.'] },
+      { h: 'Starting a franchise location', p: ['Each disclosure document estimates first-year insurance costs in Item 7, but the estimates vary widely and some leave out workers’ comp. Ask for an indication before you open so your budget reflects your revenue, caregiver count and the limits you actually need.'], link: 'homeCare' }
+    ],
+    faqs: [
+      ['How much general liability does a home care franchise require?', 'Visiting Angels, Home Instead and Senior Helpers all ask for $1,000,000 per occurrence and $3,000,000 aggregate in general liability, and the same limits in professional liability, in their current disclosure documents. Your signed agreement controls.'],
+      ['Do home care franchisees have to buy insurance from the franchisor?', 'Not under the current Visiting Angels, Home Instead or Senior Helpers disclosure documents. Home Instead says its parent company may become the sole insurance supplier in the future, so check Item 8 of your disclosure document.'],
+      ['Why was my certificate of insurance rejected by my franchisor?', 'The usual reasons are a missing line such as abuse and molestation, cyber or EPLI, a limit below the requirement, a carrier below the required rating, or missing additional insured, primary and non-contributory or waiver of subrogation wording.'],
+      ['Is Coast & Marsh a franchisor-approved insurance vendor?', 'No. Coast & Marsh is an independent Florida agency and is not affiliated with or endorsed by any franchisor. We read your franchise agreement and quote to its requirements.']
+    ],
+    related: ['homeCare', 'homeCareAbuse', 'homeCareAuto'],
+    cta: HOMECARE_CTA,
+    emailItems: EMAIL_QUOTE_HOME_CARE,
+    emailSubject: 'Home care franchise insurance quote',
+    note: HOMECARE_NOTE
+  },
+  homeCareAbuse: {
+    kind: 'article',
+    group: 'homecare',
+    date: '2026-11-20',
+    parent: 'homeCare',
+    path: '/guides/home-care-abuse-molestation-and-client-theft-coverage',
+    eyebrow: 'HOME CARE AGENCY INSURANCE',
+    title: 'Abuse, Molestation and Client Theft Coverage for Home Care Agencies',
+    description: 'How abuse and molestation coverage and client theft (third-party crime) bonds work for Florida home care agencies: exclusions and sublimits in general liability, who is covered, crime bonds versus surety bonds, and hiring practices underwriters look for.',
+    lead: 'The two claims home care owners worry about most are an abuse allegation against a caregiver and a client’s jewelry or money going missing. Neither is covered by a standard general liability policy. Here is how each is usually insured.',
+    sections: [
+      { h: 'Abuse and molestation coverage', grid: [
+        ['Why general liability isn’t enough', 'Many general liability policies exclude abuse and molestation entirely, or cover it only up to a small sublimit. Home care agencies usually need it added on purpose.'],
+        ['Where it sits', 'It may be part of the general or professional liability policy, or a separate coverage part with its own limit. Check whether its limit is shared with the rest of the policy.'],
+        ['Who it protects', 'Policies cover the agency for claims of negligent hiring, supervision or retention. Most won’t defend the person who actually committed the act.'],
+        ['Claims-made or occurrence', 'Abuse claims can be reported years later. If the coverage is claims-made, know your retroactive date and keep coverage continuous when you change insurers.']
+      ] },
+      { h: 'Client theft and crime coverage', grid: [
+        ['Client theft (third-party crime) bond', 'Pays when an employee steals money or property from a client. This is the bond home care franchise agreements and many clients ask for.'],
+        ['Employee dishonesty', 'Covers theft from your own agency, such as payroll or billing fraud. Some policies combine it with client theft; others don’t.'],
+        ['Surety or license bonds', 'Guarantee that you follow a law or contract, such as a Medicaid or Medicare requirement. They are not theft coverage, and the surety can collect from you after a claim.'],
+        ['Conviction requirements', 'Some crime bonds pay only after the employee is convicted, which can take months. Look for one that pays on proof of loss.']
+      ] },
+      { h: 'Practices underwriters look for', list: [
+        'Level 2 background screening for every caregiver, as Florida requires for home care staff, plus reference checks',
+        'A written abuse prevention, reporting and investigation policy, with training at hire and every year',
+        'Supervisory visits and electronic visit verification',
+        'A rule that caregivers never take over a client’s finances, credit cards or banking',
+        'An inventory or photos of valuables at the start of service, and a process for client complaints'
+      ], p: ['Good practices make an agency easier to place and are the best defense if a claim is ever made.'] }
+    ],
+    faqs: [
+      ['Does home care general liability include abuse and molestation coverage?', 'Not always. Many policies exclude it or cap it at a low sublimit. Ask for abuse and molestation coverage by name and confirm the limit on the declarations page.'],
+      ['How much abuse and molestation coverage do home care agencies carry?', 'It varies with size and contracts. Visiting Angels’ current franchise disclosure document requires $500,000, and some referral sources ask for more. Larger agencies often carry higher limits.'],
+      ['Is a fidelity bond the same as client theft coverage?', 'Not necessarily. Some fidelity or employee dishonesty coverage covers only theft from the agency. Home care agencies need third-party coverage that pays when an employee steals from a client.'],
+      ['Will a crime bond pay if the caregiver isn’t convicted?', 'It depends on the wording. Some bonds require a conviction, while others pay on proof of the loss. Ask before you buy.']
+    ],
+    related: ['homeCare', 'homeCareFranchise', 'homeCareAuto'],
+    cta: HOMECARE_CTA,
+    emailItems: EMAIL_QUOTE_HOME_CARE,
+    emailSubject: 'Home care agency insurance quote',
+    note: HOMECARE_NOTE
+  },
+  homeCareAuto: {
+    kind: 'article',
+    group: 'homecare',
+    date: '2026-11-20',
+    parent: 'homeCare',
+    path: '/guides/hired-and-non-owned-auto-insurance-home-care',
+    eyebrow: 'HOME CARE AGENCY INSURANCE',
+    title: 'Hired and Non-Owned Auto Insurance for Home Care Agencies',
+    description: 'How auto liability works when Florida home care caregivers drive their own cars to visits, run errands or drive clients: whose policy pays first, what hired and non-owned auto covers, and what to check on every caregiver.',
+    lead: 'Most home care agencies don’t own a single vehicle, yet driving is one of their biggest risks. Caregivers drive between visits, run errands and often take clients to appointments. When there is a crash, the injured person can sue the agency as well as the driver.',
+    sections: [
+      { h: 'Whose policy pays first', p: ['When a caregiver drives a personal car for work, the caregiver’s own auto policy usually pays first. Florida’s minimum auto insurance is low, though: personal injury protection and property damage liability, with no bodily injury liability required for most drivers. A serious crash can go far past what the caregiver carries, and the claim moves to the agency.'] },
+      { h: 'What hired and non-owned auto covers', grid: [
+        ['The agency’s liability', 'Covers the agency when it is sued over a crash involving a car it doesn’t own, such as a caregiver’s personal car or a rental.'],
+        ['Not the caregiver’s car', 'It doesn’t pay to repair the caregiver’s vehicle, and usually doesn’t protect the caregiver personally.'],
+        ['Owned vehicles', 'If the agency owns or leases a car or van, it needs a commercial auto policy. Hired and non-owned auto doesn’t cover owned vehicles.'],
+        ['Driving a client’s car', 'Some caregivers drive the client’s own car. The client’s auto policy is usually first in line, so ask how your policy treats it and put the arrangement in writing.']
+      ] },
+      { h: 'What to check on every caregiver who drives', list: [
+        'A valid driver’s license and a motor vehicle record check at hire and every year',
+        'Proof of personal auto insurance, kept on file and updated at each renewal',
+        'Whether the caregiver drives clients, and how often',
+        'A written policy on transporting clients, mobile phone use and seat belts',
+        'Mileage logs if you reimburse mileage'
+      ], p: ['Paying mileage doesn’t change whose insurance pays first, but it does show the driving was for work, which is why the agency can be pulled into the claim.'] },
+      { h: 'Limits franchisors and contracts ask for', p: ['Home care franchise agreements commonly ask for $1,000,000 in auto liability including hired and non-owned auto, often with an umbrella on top. Medicaid plans and referral sources may set their own minimums.'], link: 'homeCareFranchise' }
+    ],
+    faqs: [
+      ['Does my agency need auto insurance if we don’t own any cars?', 'Usually yes, in the form of hired and non-owned auto liability. It covers the agency if it is sued over a crash while a caregiver is driving a personal car for work.'],
+      ['Does hired and non-owned auto cover the caregiver?', 'Generally not. It protects the agency. The caregiver’s personal auto policy covers the caregiver and their car.'],
+      ['Is transporting clients covered?', 'It can be, but insurers price it differently and some programs limit it. Tell your agent whether caregivers drive clients and how often.'],
+      ['What auto limit do home care franchises require?', 'The current Visiting Angels, Home Instead and Senior Helpers franchise disclosure documents each ask for $1,000,000 including hired and non-owned auto. Your signed agreement controls.']
+    ],
+    related: ['homeCare', 'homeCareFranchise', 'homeCareAbuse'],
+    cta: HOMECARE_CTA,
+    emailItems: EMAIL_QUOTE_HOME_CARE,
+    emailSubject: 'Home care agency insurance quote',
+    note: HOMECARE_NOTE
   },
   // ---------- Local and new business ----------
   localBusiness: {

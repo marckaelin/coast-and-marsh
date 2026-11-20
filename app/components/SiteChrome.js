@@ -4,7 +4,7 @@ const LOGO = <a className="logo" href="/"><span className="logo-mark">≋</span>
 
 export const NAV = [
   { label: 'Personal Insurance', items: [['Private Client', '/private-client'], ['Boat & Yacht', '/boat-insurance'], ['Yacht Cost Estimator', '/tools/yacht-insurance-cost-calculator']] },
-  { label: 'Business Insurance', items: [['Contractors', '/contractor-insurance'], ['Auto Repair Shops', '/auto-repair-shop-insurance'], ['Pest Control', '/pest-control-insurance'], ['Hemp & CBD', '/hemp-cbd-store-insurance'], ['Local Businesses', '/business-insurance-ponte-vedra-beach-st-johns-county']] },
+  { label: 'Business Insurance', items: [['Contractors', '/contractor-insurance'], ['Auto Repair Shops', '/auto-repair-shop-insurance'], ['Pest Control', '/pest-control-insurance'], ['Home Care Agencies', '/home-care-agency-insurance'], ['Hemp & CBD', '/hemp-cbd-store-insurance'], ['Local Businesses', '/business-insurance-ponte-vedra-beach-st-johns-county']] },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' }
 ];

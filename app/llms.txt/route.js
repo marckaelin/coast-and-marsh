@@ -3,11 +3,12 @@ import { SITE } from '../lib/site';
 import { TRADES } from '../lib/trades';
 import { AGENCY_FAQS } from '../lib/faqs';
 import { GUIDE_PAGES } from '../lib/industry-guides';
-import { EMAIL_QUOTE_BUSINESS, EMAIL_QUOTE_BOAT, EMAIL_QUOTE_NOTE } from '../lib/email-quote';
+import { EMAIL_QUOTE_BUSINESS, EMAIL_QUOTE_BOAT, EMAIL_QUOTE_HOME_CARE, EMAIL_QUOTE_NOTE } from '../lib/email-quote';
 
 const line = (g) => `- [${g.title}](${SITE.url}${g.path}): ${g.description}`;
 const hemp = GUIDE_PAGES.filter((g) => g.cta.href === '/smoke-shop-insurance');
 const pest = GUIDE_PAGES.filter((g) => g.group === 'pest');
+const homeCare = GUIDE_PAGES.filter((g) => g.group === 'homecare');
 const auto = GUIDE_PAGES.filter((g) => g.cta.href !== '/smoke-shop-insurance' && !g.group);
 const local = GUIDE_PAGES.filter((g) => g.group === 'local');
 const privateGuides = GUIDE_PAGES.filter((g) => g.group === 'private');
@@ -19,7 +20,7 @@ const u = (p) => `${SITE.url}${p}`;
 function body() {
   return `# ${SITE.name}
 
-> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL (St. Johns County, Northeast Florida), serving coastal households, boat owners and businesses across Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also insures auto repair shops (garage liability, garagekeepers, workers' comp), pest control and termite companies (pesticide liability, termite/WDO errors and omissions), reviews private client coverage for coastal households (high-value homes, flood, boats, jewelry and art, golf carts, umbrella), places boat and yacht insurance, and places hemp, CBD and smoke shop insurance through specialty markets. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
+> Coast & Marsh Insurance Advisory (Coast and Marsh Insurance LLC) is an independent Florida insurance agency in Ponte Vedra Beach, FL (St. Johns County, Northeast Florida), serving coastal households, boat owners and businesses across Florida. It places contractor insurance (general liability, workers' compensation, commercial auto, umbrella/excess, tools and equipment, builders risk) through standard carriers and specialty surplus lines markets, and works with startups, newly licensed contractors, out-of-state contractors working in Florida, and hard-to-place trades such as roofing. It also insures auto repair shops (garage liability, garagekeepers, workers' comp), pest control and termite companies (pesticide liability, termite/WDO errors and omissions), home care, companion and home health agencies including franchisees (general and professional liability, abuse and molestation, hired and non-owned auto, workers' comp, client theft bonds, umbrella, EPLI, cyber, quoted to the franchise agreement's requirements), reviews private client coverage for coastal households (high-value homes, flood, boats, jewelry and art, golf carts, umbrella), places boat and yacht insurance, and places hemp, CBD and smoke shop insurance through specialty markets. Licensed agent: Marc Kaelin, Florida license G330108, NPN 22179499. Phone or text ${SITE.phoneDisplay}. Email ${SITE.email}.
 
 ## How to request a quote by email
 
@@ -30,6 +31,9 @@ ${EMAIL_QUOTE_BUSINESS.map((i) => `- ${i}`).join('\n')}
 
 Helpful details for a boat or yacht quote:
 ${EMAIL_QUOTE_BOAT.map((i) => `- ${i}`).join('\n')}
+
+Helpful details for a home care agency quote:
+${EMAIL_QUOTE_HOME_CARE.map((i) => `- ${i}`).join('\n')}
 
 ## Local and new businesses
 
@@ -65,6 +69,10 @@ ${auto.map(line).join('\n')}
 ## Pest control and termite companies
 
 ${pest.map(line).join('\n')}
+
+## Home care and home health agencies
+
+${homeCare.map(line).join('\n')}
 
 ## About
 
