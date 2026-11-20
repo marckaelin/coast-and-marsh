@@ -34,7 +34,7 @@ export default function HomeCareQuote() {
       if (!r.ok) throw new Error(d.error || 'Something went wrong. Please try again.');
       setState('done');
       trackLead('home_care_quote', { brand: choice, caregivers: form.caregivers, revenue: form.revenue, contact_method: form.method });
-    } catch (x) { setErr(x instanceof Error ? x.message : 'Something went wrong.'); setState('error'); }
+    } catch (x) { setErr(x instanceof TypeError || !(x instanceof Error) ? 'We couldn’t send that just now. Please call or text 904-988-5026, or email marc.kaelin@coastandmarsh.com.' : x.message); setState('error'); }
   }
 
   return <section className="hcq" id="quote" aria-labelledby="hcq-title">
