@@ -14,7 +14,7 @@ const PEST_NOTE = 'General information only, not legal advice, a quote or a cove
 const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance shopped?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
 
 const HOMECARE_NOTE = 'General information only, not legal advice, a quote or a coverage determination. Franchise requirements summarized here come from publicly filed franchise disclosure documents (Senior Helpers, April 2025; Visiting Angels and Home Instead, April 2026) and may have changed; your signed agreement and operations manual control. Coast & Marsh is not affiliated with or endorsed by any franchisor. Eligibility, pricing and terms are set by the insurer.';
-const HOMECARE_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want a quote built to your franchise agreement?', text: 'Call or text 904-988-5026, or email your annual revenue, caregiver count and the insurance section of your franchise agreement to marc.kaelin@coastandmarsh.com.' };
+const HOMECARE_CTA = { short: 'Get your quote', label: 'Get your quote', href: '/home-care-agency-insurance#quote', title: 'Want a quote built to your franchise agreement?', text: 'Pick your franchise or independent agency, see the requirements, and get a quote by email or text. Or call or text 904-988-5026.' };
 
 const LOCAL_NOTE = 'General information only, not a quote or coverage determination. Coverage needs depend on your business, lease and contracts. Eligibility, pricing and terms are set by the insurer.';
 const LOCAL_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your business insurance reviewed?', text: 'Call or text 904-988-5026, or email your current declarations page or lease insurance section to marc.kaelin@coastandmarsh.com.' };
@@ -413,6 +413,7 @@ export const GUIDES = {
     kind: 'service',
     group: 'homecare',
     serviceType: 'Home care agency insurance',
+    quoteFlow: 'homecare',
     path: '/home-care-agency-insurance',
     eyebrow: 'HOME CARE AGENCY INSURANCE',
     title: 'Home Care Agency Insurance in Florida',

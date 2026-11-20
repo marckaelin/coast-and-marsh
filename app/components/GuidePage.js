@@ -1,5 +1,6 @@
 import JsonLd from './JsonLd';
 import EmailQuote from './EmailQuote';
+import HomeCareQuote from './HomeCareQuote';
 import { SiteHeader, SiteFooter } from './SiteChrome';
 import { SITE } from '../lib/site';
 import { GUIDES } from '../lib/industry-guides';
@@ -38,6 +39,8 @@ export default function GuidePage({ id }) {
       <h1>{g.title}</h1>
       <p>{g.lead}</p>
     </section>
+
+    {g.quoteFlow === 'homecare' && <HomeCareQuote />}
 
     <section className="seo-prose">
       {g.sections.map((s) => <div key={s.h}>
