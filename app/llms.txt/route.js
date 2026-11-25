@@ -77,6 +77,7 @@ ${homeCare.map(line).join('\n')}
 ## About
 
 - [About Coast & Marsh](${u('/about')})
+- [All guides by industry](${u('/guides')})
 - [Frequently asked questions](${u('/faq')})
 
 ## Quick answers

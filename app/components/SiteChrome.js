@@ -5,6 +5,7 @@ const LOGO = <a className="logo" href="/"><span className="logo-mark">≋</span>
 export const NAV = [
   { label: 'Personal Insurance', items: [['Private Client', '/private-client'], ['Boat & Yacht', '/boat-insurance'], ['Yacht Cost Estimator', '/tools/yacht-insurance-cost-calculator']] },
   { label: 'Business Insurance', items: [['Contractors', '/contractor-insurance'], ['Auto Repair Shops', '/auto-repair-shop-insurance'], ['Pest Control', '/pest-control-insurance'], ['Home Care Agencies', '/home-care-agency-insurance'], ['Hemp & CBD', '/hemp-cbd-store-insurance'], ['Local Businesses', '/business-insurance-ponte-vedra-beach-st-johns-county']] },
+  { label: 'Guides', href: '/guides' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' }
 ];
@@ -42,6 +43,6 @@ export function SiteFooter() {
   return <footer>
     <div className="logo-copy"><strong>COAST &amp; MARSH</strong><small>INSURANCE ADVISORY</small></div>
     <div>Personal · Commercial · Specialty Industries<small className="footer-legal">Coast and Marsh Insurance LLC · Florida License G330108 · NPN 22179499 · Ponte Vedra Beach, FL · <a href="tel:+19049885026">904-988-5026</a> · <a href="mailto:marc.kaelin@coastandmarsh.com">marc.kaelin@coastandmarsh.com</a></small></div>
-    <div className="legal"><a href="/private-client">Private Client</a><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+    <div className="legal"><a href="/private-client">Private Client</a><a href="/boat-insurance">Boat Insurance</a><a href="/contractor-insurance">Contractors</a><a href="/guides">Guides</a><a href="/about">About</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
   </footer>;
 }

@@ -26,6 +26,7 @@ export const GUIDES = {
   // ---------- Hemp, CBD and smoke shops ----------
   hempStore: {
     kind: 'service',
+    segment: 'hemp',
     serviceType: 'Hemp and CBD store insurance',
     path: '/hemp-cbd-store-insurance',
     eyebrow: 'HEMP, CBD & SMOKE SHOP INSURANCE',
@@ -59,6 +60,7 @@ export const GUIDES = {
   },
   hempDec11: {
     kind: 'article',
+    segment: 'hemp',
     date: '2026-11-03',
     parent: 'hempStore',
     path: '/guides/hemp-shop-insurance-after-december-11',
@@ -97,6 +99,7 @@ export const GUIDES = {
   },
   hempReadiness: {
     kind: 'article',
+    segment: 'hemp',
     date: '2026-11-05',
     parent: 'hempStore',
     path: '/guides/hemp-december-11-checklist',
@@ -176,6 +179,7 @@ export const GUIDES = {
   },
   hempProducts: {
     kind: 'article',
+    segment: 'hemp',
     date: '2026-11-03',
     parent: 'hempStore',
     path: '/guides/hemp-cbd-products-liability-insurance',
@@ -213,6 +217,7 @@ export const GUIDES = {
   // ---------- Auto repair shops ----------
   autoRepair: {
     kind: 'service',
+    segment: 'autoRepair',
     serviceType: 'Auto repair shop insurance',
     path: '/auto-repair-shop-insurance',
     eyebrow: 'AUTO REPAIR SHOP INSURANCE',
@@ -245,6 +250,7 @@ export const GUIDES = {
   },
   garagekeepers: {
     kind: 'article',
+    segment: 'autoRepair',
     date: '2026-11-03',
     parent: 'autoRepair',
     path: '/guides/garage-liability-vs-garagekeepers',
@@ -274,6 +280,7 @@ export const GUIDES = {
   },
   autoWc: {
     kind: 'article',
+    segment: 'autoRepair',
     date: '2026-11-03',
     parent: 'autoRepair',
     path: '/guides/workers-comp-for-auto-repair-shops-florida',
@@ -307,6 +314,7 @@ export const GUIDES = {
   // ---------- Pest control and termite ----------
   pestControl: {
     kind: 'service',
+    segment: 'pest',
     group: 'pest',
     serviceType: 'Pest control insurance',
     path: '/pest-control-insurance',
@@ -341,6 +349,7 @@ export const GUIDES = {
   },
   termiteWdo: {
     kind: 'article',
+    segment: 'pest',
     group: 'pest',
     date: '2026-11-03',
     parent: 'pestControl',
@@ -375,6 +384,7 @@ export const GUIDES = {
   },
   pestPollution: {
     kind: 'article',
+    segment: 'pest',
     group: 'pest',
     date: '2026-11-03',
     parent: 'pestControl',
@@ -411,6 +421,7 @@ export const GUIDES = {
   // ---------- Home care and home health agencies ----------
   homeCare: {
     kind: 'service',
+    segment: 'homeCare',
     group: 'homecare',
     serviceType: 'Home care agency insurance',
     quoteFlow: 'homecare',
@@ -475,6 +486,7 @@ export const GUIDES = {
   },
   homeCareFranchise: {
     kind: 'article',
+    segment: 'homeCare',
     group: 'homecare',
     date: '2026-11-20',
     parent: 'homeCare',
@@ -524,6 +536,7 @@ export const GUIDES = {
   },
   homeCareAbuse: {
     kind: 'article',
+    segment: 'homeCare',
     group: 'homecare',
     date: '2026-11-20',
     parent: 'homeCare',
@@ -567,6 +580,7 @@ export const GUIDES = {
   },
   homeCareAuto: {
     kind: 'article',
+    segment: 'homeCare',
     group: 'homecare',
     date: '2026-11-20',
     parent: 'homeCare',
@@ -607,6 +621,7 @@ export const GUIDES = {
   // ---------- Local and new business ----------
   localBusiness: {
     kind: 'service',
+    segment: 'newBusiness',
     group: 'local',
     serviceType: 'Business insurance',
     path: '/business-insurance-ponte-vedra-beach-st-johns-county',
@@ -648,6 +663,7 @@ export const GUIDES = {
   },
   newBusiness: {
     kind: 'article',
+    segment: 'newBusiness',
     group: 'local',
     date: '2026-11-03',
     parent: 'localBusiness',
@@ -686,6 +702,7 @@ export const GUIDES = {
   // ---------- Private client (coastal households) ----------
   privateNonRenewal: {
     kind: 'article',
+    segment: 'personal',
     group: 'private',
     date: '2026-11-10',
     parent: 'privateClient',
@@ -735,6 +752,7 @@ export const GUIDES = {
   },
   privateFlood: {
     kind: 'article',
+    segment: 'personal',
     group: 'private',
     date: '2026-11-10',
     parent: 'privateClient',
@@ -775,6 +793,7 @@ export const GUIDES = {
   },
   privateValuables: {
     kind: 'article',
+    segment: 'personal',
     group: 'private',
     date: '2026-11-10',
     parent: 'privateClient',
