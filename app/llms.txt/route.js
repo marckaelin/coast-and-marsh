@@ -10,6 +10,7 @@ const hemp = GUIDE_PAGES.filter((g) => g.cta.href === '/smoke-shop-insurance');
 const pest = GUIDE_PAGES.filter((g) => g.group === 'pest');
 const homeCare = GUIDE_PAGES.filter((g) => g.group === 'homecare');
 const auto = GUIDE_PAGES.filter((g) => g.cta.href !== '/smoke-shop-insurance' && !g.group);
+const contractorGuides = GUIDE_PAGES.filter((g) => g.group === 'contractor');
 const local = GUIDE_PAGES.filter((g) => g.group === 'local');
 const privateGuides = GUIDE_PAGES.filter((g) => g.group === 'private');
 
@@ -45,6 +46,7 @@ ${local.map(line).join('\n')}
 ${TRADES.map((t) => `- [${t.title}](${u(`/contractor-insurance/${t.slug}`)}): ${t.description}`).join('\n')}
 - [Florida contractor license insurance requirements](${u('/guides/florida-contractor-license-insurance-requirements')}): CILB and electrical license liability minimums by trade, and the workers' comp rule
 - [What affects contractor insurance cost in Florida](${u('/guides/florida-contractor-insurance-cost')})
+${contractorGuides.map(line).join('\n')}
 
 ## Private client (coastal households)
 

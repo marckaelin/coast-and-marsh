@@ -33,7 +33,7 @@ export default function About() {
       <ul>
         <li>New contracting businesses and newly licensed contractors who need general liability to get licensed or start their first job</li>
         <li>Contractors from other states starting work in Florida</li>
-        <li>Established contractors who want their renewal shopped with markets that understand their trade</li>
+        <li>Established contractors who want their renewal put in front of markets that understand their trade</li>
         <li>Risks other agents couldn’t place</li>
       </ul>
 
