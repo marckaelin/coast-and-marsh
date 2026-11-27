@@ -4,8 +4,10 @@
 export const INDEXNOW_KEY = '7c2800a5425248be7ce1b328bbed9bda';
 export const INDEXNOW_HOST = 'www.coastandmarsh.com';
 
-export async function submitIndexNow(urlList) {
-  const res = await fetch('https://api.indexnow.org/indexnow', {
+const ENDPOINTS = { indexnow: 'https://api.indexnow.org/indexnow', bing: 'https://www.bing.com/indexnow', yandex: 'https://yandex.com/indexnow' };
+
+export async function submitIndexNow(urlList, engine = 'indexnow') {
+  const res = await fetch(ENDPOINTS[engine] || ENDPOINTS.indexnow, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify({ host: INDEXNOW_HOST, key: INDEXNOW_KEY, keyLocation: `https://${INDEXNOW_HOST}/${INDEXNOW_KEY}.txt`, urlList }),
