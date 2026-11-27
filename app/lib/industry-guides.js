@@ -8,10 +8,10 @@ const HEMP_NOTE = 'General information only, not legal advice, a quote or a cove
 const AUTO_NOTE = 'General information only, not a quote or coverage determination. Coverage forms differ by insurer; read your policy for exact terms. Eligibility, pricing and terms are set by the insurer.';
 
 const HEMP_CTA = { short: 'Get a review', label: 'Start a hemp shop review', href: '/smoke-shop-insurance', title: 'Want your policy checked before December 11?', text: 'Start the online review, or call or text 904-988-5026 with your renewal date.' };
-const AUTO_CTA = { short: 'Text for a quote', label: 'Text QUOTE to 904-988-5026', href: 'sms:+19049885026?body=QUOTE', title: 'Want your shop insurance shopped?', text: 'Text QUOTE to 904-988-5026 and answer six quick questions. No forms.' };
+const AUTO_CTA = { short: 'Text for a quote', label: 'Text QUOTE to 904-988-5026', href: 'sms:+19049885026?body=QUOTE', title: 'Want your shop insurance put in front of more carriers?', text: 'Text QUOTE to 904-988-5026 and answer six quick questions. No forms.' };
 
 const PEST_NOTE = 'General information only, not legal advice, a quote or a coverage determination. License insurance minimums reflect section 482.071, Florida Statutes, as of November 2026; confirm current requirements with FDACS. Eligibility, pricing and terms are set by the insurer.';
-const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance shopped?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
+const PEST_CTA = { short: 'Call for a quote', label: 'Call or text 904-988-5026', href: 'tel:+19049885026', title: 'Want your pest control insurance put in front of more carriers?', text: 'Call or text 904-988-5026, or email your current declarations page to marc.kaelin@coastandmarsh.com.' };
 
 const HOMECARE_NOTE = 'General information only, not legal advice, a quote or a coverage determination. Franchise requirements summarized here come from publicly filed franchise disclosure documents (Senior Helpers, April 2025; Visiting Angels and Home Instead, April 2026) and may have changed; your signed agreement and operations manual control. Coast & Marsh is not affiliated with or endorsed by any franchisor. Eligibility, pricing and terms are set by the insurer.';
 const HOMECARE_CTA = { short: 'Get your quote', label: 'Get your quote', href: '/home-care-agency-insurance#quote', title: 'Want a quote built to your franchise agreement?', text: 'Pick your franchise or independent agency, see the requirements, and get a quote by email or text. Or call or text 904-988-5026.' };
@@ -478,7 +478,7 @@ export const GUIDES = {
       ['Can you quote to my franchise agreement?', 'Yes. Send the insurance section of your franchise agreement or operations manual, and we check every limit, rating and endorsement against it before we send the quote. Coast & Marsh is an independent agency and is not affiliated with or endorsed by any franchisor.'],
       ['Do you work with home care agencies across Florida?', 'Yes. Coast & Marsh is an independent agency in Ponte Vedra Beach and works with home care and home health agencies statewide, by phone and email.']
     ],
-    related: ['homeCareFranchise', 'homeCareAbuse', 'homeCareAuto'],
+    related: ['homeCareAhca', 'homeCareFranchise', 'homeCareAbuse', 'homeCareAuto'],
     cta: HOMECARE_CTA,
     emailItems: EMAIL_QUOTE_HOME_CARE,
     emailSubject: 'Home care agency insurance quote',
@@ -617,6 +617,70 @@ export const GUIDES = {
     emailItems: EMAIL_QUOTE_HOME_CARE,
     emailSubject: 'Home care agency insurance quote',
     note: HOMECARE_NOTE
+  },
+  homeCareAhca: {
+    kind: 'article',
+    segment: 'homeCare',
+    group: 'homecare',
+    date: '2026-11-27',
+    parent: 'homeCare',
+    path: '/guides/home-health-agency-insurance-ahca-license-renewal',
+    eyebrow: 'HOME CARE AGENCY INSURANCE',
+    title: 'Home Health Agency Insurance for AHCA License Renewal: The $250,000 Rule',
+    metaTitle: 'Florida Home Health Agency Insurance for AHCA Renewal ($250,000 Rule)',
+    description: 'What section 400.471, Florida Statutes, requires a licensed home health agency to carry and prove to AHCA at every license renewal: malpractice and liability insurance of at least $250,000 per claim, what the certificate should show, and how to keep renewal from stalling.',
+    lead: 'Every licensed home health agency in Florida has to show AHCA proof of malpractice and liability insurance with its initial application and with every license renewal. The legal minimum is modest, but a renewal held up over a certificate can cost far more than the premium. Here is what the law asks for, what most agencies actually carry, and a simple timeline so proof is ready before AHCA asks.',
+    sections: [
+      { h: 'What the law requires', p: [
+        'Section 400.471(3), Florida Statutes, says a licensed home health agency must obtain and maintain insurance of not less than $250,000 per claim, and must submit proof of that coverage with its initial license application and with each application for license renewal. It names two coverages:'
+      ], grid: [
+        ['Malpractice (professional) liability', 'Claims that care was given wrongly, or not at all: a missed medication, a fall during a transfer, a wound that wasn’t reported. Defined in section 624.605(1)(k).'],
+        ['General liability', 'Bodily injury or property damage that isn’t about the care itself, such as a caregiver breaking something in a client’s home. Defined in section 624.605(1)(b).']
+      ] },
+      { h: 'Who the $250,000 rule applies to', p: [
+        'The rule in section 400.471 applies to home health agencies licensed under Part III of Chapter 400, the agencies that provide skilled nursing, therapy and home health aide services. Nurse registries and companion and homemaker providers are regulated under other sections (400.506 and 400.509) with their own rules, and many of them carry the same two coverages because referral sources and contracts ask for it.',
+        'Workers’ compensation is a separate requirement under Chapter 440. Outside construction, Florida generally requires it once a business has four or more employees, and part-time caregivers count.'
+      ] },
+      { h: 'The minimum is rarely the right limit', p: [
+        'The $250,000 per claim figure is a floor for licensure, not a recommendation. Most home health agencies carry $1,000,000 per claim or occurrence on both general and professional liability, because hospitals, Medicaid managed care plans, VA community care, senior living communities and franchise agreements commonly ask for it. Before your renewal, collect every contract that sets an insurance requirement and buy to the highest one.'
+      ], link: 'homeCareFranchise' },
+      { h: 'What the certificate should show', list: [
+        'The agency’s legal name exactly as it appears on the AHCA license',
+        'Professional (malpractice) liability and general liability, each with a per-claim or per-occurrence limit of at least $250,000',
+        'Policy periods that are current on the date you submit the renewal',
+        'Every location or branch covered, if you operate more than one office',
+        'Whether professional liability is claims-made, and its retroactive date, so a change of insurer doesn’t leave a gap for past visits'
+      ] },
+      { h: 'A renewal timeline that works', steps: [
+        ['90 days before the insurance renewal', 'Send current payroll, revenue, visit counts, services and claims to your agent, along with any contracts that set insurance minimums.'],
+        ['60 days before', 'Review options side by side, including abuse and molestation, hired and non-owned auto and a client theft bond, not just the two lines AHCA asks about.'],
+        ['30 days before', 'Bind coverage and get the certificate. If your AHCA license renewal falls in the same window, have the certificate ready before you file.'],
+        ['Within a week of binding', 'Send updated certificates to referral sources and contracted plans that ask for them, so referrals don’t pause.']
+      ] },
+      { h: 'Common problems that stall renewal', list: [
+        'The policy lapsed or was cancelled for non-payment between renewals',
+        'Only general liability is in place, with professional liability missing or excluded for nursing services',
+        'The named insured on the policy doesn’t match the licensed entity after a change of ownership or a new LLC',
+        'Abuse and molestation is excluded, which AHCA may not ask about but referral partners and franchisors often do',
+        'Claims-made professional liability replaced without prior acts coverage, leaving earlier visits uncovered'
+      ] },
+      { h: 'How Coast & Marsh helps', p: [
+        'Coast & Marsh is an independent Florida agency. We put your coverage in front of our carriers, match it to your AHCA license and every contract that sets a requirement, and keep certificates moving so a renewal never waits on paperwork. The C&M Caregiver Package brings general and professional liability, abuse and molestation, hired and non-owned auto, workers’ comp and a client theft bond under one contact and one renewal conversation.'
+      ], link: 'homeCare' }
+    ],
+    faqs: [
+      ['How much insurance does a Florida home health agency need for its AHCA license?', 'Section 400.471(3), Florida Statutes, requires malpractice insurance and liability insurance of at least $250,000 per claim, with proof submitted with the initial license application and with each license renewal application.'],
+      ['Do I have to send proof of insurance to AHCA at every renewal?', 'Yes. The statute requires proof of the malpractice and liability coverage with each application for license renewal, not just the first application.'],
+      ['Is $250,000 enough coverage for a home health agency?', 'It meets the licensing minimum, but most agencies carry $1,000,000 per claim or more, because hospitals, Medicaid managed care plans, referral sources and franchise agreements commonly require higher limits.'],
+      ['Does the $250,000 rule apply to companion and homemaker agencies or nurse registries?', 'Section 400.471 applies to licensed home health agencies. Nurse registries and companion and homemaker providers are covered by other sections of Chapter 400, though many carry the same coverages because contracts and referral partners require them.'],
+      ['Does general liability alone satisfy AHCA?', 'No. The statute names both malpractice (professional) liability and general liability, each at $250,000 per claim or more.'],
+      ['Can Coast & Marsh help before my AHCA renewal?', 'Yes. Send your renewal month, services, caregiver count and current declarations pages, and we will put your coverage in front of our carriers and have the certificate ready before you file.']
+    ],
+    related: ['homeCare', 'homeCareAbuse', 'homeCareAuto', 'homeCareFranchise'],
+    cta: { ...HOMECARE_CTA, title: 'Renewing your AHCA license soon?', text: 'Tell us your renewal month and services, and we’ll have a certificate ready before you file. Or call or text 904-988-5026.' },
+    emailItems: EMAIL_QUOTE_HOME_CARE,
+    emailSubject: 'Home health agency insurance for AHCA renewal',
+    note: 'General information only, not legal advice, a quote or a coverage determination. Statute references reflect the 2026 Florida Statutes (sections 400.471, 400.506, 400.509 and Chapter 440); confirm current requirements with AHCA. Eligibility, pricing and terms are set by the insurer.'
   },
   // ---------- Local and new business ----------
   localBusiness: {
@@ -831,6 +895,67 @@ export const GUIDES = {
     emailItems: EMAIL_QUOTE_PRIVATE_CLIENT,
     emailSubject: 'Jewelry, watch and art coverage',
     note: PRIVATE_NOTE
+  },
+  // ---------- Contractors ----------
+  contractorExemptWc: {
+    kind: 'article',
+    segment: 'contractors',
+    group: 'contractor',
+    date: '2026-11-27',
+    parent: 'contractorHub',
+    path: '/guides/florida-workers-comp-exemption-gc-requires-policy',
+    eyebrow: 'CONTRACTOR INSURANCE',
+    title: 'Exempt From Workers’ Comp, but the GC Wants a Policy: What Florida Contractors Can Do',
+    metaTitle: 'Florida Workers’ Comp Exemption but GC Requires a Policy: Options',
+    description: 'Why Florida general contractors and cities often refuse a construction officer exemption and ask for a workers’ compensation policy, how the exemption works under section 440.05, and the realistic options for an owner-only or small contractor.',
+    lead: 'You filed your construction exemption, paid the $50 and got your certificate. Then the general contractor, property manager or city says an exemption isn’t enough and they need a workers’ comp policy before you start. It happens every week in Florida. Here is why, and what you can do about it without overbuying.',
+    sections: [
+      { h: 'How the construction exemption works', list: [
+        'Officers of a Florida corporation and members of a Florida LLC who own at least 10% can elect to be exempt, filed online with the Division of Workers’ Compensation.',
+        'No more than three exemptions are allowed per company or group of affiliated companies.',
+        'The fee is $50, and a construction exemption is valid for 2 years. The Division sends a notice about 60 days before it expires.',
+        'The certificate covers only the person named on it and lists the company it applies to. It is not a contractor license.',
+        'An exempt officer gives up workers’ comp benefits for their own injuries (section 440.05(13)).',
+        'Employees can’t be exempted. In construction, one employee generally means you need a policy.'
+      ] },
+      { h: 'Why a GC or city still asks for a policy', p: [
+        'Under section 440.10, a contractor that hires a subcontractor is responsible for workers’ comp for the sub’s workers if the sub doesn’t carry it. That is why the general contractor’s own insurer looks at every subcontractor at audit.',
+        'At the GC’s year-end audit, an uninsured sub’s payroll or contract price is often added to the GC’s premium. An exemption certificate covers the owner, but the GC’s auditor can’t see whether you had a helper on the job, so many GCs ask every sub for a policy, even a minimal one. Some contracts, property managers and permit offices set the same rule.'
+      ] },
+      { h: 'Your options', grid: [
+        ['Minimum-premium policy with no employees', 'A real workers’ comp policy written for an owner-only business, sometimes called an “if any” or ghost policy. Exempt officers stay excluded, so the price is usually close to the insurer’s minimum premium. It gives the GC a certificate showing coverage is in force.'],
+        ['Include yourself on the policy', 'Revoke the exemption and cover the owner. It costs more, but your own injuries are covered, which many owners who work on roofs or ladders want anyway.'],
+        ['Employee leasing (PEO)', 'If you have or will soon have employees, a professional employer organization can carry the workers’ comp and handle payroll. Useful when the standard market declines a new contractor with no prior coverage.'],
+        ['Ask the GC what they accept', 'Some GCs accept an exemption plus a signed statement that you have no employees on site. Ask before you buy anything, and get the answer in writing.']
+      ] },
+      { h: 'Why some contractors get declined at first', p: [
+        'Many online workers’ comp markets decline construction businesses that have never carried a policy, and some exclude roofing, general contractors or work above a certain height. That doesn’t mean you can’t get coverage. It means the submission has to go to markets that write new construction accounts, and sometimes to a PEO.',
+        'An independent agent can put your coverage in front of several carriers at once, so a decline from one market doesn’t cost you the job.'
+      ] },
+      { h: 'Before you buy, have this ready', list: [
+        'Your exemption certificate and the names of every owner and officer',
+        'Your trade and the job descriptions you actually do (the class code drives the price)',
+        'Estimated payroll for the next 12 months, including any helpers, and what you pay subcontractors',
+        'Certificates of insurance or exemptions from your own subs',
+        'The GC’s or city’s exact insurance requirement, ideally the contract page',
+        'When the job starts'
+      ] },
+      { h: 'Keep the audit from surprising you', p: [
+        'Workers’ comp is priced on an estimate and trued up at audit. If you hire help or pay uninsured subs during the year, the auditor adds that payroll and bills the difference. Keep copies of every sub’s certificate or exemption, and tell your agent when you hire someone so the estimate stays close.'
+      ], link: 'newContractors' }
+    ],
+    faqs: [
+      ['Can a general contractor require workers’ comp if I have an exemption?', 'Yes. The exemption is valid under Florida law, but a general contractor can set its own requirements in the subcontract. Many require a policy because, under section 440.10, the GC can be responsible for the comp of a sub’s uninsured workers.'],
+      ['How much does a workers’ comp policy with no employees cost in Florida?', 'It is usually close to the insurer’s minimum premium, because exempt officers are excluded and payroll is low. The exact price depends on your trade’s class code and the insurer.'],
+      ['How long is a Florida construction exemption good for?', 'Two years from its effective date. The fee is $50, and the Division of Workers’ Compensation sends an expiration notice at least 60 days before it expires.'],
+      ['How many owners can be exempt?', 'Up to three officers or LLC members per company or group of affiliated companies, and each must own at least 10%.'],
+      ['Can I exempt my employees or helpers?', 'No. Only qualifying officers and LLC members can be exempt. A construction business with one or more employees generally must carry workers’ compensation.'],
+      ['What if I get declined for workers’ comp?', 'Declines are common for contractors with no prior coverage. Coast & Marsh works with markets that write new construction accounts and with employee leasing companies, and can put your coverage in front of several of them at once.']
+    ],
+    related: ['contractorHub', 'newContractors'],
+    cta: { short: 'Request a quote', label: 'Start a contractor quote', href: '/contractor-insurance#review', title: 'Need a certificate before the job starts?', text: 'Send your trade, exemption certificate and the GC’s requirement, or call or text 904-988-5026.' },
+    emailSubject: 'Contractor workers’ comp quote (exempt owner)',
+    note: 'General information only, not legal advice, a quote or a coverage determination. Workers’ compensation rules reflect sections 440.02, 440.05 and 440.10, Florida Statutes, and Division of Workers’ Compensation guidance as of November 2026; confirm current rules with the Division. Eligibility, pricing and terms are set by the insurer.'
   },
   privateClient: { path: '/private-client', title: 'Private client insurance for coastal Florida homes' },
   contractorHub: { path: '/contractor-insurance', title: 'Florida contractor insurance' },
