@@ -15,7 +15,7 @@ export async function GET(request) {
   const paths = asked.length ? asked : [...known];
   try {
     const result = await submitIndexNow(paths.map((p) => `https://${INDEXNOW_HOST}${p === '/' ? '' : p}`), params.get('engine') || undefined);
-    return Response.json({ submitted: paths.length, ...result });
+    return Response.json({ submitted: paths.length, ...result }, { status: result.status < 300 ? 200 : 502 });
   } catch (e) {
     return Response.json({ submitted: 0, error: e.message }, { status: 502 });
   }

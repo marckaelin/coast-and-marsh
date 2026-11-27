@@ -1,0 +1,13 @@
+# After Vercel finishes a production deployment, ask the live site to ping IndexNow.
+# The ping runs from app/api/indexnow/route.js so the key file is already being served.
+name: IndexNow ping
+on: deployment_status
+jobs:
+  ping:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the domain to switch to the new deployment
+        run: sleep 30
+      - name: Ping IndexNow
+        run: curl -sS --fail-with-body "https://www.coastandmarsh.com/api/indexnow?key=b22cbd2091c8b1b421c13f75c9d4bd10"
