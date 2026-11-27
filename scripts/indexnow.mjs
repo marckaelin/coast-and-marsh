@@ -16,7 +16,7 @@ async function main() {
     body: JSON.stringify({ host: HOST, key: KEY, keyLocation: `https://${HOST}/${KEY}.txt`, urlList }),
     signal: AbortSignal.timeout(10000)
   });
-  console.log(`[indexnow] submitted ${urlList.length} URLs: HTTP ${res.status}`);
+  console.log(`[indexnow] submitted ${urlList.length} URLs: HTTP ${res.status} ${(await res.text()).slice(0, 300)}`);
 }
 
 main().catch((e) => console.log('[indexnow] ping failed, continuing:', e.message));
