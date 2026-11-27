@@ -244,7 +244,7 @@ export const GUIDES = {
       ['Does my general liability cover customer cars?', 'Usually not. General liability normally excludes property in your care, custody or control, which includes cars left for repair. That gap is what garagekeepers fills.'],
       ['How do I get a quote?', 'Text QUOTE to 904-988-5026 and answer six quick questions, or email your current policy’s declarations page to marc.kaelin@coastandmarsh.com.']
     ],
-    related: ['garagekeepers', 'autoWc'],
+    related: ['autoLease', 'garagekeepers', 'autoWc'],
     cta: AUTO_CTA,
     note: AUTO_NOTE
   },
@@ -309,6 +309,62 @@ export const GUIDES = {
     ],
     related: ['autoRepair', 'garagekeepers'],
     cta: AUTO_CTA,
+    note: AUTO_NOTE
+  },
+  autoLease: {
+    kind: 'article',
+    segment: 'autoRepair',
+    date: '2026-11-27',
+    parent: 'autoRepair',
+    path: '/guides/auto-repair-shop-lease-insurance-requirements',
+    eyebrow: 'AUTO REPAIR SHOP INSURANCE',
+    title: 'What Your Auto Repair Shop Lease Requires for Insurance',
+    metaTitle: 'Auto Repair Shop Lease Insurance Requirements in Florida',
+    description: 'How to read the insurance section of a Florida auto repair shop lease: landlord as additional insured (managers or lessors of premises), endorsement copies, plate glass, “adequate” fire, wind and theft coverage, garagekeepers, and why a bare-bones quote can fail the lease.',
+    lead: 'Most repair shop leases have a page or two on insurance, and landlords do check it. A policy can look fine on price and still fail the lease because the landlord isn’t named the right way, a required line is missing, or the wording is too thin. Read the lease section before you buy, and send it to your agent with the quote request.',
+    sections: [
+      { h: 'Landlord as additional insured', p: [
+        'Almost every commercial lease asks you to name the landlord, and often its property manager and lender, as an additional insured on your liability policy. For a tenant, that is usually done with an endorsement called Additional Insured: Managers or Lessors of Premises (ISO form CG 20 11 or the insurer’s equivalent).',
+        'Some online applications show the landlord only as an “additional interest,” which gets them notices but not coverage. Ask for the additional insured endorsement itself after you bind, and check that the names match the lease exactly, including the LLC.'
+      ] },
+      { h: 'A certificate is not enough', p: [
+        'A certificate of insurance is a summary. It says so in the box at the top: it confers no rights. Many leases ask for a copy of the additional insured endorsement, and sometimes waiver of subrogation or primary and non-contributory wording too. Send the certificate and the endorsement together, and put your renewal date on the calendar so a new set goes out before the old one expires.'
+      ] },
+      { h: 'Lines leases commonly require', grid: [
+        ['General or garage liability', 'Usually $1,000,000 per occurrence and $2,000,000 aggregate, with the landlord as additional insured.'],
+        ['Property: “fire, wind and theft” or “special form”', 'Leases often say “adequate” or “full replacement cost” for your equipment, lifts, tools, inventory and improvements you paid for. Florida wind may need its own deductible or policy, so confirm wind is not excluded.'],
+        ['Plate glass', 'Many leases make the tenant responsible for storefront glass and bay doors. Check whether your property policy covers it or the lease wants a separate glass coverage.'],
+        ['Garagekeepers', 'Not always in the lease, but always on your mind: the customer cars in your bays and on the lot. Landlords may ask for it when cars are stored on their property overnight.'],
+        ['Workers’ comp and umbrella', 'Some leases require workers’ comp as required by law and an umbrella of $1,000,000 or more over liability.'],
+        ['Business income', 'Some leases require it so rent keeps getting paid after a covered loss shuts the shop down.']
+      ] },
+      { h: 'Why a bare-bones quote can fail a lease', list: [
+        'The cheapest surplus lines (E&S) quotes are often liability only, with no property, glass or garagekeepers',
+        'Some limit or exclude additional insured endorsements, or charge for each one',
+        'The policy may exclude wind or flood, which a “fire, wind and theft” clause expects you to cover',
+        'Aggregate limits, deductibles or the named insured may not match what the lease spells out'
+      ], p: ['A low price that the landlord rejects costs more than a right-sized policy, because you end up buying twice.'] },
+      { h: 'What to send your agent', list: [
+        'The insurance section of the lease, and any exhibit with the landlord’s certificate instructions',
+        'The landlord’s exact legal name, the property manager and lender if listed, and the address for certificates',
+        'Your lease start date and the date the landlord needs proof',
+        'The value of your equipment, tools, lifts and any improvements you made to the space',
+        'How many customer cars are usually at the shop overnight'
+      ] },
+      { h: 'How Coast & Marsh helps', p: [
+        'We read the lease section first, then put your coverage in front of our carriers with the lease requirements built into the quote. After you bind, we request the endorsements and send the certificate and endorsement copies to your landlord, so you are not chasing paperwork the week you open.'
+      ], link: 'garagekeepers' }
+    ],
+    faqs: [
+      ['What insurance does a Florida repair shop lease usually require?', 'Commonly general or garage liability of $1,000,000 per occurrence with the landlord as additional insured, property coverage for fire, wind and theft on your equipment and improvements, plate glass, and sometimes workers’ comp, umbrella and business income.'],
+      ['How do I add my landlord as an additional insured?', 'Ask your agent for an additional insured endorsement for managers or lessors of premises naming the landlord exactly as the lease does. Listing the landlord only as an additional interest or certificate holder usually doesn’t meet the lease.'],
+      ['Is a certificate of insurance enough for my landlord?', 'Often not. Many leases ask for a copy of the additional insured endorsement, and sometimes waiver of subrogation and primary and non-contributory wording, along with the certificate.'],
+      ['Why did my landlord reject my insurance?', 'Common reasons are a missing additional insured endorsement, the wrong landlord name, limits below the lease, no property or glass coverage, or a wind exclusion.'],
+      ['Does my lease require garagekeepers coverage?', 'Some do, especially when customer cars are stored on the landlord’s property. Even when the lease doesn’t, garagekeepers protects the customer cars in your care, which general liability usually excludes.']
+    ],
+    related: ['autoRepair', 'garagekeepers', 'autoWc'],
+    cta: { ...AUTO_CTA, title: 'Signing a lease or renewing one?', text: 'Text QUOTE to 904-988-5026, or email the lease insurance section to marc.kaelin@coastandmarsh.com.' },
+    emailSubject: 'Auto repair shop insurance for my lease',
     note: AUTO_NOTE
   },
   // ---------- Pest control and termite ----------
